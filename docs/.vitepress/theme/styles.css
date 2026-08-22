@@ -13,12 +13,19 @@
   --vp-c-divider: #e5e3df;
   --vp-font-family-base: "Notion Sans", "HarmonyOS Sans", "HarmonyOS Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --vp-font-family-mono: "SFMono-Regular", "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+  --dd-canvas-light: #ffffff;
+  --dd-ink-light: #1a1a1a;
+  --dd-charcoal-light: #37352f;
+  --dd-slate-light: #5d5b54;
+  --dd-steel-light: #787671;
+  --dd-hairline-light: #e5e3df;
   --dd-surface: rgba(255, 254, 250, 0.86);
   --dd-surface-strong: #fffefa;
   --dd-border: rgba(36, 35, 31, 0.12);
   --dd-shadow: 0 18px 42px rgba(36, 35, 31, 0.08);
   --dd-navy: #0a1530;
   --dd-navy-mid: #1a2a52;
+  --dd-purple-300: #d6b6f6;
   --dd-peach: #ffe8d4;
   --dd-mint: #d9f3e1;
   --dd-sky: #dcecfa;
@@ -202,13 +209,46 @@ body {
   color: #fffefa;
 }
 
+.VPHome .vp-doc .dd-start-card,
+.VPHome .vp-doc .dd-start-card:hover,
+.VPHome .vp-doc .dd-start-card:focus-visible {
+  color: var(--dd-charcoal-light);
+}
+
+.VPHome .vp-doc .dd-start-card strong {
+  color: var(--dd-ink-light);
+}
+
+.VPHome .vp-doc .dd-start-card span {
+  color: var(--dd-slate-light);
+}
+
+.VPHome .vp-doc .dd-config-panel,
+.VPHome .vp-doc .dd-config-panel strong,
+.VPHome .vp-doc .dd-config-panel dd {
+  color: var(--dd-charcoal-light);
+}
+
+.VPHome .vp-doc .dd-config-panel dt,
+.VPHome .vp-doc .dd-config-panel span {
+  color: var(--dd-slate-light);
+}
+
+.VPHome .vp-doc .dd-config-head strong {
+  color: var(--dd-ink-light);
+}
+
+.VPHome .vp-doc .dd-config-panel code {
+  color: var(--vp-c-brand-1);
+}
+
 .dd-config-panel {
   position: relative;
   padding: 24px;
   border: 1px solid rgba(255, 254, 250, 0.26);
   border-radius: 12px;
   background: #fffefa;
-  color: var(--vp-c-text-1);
+  color: var(--dd-charcoal-light);
   box-shadow: 0 24px 48px -18px rgba(0, 0, 0, 0.34);
 }
 
@@ -223,7 +263,7 @@ body {
 .dd-config-head img {
   width: 48px;
   height: 48px;
-  border: 1px solid var(--dd-border);
+  border: 1px solid var(--dd-hairline-light);
   border-radius: 8px;
   background: #fff;
   object-fit: contain;
@@ -235,14 +275,14 @@ body {
 }
 
 .dd-config-head strong {
-  color: var(--vp-c-text-1);
+  color: var(--dd-ink-light);
   font-size: 18px;
   line-height: 1.35;
 }
 
 .dd-config-head span {
   margin-top: 3px;
-  color: var(--vp-c-text-2);
+  color: var(--dd-slate-light);
   font-size: 13px;
 }
 
@@ -255,7 +295,7 @@ body {
   grid-template-columns: 92px minmax(0, 1fr);
   gap: 16px;
   padding: 13px 0;
-  border-top: 1px solid var(--vp-c-divider);
+  border-top: 1px solid var(--dd-hairline-light);
 }
 
 .dd-config-list dt,
@@ -265,18 +305,20 @@ body {
 }
 
 .dd-config-list dt {
-  color: var(--vp-c-text-2);
+  color: var(--dd-slate-light);
   font-size: 13px;
   font-weight: 700;
 }
 
 .dd-config-list dd {
-  color: var(--vp-c-text-1);
+  color: var(--dd-charcoal-light);
   font-size: 14px;
   line-height: 1.6;
 }
 
 .dd-config-list code {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--dd-lavender) 44%, var(--dd-canvas-light));
   white-space: normal;
   word-break: break-word;
 }
@@ -292,9 +334,9 @@ body {
   display: block;
   min-height: 132px;
   padding: 20px;
-  border: 1px solid var(--dd-border);
+  border: 1px solid color-mix(in srgb, var(--dd-charcoal-light) 14%, transparent);
   border-radius: 12px;
-  color: var(--vp-c-text-1);
+  color: var(--dd-charcoal-light);
   text-decoration: none;
   transition:
     transform 0.18s ease,
@@ -321,27 +363,27 @@ body {
 
 .dd-start-card strong {
   margin-bottom: 10px;
-  color: var(--vp-c-text-1);
+  color: var(--dd-ink-light);
   font-size: 18px;
   line-height: 1.35;
 }
 
 .dd-start-card span {
-  color: var(--vp-c-text-2);
+  color: var(--dd-slate-light);
   font-size: 14px;
   line-height: 1.65;
 }
 
 .dd-start-card--yellow {
-  background: color-mix(in srgb, var(--dd-yellow) 58%, var(--vp-c-bg));
+  background: color-mix(in srgb, var(--dd-yellow) 58%, var(--dd-canvas-light));
 }
 
 .dd-start-card--lavender {
-  background: color-mix(in srgb, var(--dd-lavender) 72%, var(--vp-c-bg));
+  background: color-mix(in srgb, var(--dd-lavender) 72%, var(--dd-canvas-light));
 }
 
 .dd-start-card--mint {
-  background: color-mix(in srgb, var(--dd-mint) 68%, var(--vp-c-bg));
+  background: color-mix(in srgb, var(--dd-mint) 68%, var(--dd-canvas-light));
 }
 
 .VPHomeHero {
@@ -467,6 +509,23 @@ body {
 
 .VPDoc a {
   text-underline-offset: 3px;
+}
+
+.dark .VPDoc a:not(.dd-action):not(.dd-start-card):not(.dd-tool-card):not(.ml-route-card),
+.dark .VPHome .vp-doc a:not(.dd-action):not(.dd-start-card):not(.dd-tool-card):not(.ml-route-card) {
+  color: var(--dd-purple-300);
+}
+
+.dark .VPDoc :not(pre) > code,
+.dark .VPHome .vp-doc :not(pre) > code {
+  color: var(--dd-purple-300);
+  background: color-mix(in srgb, var(--dd-purple-300) 14%, var(--vp-c-bg-soft));
+}
+
+.VPHome .vp-doc .dd-config-panel code,
+.dark .VPHome .vp-doc .dd-config-panel code {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--dd-lavender) 44%, var(--dd-canvas-light));
 }
 
 .VPDoc table {
