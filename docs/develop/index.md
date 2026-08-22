@@ -1,229 +1,87 @@
-# 快速开始
+# 开发指南
 
-本指南帮助你在 3 分钟内接入 DouDi.ai Gateway，开始调用全球顶级模型。
+这里整理 DouDi.ai 的开发接入路径。第一次接入先完成一条最小请求；已经能请求成功后，再按协议、能力和稳定性需求继续阅读。
 
-## 前置要求
+<div class="ml-route-grid">
+  <a class="ml-route-card" href="/quick-start">
+    <span>快速开始</span>
+    <p>准备 API Key、Base URL 和模型名，用 cURL、Python 或 TypeScript 完成第一次请求。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/authentication">
+    <span>认证与 Key</span>
+    <p>理解不同协议的鉴权 Header、Key 管理方式和常见认证失败原因。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/models">
+    <span>模型目录</span>
+    <p>确认模型 ID、能力边界、协议入口和供应商命名方式。</p>
+  </a>
+  <a class="ml-route-card" href="/api/">
+    <span>API 参考</span>
+    <p>按 OpenAI、Anthropic、Grok / xAI 和 DouDi OpenAPI 查看端点细节。</p>
+  </a>
+</div>
 
-1.  前往 [DouDi.ai 控制台](https://doudi.ai/console/overview) 
-2.  进入 [API Keys 页面](https://doudi.ai/console/api-keys) 
-3.  点击创建 API Key
-4.  准备开发环境（Python 3.8+ / Node.js 18+）
+## 接入基础
 
-DouDi.ai 提供 OpenAI、Anthropic、Grok / xAI 三种协议入口。Grok 使用独立路由，文本请求可直接使用 OpenAI SDK。
+| 页面 | 适合场景 |
+| --- | --- |
+| [快速开始](/quick-start) | 还没有发出第一条请求，需要最短路径跑通 DouDi。 |
+| [认证与 Key](/develop/authentication) | 需要确认 `Authorization`、`x-api-key`、Key 失效和权限问题。 |
+| [模型目录](/develop/models) | 需要确认模型命名、协议入口和模型能力差异。 |
 
-## 选择接入方式
+## 进阶指南
 
-### OpenAI SDK（推荐）
+<div class="ml-route-grid">
+  <a class="ml-route-card" href="/develop/guides/streaming">
+    <span>流式响应</span>
+    <p>让客户端逐段接收输出，适合聊天、代码生成和长回答。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/guides/function-calling">
+    <span>Function Calling</span>
+    <p>让模型调用工具函数，适合结构化任务、查询和自动化流程。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/guides/structured-output">
+    <span>结构化输出</span>
+    <p>约束模型返回 JSON 或固定字段，降低解析失败概率。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/guides/vision">
+    <span>视觉输入</span>
+    <p>处理图片、多模态提示和视觉模型请求。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/guides/error-handling">
+    <span>错误处理</span>
+    <p>按状态码、错误体和上游异常定位请求失败。</p>
+  </a>
+</div>
 
-**OpenAI 兼容协议** — 最通用的接入方式。
+## 高级功能
 
-### cURL
+| 页面 | 解决的问题 |
+| --- | --- |
+| [频率限制](/develop/guides/rate-limits) | 理解 RPM、团队级聚合限制和 `429` 重试策略。 |
+| [供应商路由](/develop/advanced/provider-routing) | 按延迟、成本、供应商或模型能力选择路由策略。 |
+| [故障回退](/develop/advanced/fallback) | 当首选供应商不可用时自动切换备选模型或线路。 |
+| [Prompt Caching](/develop/advanced/prompt-caching) | 通过可缓存上下文降低重复请求成本。 |
 
-Terminal
+## 可观测性
 
-```
-curl https://doudi.ai/v1/chat/completions \
-  -H "Authorization: Bearer YOUR_DOUDI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "gpt-4o-mini",
-    "messages": [
-      { "role": "user", "content": "用一句话介绍 DouDi.ai Gateway" }
-    ]
-  }'
-```
+<div class="ml-route-grid">
+  <a class="ml-route-card" href="/develop/observability/dashboard">
+    <span>仪表盘</span>
+    <p>查看请求趋势、错误分布和整体使用情况。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/observability/usage-tracking">
+    <span>用量追踪</span>
+    <p>按 Key、模型、时间范围和业务系统追踪消耗。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/observability/pricing">
+    <span>价格观察</span>
+    <p>对照模型价格、供应商价格和实际扣费变化。</p>
+  </a>
+</div>
 
-### Python
+## 推荐阅读顺序
 
-quickstart.py
-
-```
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://doudi.ai/v1",
-    api_key="YOUR_DOUDI_API_KEY",
-)
-
-response = client.chat.completions.create(
-    model="gpt-4o-mini",
-    messages=[
-        {"role": "user", "content": "用一句话介绍 DouDi.ai Gateway"}
-    ],
-)
-
-print(response.choices[0].message.content)
-```
-
-### TypeScript
-
-quickstart.ts
-
-```
-import OpenAI from "openai";
-
-const client = new OpenAI({
-  baseURL: "https://doudi.ai/v1",
-  apiKey: "YOUR_DOUDI_API_KEY",
-});
-
-async function main() {
-  const response = await client.chat.completions.create({
-    model: "gpt-4o-mini",
-    messages: [
-      { role: "user", content: "用一句话介绍 DouDi.ai Gateway" },
-    ],
-  });
-
-  console.log(response.choices[0]?.message?.content);
-}
-
-main();
-```
-
-### Anthropic SDK
-
-**Anthropic 原生协议** — 直接使用 Anthropic SDK，完整支持 Claude 全部功能。
-
-### cURL
-
-Terminal
-
-```
-curl https://doudi.ai/anthropic/v1/messages \
-  -H "x-api-key: YOUR_DOUDI_API_KEY" \
-  -H "anthropic-version: 2023-06-01" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "anthropic/claude-sonnet-4.6",
-    "max_tokens": 512,
-    "messages": [
-      { "role": "user", "content": "用一句话介绍 DouDi.ai Gateway" }
-    ]
-  }'
-```
-
-### Python
-
-quickstart\_anthropic.py
-
-```
-import anthropic
-
-client = anthropic.Anthropic(
-    base_url="https://doudi.ai/anthropic",
-    api_key="YOUR_DOUDI_API_KEY",
-)
-
-message = client.messages.create(
-    model="anthropic/claude-sonnet-4.6",
-    max_tokens=512,
-    messages=[
-        {"role": "user", "content": "用一句话介绍 DouDi.ai Gateway"}
-    ],
-)
-
-print(message.content[0].text)
-```
-
-### TypeScript
-
-quickstart\_anthropic.ts
-
-```
-import Anthropic from "@anthropic-ai/sdk";
-
-const client = new Anthropic({
-  baseURL: "https://doudi.ai/anthropic",
-  apiKey: "YOUR_DOUDI_API_KEY",
-});
-
-async function main() {
-  const message = await client.messages.create({
-    model: "anthropic/claude-sonnet-4.6",
-    max_tokens: 512,
-    messages: [
-      { role: "user", content: "用一句话介绍 DouDi.ai Gateway" },
-    ],
-  });
-
-  console.log(message.content[0]?.type === "text" ? message.content[0].text : "");
-}
-
-main();
-```
-
-### Grok / xAI
-
-**Grok / xAI 协议** — 使用 Grok / xAI 路由，文本 JSON/SSE 兼容 xAI OpenAI-compatible 格式。
-
-### cURL
-
-Terminal
-
-```
-curl https://doudi.ai/grok/v1/chat/completions \
-  -H "Authorization: Bearer YOUR_DOUDI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok/grok-4.5",
-    "messages": [
-      { "role": "user", "content": "用一句话介绍 DouDi.ai Gateway" }
-    ]
-  }'
-```
-
-### Python
-
-quickstart\_grok.py
-
-```
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://doudi.ai/grok/v1",
-    api_key="YOUR_DOUDI_API_KEY",
-)
-
-response = client.chat.completions.create(
-    model="grok/grok-4.5",
-    messages=[
-        {"role": "user", "content": "用一句话介绍 DouDi.ai Gateway"}
-    ],
-)
-
-print(response.choices[0].message.content)
-```
-
-### TypeScript
-
-quickstart\_grok.ts
-
-```
-import OpenAI from "openai";
-
-const client = new OpenAI({
-  baseURL: "https://doudi.ai/grok/v1",
-  apiKey: "YOUR_DOUDI_API_KEY",
-});
-
-async function main() {
-  const response = await client.chat.completions.create({
-    model: "grok/grok-4.5",
-    messages: [
-      { role: "user", content: "用一句话介绍 DouDi.ai Gateway" },
-    ],
-  });
-
-  console.log(response.choices[0]?.message?.content);
-}
-
-main();
-```
-
-## 下一步
-
-[🔑 认证指南](/develop/authentication)[📊 模型目录](/develop/models)[🔧 API 参考](/api/)[🛠️ 工具集成](/integrations/claude-code)
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。
+1. 新接入先看 [快速开始](/quick-start)、[认证与 Key](/develop/authentication) 和 [API 概览](/api/)。
+2. 做用户界面或聊天客户端时，优先补 [流式响应](/develop/guides/streaming) 和 [错误处理](/develop/guides/error-handling)。
+3. 做生产服务时，继续补 [频率限制](/develop/guides/rate-limits)、[故障回退](/develop/advanced/fallback) 和 [用量追踪](/develop/observability/usage-tracking)。

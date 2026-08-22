@@ -4,6 +4,27 @@ DouDi.ai 提供三种协议的 API 接入方式，覆盖 OpenAI 兼容、Anthrop
 
 **协议推荐：** OpenAI 协议推荐使用 [Responses API](/api/openai/responses)，原生 Prompt Caching 支持更优；调用 Claude 模型推荐使用 [Anthropic 原生协议](/api/anthropic/messages)；调用 Grok 模型推荐使用 [Grok / xAI 协议](/api/grok/chat-completions)，其文本 JSON/SSE 形状兼容 xAI 的 OpenAI-compatible 格式。
 
+## API 文档结构
+
+<div class="ml-route-grid">
+  <a class="ml-route-card" href="/api/openai/responses">
+    <span>OpenAI 兼容协议</span>
+    <p>适合 OpenAI SDK、Responses API、Chat Completions、模型列表和图像生成。</p>
+  </a>
+  <a class="ml-route-card" href="/api/anthropic/messages">
+    <span>Anthropic 原生协议</span>
+    <p>适合 Claude Messages、Anthropic SDK、原生 Claude 参数和模型列表。</p>
+  </a>
+  <a class="ml-route-card" href="/api/grok/chat-completions">
+    <span>Grok / xAI 协议</span>
+    <p>适合 Grok Chat Completions、Responses 和 Grok 模型查询。</p>
+  </a>
+  <a class="ml-route-card" href="/api/openapi/balance">
+    <span>DouDi OpenAPI</span>
+    <p>适合余额查询、实时价格查询和平台级工具集成。</p>
+  </a>
+</div>
+
 ## Base URL
 
 | 协议 | Base URL | 说明 |

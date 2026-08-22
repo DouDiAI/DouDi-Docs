@@ -59,6 +59,27 @@ import { withBase } from "vitepress";
   </a>
 </section>
 
+## 文档地图
+
+<div class="ml-route-grid">
+  <a class="ml-route-card" href="/quick-start">
+    <span>入门</span>
+    <p>快速开始、API Key、模型与分组、计费与额度。</p>
+  </a>
+  <a class="ml-route-card" href="/develop/">
+    <span>开发指南</span>
+    <p>认证、模型目录、流式响应、结构化输出、路由、回退和可观测性。</p>
+  </a>
+  <a class="ml-route-card" href="/api/">
+    <span>API 参考</span>
+    <p>OpenAI、Anthropic、Grok / xAI 和 DouDi OpenAPI 端点。</p>
+  </a>
+  <a class="ml-route-card" href="/integrations/">
+    <span>工具集成</span>
+    <p>代码 Agent、编辑器、桌面客户端、SDK 与自部署教程。</p>
+  </a>
+</div>
+
 ## DouDi.ai 是什么
 
 DouDi.ai 是一个 AI API 聚合网关。你可以把多个模型服务理解成一个统一入口，在控制台里管理账户、余额、API Key、模型、分组和请求日志。

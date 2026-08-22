@@ -3,6 +3,196 @@ import { defineConfig } from "vitepress";
 const base = process.env.VITEPRESS_BASE || "/";
 const asset = (fileName) => `${base}${fileName}`.replace(/\/{2,}/g, "/");
 
+const gettingStartedSidebar = {
+  text: "入门",
+  items: [
+    { text: "文档首页", link: "/" },
+    { text: "快速开始", link: "/quick-start" },
+    { text: "创建 API Key", link: "/api-key" },
+    { text: "模型与分组", link: "/models-groups" },
+    { text: "计费与额度", link: "/billing-quota" },
+  ],
+};
+
+const developSidebar = {
+  text: "开发文档",
+  collapsed: false,
+  items: [
+    { text: "开发指南总览", link: "/develop/" },
+    {
+      text: "接入基础",
+      collapsed: false,
+      items: [
+        { text: "快速开始", link: "/quick-start" },
+        { text: "认证与 Key", link: "/develop/authentication" },
+        { text: "模型目录", link: "/develop/models" },
+      ],
+    },
+    {
+      text: "进阶指南",
+      collapsed: false,
+      items: [
+        { text: "流式响应", link: "/develop/guides/streaming" },
+        { text: "Function Calling", link: "/develop/guides/function-calling" },
+        { text: "结构化输出", link: "/develop/guides/structured-output" },
+        { text: "视觉输入", link: "/develop/guides/vision" },
+        { text: "错误处理", link: "/develop/guides/error-handling" },
+      ],
+    },
+    {
+      text: "高级功能",
+      collapsed: false,
+      items: [
+        { text: "频率限制", link: "/develop/guides/rate-limits" },
+        { text: "供应商路由", link: "/develop/advanced/provider-routing" },
+        { text: "故障回退", link: "/develop/advanced/fallback" },
+        { text: "Prompt Caching", link: "/develop/advanced/prompt-caching" },
+      ],
+    },
+    {
+      text: "可观测性",
+      collapsed: false,
+      items: [
+        { text: "仪表盘", link: "/develop/observability/dashboard" },
+        { text: "用量追踪", link: "/develop/observability/usage-tracking" },
+        { text: "价格观察", link: "/develop/observability/pricing" },
+      ],
+    },
+  ],
+};
+
+const apiSidebar = {
+  text: "API 参考",
+  collapsed: false,
+  items: [
+    { text: "API 概览", link: "/api/" },
+    {
+      text: "OpenAI 兼容协议",
+      collapsed: false,
+      items: [
+        { text: "Chat Completions", link: "/api/openai/chat-completions" },
+        { text: "Responses", link: "/api/openai/responses" },
+        { text: "Models", link: "/api/openai/models" },
+        { text: "Images", link: "/api/openai/images" },
+      ],
+    },
+    {
+      text: "Anthropic 原生协议",
+      collapsed: false,
+      items: [
+        { text: "Messages", link: "/api/anthropic/messages" },
+        { text: "Models", link: "/api/anthropic/models" },
+      ],
+    },
+    {
+      text: "Grok / xAI 协议",
+      collapsed: false,
+      items: [
+        { text: "Chat Completions", link: "/api/grok/chat-completions" },
+        { text: "Responses", link: "/api/grok/responses" },
+        { text: "Models", link: "/api/grok/models" },
+      ],
+    },
+    {
+      text: "DouDi OpenAPI",
+      collapsed: false,
+      items: [
+        { text: "余额查询", link: "/api/openapi/balance" },
+        { text: "实时价格查询", link: "/api/openapi/provider-pricing" },
+      ],
+    },
+    { text: "旧版 API 参考", link: "/api-reference" },
+  ],
+};
+
+const integrationsSidebar = {
+  text: "工具集成",
+  collapsed: false,
+  items: [
+    { text: "工具集成总览", link: "/integrations/" },
+    {
+      text: "代码与 Agent 工具",
+      collapsed: false,
+      items: [
+        { text: "Claude Code 总览", link: "/integrations/claude-code" },
+        { text: "安装 Claude Code", link: "/integrations/claude-code/installation" },
+        { text: "配置 Claude Code 模型", link: "/integrations/claude-code/model-provider" },
+        { text: "Claude Code 状态栏", link: "/integrations/claude-code/contextline" },
+        { text: "Claude Code Skills", link: "/integrations/claude-code/skills" },
+        { text: "Codex CLI 总览", link: "/integrations/codex" },
+        { text: "安装 Codex CLI", link: "/integrations/codex/installation" },
+        { text: "配置 Codex 模型", link: "/integrations/codex/model-provider" },
+        { text: "Codex WebSocket", link: "/integrations/codex/websocket" },
+        { text: "OpenCode", link: "/integrations/opencode" },
+        { text: "CC Switch", link: "/integrations/cc-switch" },
+        { text: "Claude Coworks", link: "/integrations/claude-coworks" },
+        { text: "OpenClaw", link: "/integrations/openclaw" },
+      ],
+    },
+    {
+      text: "编辑器与 IDE",
+      collapsed: false,
+      items: [
+        { text: "Cursor", link: "/integrations/cursor" },
+        { text: "Cline", link: "/integrations/cline" },
+        { text: "Zed", link: "/integrations/zed" },
+        { text: "GitHub Copilot", link: "/integrations/copilot" },
+      ],
+    },
+    {
+      text: "桌面客户端",
+      collapsed: false,
+      items: [
+        { text: "Cherry Studio", link: "/integrations/cherry-studio" },
+        { text: "Chatbox", link: "/integrations/chatbox" },
+        { text: "BotGem", link: "/integrations/botgem" },
+        { text: "LobeHub / LobeChat", link: "/integrations/lobehub" },
+        { text: "OpenCat", link: "/integrations/opencat" },
+        { text: "NextChat", link: "/integrations/nextchat" },
+        { text: "WorkBuddy", link: "/integrations/workbuddy" },
+        { text: "沉浸式翻译", link: "/integrations/immersive-translate" },
+      ],
+    },
+    {
+      text: "SDK 与自部署",
+      collapsed: false,
+      items: [
+        { text: "OpenAI SDK", link: "/integrations/openai-sdk" },
+        { text: "LangChain", link: "/integrations/langchain" },
+        { text: "LlamaIndex", link: "/integrations/llamaindex" },
+        { text: "Open WebUI", link: "/tools/open-webui" },
+        { text: "其他客户端", link: "/integrations/others" },
+      ],
+    },
+  ],
+};
+
+const legacyToolsSidebar = {
+  text: "旧版工具教程",
+  collapsed: true,
+  items: [
+    { text: "旧版工具总览", link: "/tools" },
+    { text: "怎么选择工具", link: "/tools/choose-tool" },
+    { text: "OpenAI Compatible", link: "/tools/openai-compatible" },
+    { text: "工具问题排查", link: "/tools/troubleshooting" },
+    { text: "CodeBuddy", link: "/tools/codebuddy" },
+    { text: "Trae", link: "/tools/trae" },
+    { text: "Open WebUI", link: "/tools/open-webui" },
+  ],
+};
+
+const accountSidebar = {
+  text: "账户与排查",
+  items: [
+    { text: "账户概览", link: "/account/" },
+    { text: "充值余额", link: "/account/recharge" },
+    { text: "订阅与套餐", link: "/account/subscription-plans" },
+    { text: "订单与发票", link: "/account/orders-invoices" },
+    { text: "常见问题", link: "/troubleshooting" },
+    { text: "账户问题排查", link: "/account/troubleshooting" },
+  ],
+};
+
 export default defineConfig({
   title: "DouDi 文档",
   description: "DouDi.ai API 接入、Key、计费、模型分组和常见工具配置教程",
@@ -18,128 +208,29 @@ export default defineConfig({
     logo: "/logo.png",
     siteTitle: "DouDi 文档",
     nav: [
+      { text: "首页", link: "/" },
       { text: "快速开始", link: "/quick-start" },
       { text: "开发指南", link: "/develop/" },
-      { text: "API", link: "/api/" },
-      { text: "API Key", link: "/api-key" },
-      { text: "计费与额度", link: "/billing-quota" },
+      { text: "API 参考", link: "/api/" },
       { text: "工具集成", link: "/integrations/" },
-      { text: "账户", link: "/account/" },
-    ],
-    sidebar: [
-      {
-        text: "入门",
-        items: [
-          { text: "文档首页", link: "/" },
-          { text: "快速开始", link: "/quick-start" },
-          { text: "创建 API Key", link: "/api-key" },
-          { text: "模型与分组", link: "/models-groups" },
-          { text: "计费与额度", link: "/billing-quota" },
-          { text: "API 参考", link: "/api-reference" },
-        ],
-      },
-      {
-        text: "开发指南",
-        items: [
-          { text: "开发指南总览", link: "/develop/" },
-          { text: "认证与 Key", link: "/develop/authentication" },
-          { text: "模型目录", link: "/develop/models" },
-          { text: "流式响应", link: "/develop/guides/streaming" },
-          { text: "Function Calling", link: "/develop/guides/function-calling" },
-          { text: "结构化输出", link: "/develop/guides/structured-output" },
-          { text: "视觉输入", link: "/develop/guides/vision" },
-          { text: "错误处理", link: "/develop/guides/error-handling" },
-          { text: "频率限制", link: "/develop/guides/rate-limits" },
-          { text: "供应商路由", link: "/develop/advanced/provider-routing" },
-          { text: "故障回退", link: "/develop/advanced/fallback" },
-          { text: "Prompt Caching", link: "/develop/advanced/prompt-caching" },
-          { text: "仪表盘", link: "/develop/observability/dashboard" },
-          { text: "用量追踪", link: "/develop/observability/usage-tracking" },
-          { text: "价格观察", link: "/develop/observability/pricing" },
-        ],
-      },
-      {
-        text: "API",
-        items: [
-          { text: "API 概览", link: "/api/" },
-          { text: "OpenAI Chat Completions", link: "/api/openai/chat-completions" },
-          { text: "OpenAI Responses", link: "/api/openai/responses" },
-          { text: "OpenAI Models", link: "/api/openai/models" },
-          { text: "OpenAI Images", link: "/api/openai/images" },
-          { text: "Anthropic Messages", link: "/api/anthropic/messages" },
-          { text: "Anthropic Models", link: "/api/anthropic/models" },
-          { text: "Grok Chat Completions", link: "/api/grok/chat-completions" },
-          { text: "Grok Responses", link: "/api/grok/responses" },
-          { text: "Grok Models", link: "/api/grok/models" },
-          { text: "余额查询", link: "/api/openapi/balance" },
-          { text: "实时价格查询", link: "/api/openapi/provider-pricing" },
-        ],
-      },
-      {
-        text: "工具集成",
-        collapsed: false,
-        items: [
-          { text: "工具集成总览", link: "/integrations/" },
-          { text: "Claude Code", link: "/integrations/claude-code" },
-          { text: "Claude Code 安装", link: "/integrations/claude-code/installation" },
-          { text: "Claude Code 模型提供商", link: "/integrations/claude-code/model-provider" },
-          { text: "Claude Code Skills", link: "/integrations/claude-code/skills" },
-          { text: "Contextline", link: "/integrations/claude-code/contextline" },
-          { text: "Codex CLI", link: "/integrations/codex" },
-          { text: "Codex 安装", link: "/integrations/codex/installation" },
-          { text: "Codex 模型提供商", link: "/integrations/codex/model-provider" },
-          { text: "Codex WebSocket", link: "/integrations/codex/websocket" },
-          { text: "OpenCode", link: "/integrations/opencode" },
-          { text: "CC Switch", link: "/integrations/cc-switch" },
-          { text: "Claude Coworks", link: "/integrations/claude-coworks" },
-          { text: "Cursor", link: "/integrations/cursor" },
-          { text: "Cline", link: "/integrations/cline" },
-          { text: "Zed", link: "/integrations/zed" },
-          { text: "GitHub Copilot", link: "/integrations/copilot" },
-        ],
-      },
-      {
-        text: "桌面与 SDK",
-        collapsed: false,
-        items: [
-          { text: "Cherry Studio", link: "/integrations/cherry-studio" },
-          { text: "Chatbox", link: "/integrations/chatbox" },
-          { text: "BotGem", link: "/integrations/botgem" },
-          { text: "LobeHub / LobeChat", link: "/integrations/lobehub" },
-          { text: "OpenCat", link: "/integrations/opencat" },
-          { text: "NextChat", link: "/integrations/nextchat" },
-          { text: "WorkBuddy", link: "/integrations/workbuddy" },
-          { text: "Open WebUI", link: "/tools/open-webui" },
-          { text: "OpenAI SDK", link: "/integrations/openai-sdk" },
-          { text: "LangChain", link: "/integrations/langchain" },
-          { text: "LlamaIndex", link: "/integrations/llamaindex" },
-          { text: "OpenClaw", link: "/integrations/openclaw" },
-          { text: "沉浸式翻译", link: "/integrations/immersive-translate" },
-          { text: "其他客户端", link: "/integrations/others" },
-        ],
-      },
-      {
-        text: "旧版工具页",
-        collapsed: false,
-        items: [
-          { text: "工具接入总览", link: "/tools" },
-          { text: "怎么选择工具", link: "/tools/choose-tool" },
-          { text: "OpenAI Compatible", link: "/tools/openai-compatible" },
-          { text: "工具问题排查", link: "/tools/troubleshooting" },
-        ],
-      },
       {
         text: "账户与排查",
         items: [
           { text: "账户概览", link: "/account/" },
+          { text: "计费与额度", link: "/billing-quota" },
           { text: "充值余额", link: "/account/recharge" },
-          { text: "订阅与套餐", link: "/account/subscription-plans" },
-          { text: "订单与发票", link: "/account/orders-invoices" },
           { text: "常见问题", link: "/troubleshooting" },
-          { text: "账户问题排查", link: "/account/troubleshooting" },
         ],
       },
     ],
+    sidebar: {
+      "/develop/": [developSidebar],
+      "/api/": [apiSidebar],
+      "/integrations/": [integrationsSidebar],
+      "/account/": [accountSidebar],
+      "/tools/": [legacyToolsSidebar, integrationsSidebar],
+      "/": [gettingStartedSidebar, developSidebar, apiSidebar, integrationsSidebar, accountSidebar, legacyToolsSidebar],
+    },
     outline: {
       label: "本页目录",
       level: [2, 3],
