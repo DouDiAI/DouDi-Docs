@@ -6,11 +6,15 @@
   "packageManager": "pnpm@11.9.0",
   "scripts": {
     "data:sync": "node scripts/sync-public-data.mjs",
+    "docs:import:haoai": "node scripts/import-haoai-docs.mjs",
     "docs:dev": "vitepress dev docs --host 0.0.0.0",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs --host 0.0.0.0"
   },
   "devDependencies": {
+    "cheerio": "^1.2.0",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
     "vitepress": "^1.6.4",
     "vue": "^3.5.13"
   }

@@ -1,0 +1,3437 @@
+{
+  "generatedAt": "2026-08-22T19:41:04.428Z",
+  "sourceHubs": [
+    "https://hao.ai/docs/zh/develop",
+    "https://hao.ai/docs/zh/api",
+    "https://hao.ai/docs/zh/integrations"
+  ],
+  "sourceOrigin": "https://hao.ai",
+  "pageCount": 57,
+  "imageCount": 105,
+  "pages": [
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api",
+      "sourcePath": "/docs/zh/api",
+      "route": "/api/",
+      "target": "api/index.md",
+      "kind": "api",
+      "title": "API 概览",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "Base URL"
+        },
+        {
+          "level": "h2",
+          "text": "认证"
+        },
+        {
+          "level": "h2",
+          "text": "可用端点"
+        },
+        {
+          "level": "h3",
+          "text": "OpenAI 兼容协议"
+        },
+        {
+          "level": "h3",
+          "text": "Anthropic 原生协议"
+        },
+        {
+          "level": "h3",
+          "text": "Grok / xAI 协议"
+        },
+        {
+          "level": "h3",
+          "text": "HaoAI OpenAPI（平台）"
+        },
+        {
+          "level": "h2",
+          "text": "速率限制"
+        },
+        {
+          "level": "h2",
+          "text": "错误码"
+        },
+        {
+          "level": "h3",
+          "text": "错误响应格式"
+        },
+        {
+          "level": "h2",
+          "text": "HaoAI 扩展参数"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 3
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/anthropic/messages",
+      "sourcePath": "/docs/zh/api/anthropic/messages",
+      "route": "/api/anthropic/messages",
+      "target": "api/anthropic/messages.md",
+      "kind": "api",
+      "title": "Messages API (推荐)",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "端点"
+        },
+        {
+          "level": "h2",
+          "text": "认证"
+        },
+        {
+          "level": "h2",
+          "text": "请求参数"
+        },
+        {
+          "level": "h3",
+          "text": "Message 格式"
+        },
+        {
+          "level": "h2",
+          "text": "Claude 思考模式"
+        },
+        {
+          "level": "h3",
+          "text": "手动思考：Sonnet 4.5 / Haiku 4.5"
+        },
+        {
+          "level": "h3",
+          "text": "自适应思考：Sonnet 4.6 / Opus 4.6"
+        },
+        {
+          "level": "h3",
+          "text": "Opus 4.7+：不要使用 budget_tokens"
+        },
+        {
+          "level": "h2",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "响应格式"
+        },
+        {
+          "level": "h2",
+          "text": "流式响应"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "支持的模型"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 11
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/anthropic/models",
+      "sourcePath": "/docs/zh/api/anthropic/models",
+      "route": "/api/anthropic/models",
+      "target": "api/anthropic/models.md",
+      "kind": "api",
+      "title": "Anthropic Models API",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "列出所有模型"
+        },
+        {
+          "level": "h3",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "响应格式"
+        },
+        {
+          "level": "h3",
+          "text": "与 OpenAI 协议的字段差异"
+        },
+        {
+          "level": "h2",
+          "text": "按供应商过滤模型"
+        },
+        {
+          "level": "h3",
+          "text": "路径参数"
+        },
+        {
+          "level": "h3",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "响应格式"
+        },
+        {
+          "level": "h2",
+          "text": "获取模型详情"
+        },
+        {
+          "level": "h3",
+          "text": "路径参数"
+        },
+        {
+          "level": "h3",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "响应格式"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 7
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/grok/chat-completions",
+      "sourcePath": "/docs/zh/api/grok/chat-completions",
+      "route": "/api/grok/chat-completions",
+      "target": "api/grok/chat-completions.md",
+      "kind": "api",
+      "title": "Grok Chat Completions",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "Base URL 与端点"
+        },
+        {
+          "level": "h2",
+          "text": "认证"
+        },
+        {
+          "level": "h2",
+          "text": "当前可用模型"
+        },
+        {
+          "level": "h2",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "流式响应"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 8
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/grok/models",
+      "sourcePath": "/docs/zh/api/grok/models",
+      "route": "/api/grok/models",
+      "target": "api/grok/models.md",
+      "kind": "api",
+      "title": "Grok Models API",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "Base URL 与端点"
+        },
+        {
+          "level": "h2",
+          "text": "列出可用 Grok 模型"
+        },
+        {
+          "level": "h2",
+          "text": "获取单个模型"
+        },
+        {
+          "level": "h2",
+          "text": "当前模型目录"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 5
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/grok/responses",
+      "sourcePath": "/docs/zh/api/grok/responses",
+      "route": "/api/grok/responses",
+      "target": "api/grok/responses.md",
+      "kind": "api",
+      "title": "Grok Responses",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "Base URL 与端点"
+        },
+        {
+          "level": "h2",
+          "text": "认证"
+        },
+        {
+          "level": "h2",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "流式响应"
+        },
+        {
+          "level": "h2",
+          "text": "续写与 WebSocket 客户端"
+        },
+        {
+          "level": "h2",
+          "text": "当前文本模型"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 8
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/openai/chat-completions",
+      "sourcePath": "/docs/zh/api/openai/chat-completions",
+      "route": "/api/openai/chat-completions",
+      "target": "api/openai/chat-completions.md",
+      "kind": "api",
+      "title": "Chat Completions",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "端点"
+        },
+        {
+          "level": "h2",
+          "text": "请求参数"
+        },
+        {
+          "level": "h3",
+          "text": "Message 格式"
+        },
+        {
+          "level": "h2",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "响应格式"
+        },
+        {
+          "level": "h2",
+          "text": "流式响应"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "流式响应格式"
+        },
+        {
+          "level": "h2",
+          "text": "多模态输入（视觉）"
+        },
+        {
+          "level": "h2",
+          "text": "Function Calling"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 10
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/openai/images",
+      "sourcePath": "/docs/zh/api/openai/images",
+      "route": "/api/openai/images",
+      "target": "api/openai/images.md",
+      "kind": "api",
+      "title": "Images API",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "生成图像"
+        },
+        {
+          "level": "h3",
+          "text": "用 gpt-image-2"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "参数"
+        },
+        {
+          "level": "h3",
+          "text": "支持的尺寸（gpt-image-2）"
+        },
+        {
+          "level": "h3",
+          "text": "计费（官方 token 口径 × 1.5 折）"
+        },
+        {
+          "level": "h3",
+          "text": "响应"
+        },
+        {
+          "level": "h2",
+          "text": "编辑图像"
+        },
+        {
+          "level": "h3",
+          "text": "调用"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "参数"
+        },
+        {
+          "level": "h3",
+          "text": "响应"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-gpt-image-2-%E7%94%9F%E6%88%90%E7%9A%84%E7%BA%A2%E8%8B%B9%E6%9E%9C.a50239ca.webp&w=2048&q=75",
+          "local": "/imported/haoai/api-openai-images-01.webp",
+          "downloaded": false,
+          "alt": "gpt-image-2 生成的红苹果"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E5%8E%9F%E5%A7%8B%E7%BA%A2%E8%8B%B9%E6%9E%9C.a50239ca.webp&w=2048&q=75",
+          "local": "/imported/haoai/api-openai-images-02.webp",
+          "downloaded": false,
+          "alt": "原始红苹果"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E7%BC%96%E8%BE%91%E5%90%8E%E7%9A%84%E7%BB%BF%E8%8B%B9%E6%9E%9C.a3bd8d34.webp&w=3840&q=75",
+          "local": "/imported/haoai/api-openai-images-03.webp",
+          "downloaded": false,
+          "alt": "编辑后的绿苹果"
+        }
+      ],
+      "codeBlocks": 10
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/openai/models",
+      "sourcePath": "/docs/zh/api/openai/models",
+      "route": "/api/openai/models",
+      "target": "api/openai/models.md",
+      "kind": "api",
+      "title": "Models API",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "列出所有模型"
+        },
+        {
+          "level": "h3",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "响应格式"
+        },
+        {
+          "level": "h3",
+          "text": "响应字段说明"
+        },
+        {
+          "level": "h2",
+          "text": "按供应商过滤模型"
+        },
+        {
+          "level": "h3",
+          "text": "路径参数"
+        },
+        {
+          "level": "h3",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "响应格式"
+        },
+        {
+          "level": "h2",
+          "text": "获取模型详情"
+        },
+        {
+          "level": "h3",
+          "text": "路径参数"
+        },
+        {
+          "level": "h3",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "响应格式"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 9
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/openai/responses",
+      "sourcePath": "/docs/zh/api/openai/responses",
+      "route": "/api/openai/responses",
+      "target": "api/openai/responses.md",
+      "kind": "api",
+      "title": "Responses API (推荐)",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "端点"
+        },
+        {
+          "level": "h2",
+          "text": "请求参数"
+        },
+        {
+          "level": "h3",
+          "text": "Input 格式"
+        },
+        {
+          "level": "h2",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "响应格式"
+        },
+        {
+          "level": "h3",
+          "text": "响应字段说明"
+        },
+        {
+          "level": "h2",
+          "text": "结构化消息输入"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "流式响应"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "流式事件类型"
+        },
+        {
+          "level": "h2",
+          "text": "Function Calling"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "工具调用响应格式"
+        },
+        {
+          "level": "h3",
+          "text": "提交工具结果"
+        },
+        {
+          "level": "h3",
+          "text": "Tool Choice 选项"
+        },
+        {
+          "level": "h2",
+          "text": "与 Chat Completions 的对比"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 16
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/openapi/balance",
+      "sourcePath": "/docs/zh/api/openapi/balance",
+      "route": "/api/openapi/balance",
+      "target": "api/openapi/balance.md",
+      "kind": "api",
+      "title": "余额查询",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "端点"
+        },
+        {
+          "level": "h2",
+          "text": "认证"
+        },
+        {
+          "level": "h2",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "响应格式"
+        },
+        {
+          "level": "h3",
+          "text": "响应字段"
+        },
+        {
+          "level": "h2",
+          "text": "错误响应"
+        },
+        {
+          "level": "h2",
+          "text": "第三方工具兼容性"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 7
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/api/openapi/provider-pricing",
+      "sourcePath": "/docs/zh/api/openapi/provider-pricing",
+      "route": "/api/openapi/provider-pricing",
+      "target": "api/openapi/provider-pricing.md",
+      "kind": "api",
+      "title": "实时价格查询",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "端点"
+        },
+        {
+          "level": "h2",
+          "text": "认证"
+        },
+        {
+          "level": "h3",
+          "text": "签名算法"
+        },
+        {
+          "level": "h2",
+          "text": "请求示例"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "响应格式"
+        },
+        {
+          "level": "h3",
+          "text": "顶层字段"
+        },
+        {
+          "level": "h3",
+          "text": "data 字段"
+        },
+        {
+          "level": "h3",
+          "text": "models[] 字段"
+        },
+        {
+          "level": "h2",
+          "text": "错误响应"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 6
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop",
+      "sourcePath": "/docs/zh/develop",
+      "route": "/develop/",
+      "target": "develop/index.md",
+      "kind": "develop",
+      "title": "快速开始",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前置要求"
+        },
+        {
+          "level": "h2",
+          "text": "选择接入方式"
+        },
+        {
+          "level": "h3",
+          "text": "OpenAI SDK（推荐）"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "Anthropic SDK"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "Grok / xAI"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "下一步"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 9
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/advanced/fallback",
+      "sourcePath": "/docs/zh/develop/advanced/fallback",
+      "route": "/develop/advanced/fallback",
+      "target": "develop/advanced/fallback.md",
+      "kind": "develop",
+      "title": "故障回退",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "工作原理"
+        },
+        {
+          "level": "h2",
+          "text": "单请求回退"
+        },
+        {
+          "level": "h2",
+          "text": "回退触发条件"
+        },
+        {
+          "level": "h2",
+          "text": "配合路由使用"
+        },
+        {
+          "level": "h2",
+          "text": "推荐回退方案"
+        },
+        {
+          "level": "h2",
+          "text": "最佳实践"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 3
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/advanced/prompt-caching",
+      "sourcePath": "/docs/zh/develop/advanced/prompt-caching",
+      "route": "/develop/advanced/prompt-caching",
+      "target": "develop/advanced/prompt-caching.md",
+      "kind": "develop",
+      "title": "提示缓存",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "工作原理"
+        },
+        {
+          "level": "h2",
+          "text": "缓存支持"
+        },
+        {
+          "level": "h2",
+          "text": "使用方式"
+        },
+        {
+          "level": "h3",
+          "text": "OpenAI 协议"
+        },
+        {
+          "level": "h3",
+          "text": "Anthropic 协议"
+        },
+        {
+          "level": "h2",
+          "text": "成本节省"
+        },
+        {
+          "level": "h2",
+          "text": "最佳实践"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 3
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/advanced/provider-routing",
+      "sourcePath": "/docs/zh/develop/advanced/provider-routing",
+      "route": "/develop/advanced/provider-routing",
+      "target": "develop/advanced/provider-routing.md",
+      "kind": "develop",
+      "title": "供应商路由",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "路由策略"
+        },
+        {
+          "level": "h2",
+          "text": "使用方式"
+        },
+        {
+          "level": "h2",
+          "text": "策略详解"
+        },
+        {
+          "level": "h3",
+          "text": "priority — 优先级路由（默认）"
+        },
+        {
+          "level": "h3",
+          "text": "cost — 成本优先"
+        },
+        {
+          "level": "h3",
+          "text": "latency — 延迟优先"
+        },
+        {
+          "level": "h3",
+          "text": "balanced — 负载均衡"
+        },
+        {
+          "level": "h2",
+          "text": "最佳实践"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 2
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/authentication",
+      "sourcePath": "/docs/zh/develop/authentication",
+      "route": "/develop/authentication",
+      "target": "develop/authentication.md",
+      "kind": "develop",
+      "title": "认证指南",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "获取 API Key"
+        },
+        {
+          "level": "h2",
+          "text": "认证方式"
+        },
+        {
+          "level": "h3",
+          "text": "OpenAI 兼容"
+        },
+        {
+          "level": "h3",
+          "text": "Anthropic 原生"
+        },
+        {
+          "level": "h3",
+          "text": "Grok / xAI 协议"
+        },
+        {
+          "level": "h2",
+          "text": "环境变量配置"
+        },
+        {
+          "level": "h2",
+          "text": "安全最佳实践"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 7
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/guides/error-handling",
+      "sourcePath": "/docs/zh/develop/guides/error-handling",
+      "route": "/develop/guides/error-handling",
+      "target": "develop/guides/error-handling.md",
+      "kind": "develop",
+      "title": "错误处理",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "错误响应格式"
+        },
+        {
+          "level": "h2",
+          "text": "HTTP 状态码"
+        },
+        {
+          "level": "h2",
+          "text": "常见错误和解决方案"
+        },
+        {
+          "level": "h3",
+          "text": "401 — API Key 无效"
+        },
+        {
+          "level": "h3",
+          "text": "429 — 速率限制"
+        },
+        {
+          "level": "h3",
+          "text": "502 — 上游错误"
+        },
+        {
+          "level": "h2",
+          "text": "重试策略"
+        },
+        {
+          "level": "h2",
+          "text": "超时设置"
+        },
+        {
+          "level": "h2",
+          "text": "最佳实践"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 7
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/guides/function-calling",
+      "sourcePath": "/docs/zh/develop/guides/function-calling",
+      "route": "/develop/guides/function-calling",
+      "target": "develop/guides/function-calling.md",
+      "kind": "develop",
+      "title": "函数调用（Function Calling）",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "基本概念"
+        },
+        {
+          "level": "h2",
+          "text": "OpenAI 协议"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "Anthropic 协议"
+        },
+        {
+          "level": "h2",
+          "text": "并行函数调用"
+        },
+        {
+          "level": "h2",
+          "text": "tool_choice 参数"
+        },
+        {
+          "level": "h2",
+          "text": "支持的模型"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 4
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/guides/rate-limits",
+      "sourcePath": "/docs/zh/develop/guides/rate-limits",
+      "route": "/develop/guides/rate-limits",
+      "target": "develop/guides/rate-limits.md",
+      "kind": "develop",
+      "title": "速率限制",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "默认限制"
+        },
+        {
+          "level": "h2",
+          "text": "Rate Limit Header"
+        },
+        {
+          "level": "h2",
+          "text": "429 错误处理"
+        },
+        {
+          "level": "h2",
+          "text": "优化策略"
+        },
+        {
+          "level": "h3",
+          "text": "1. 使用 Prompt Caching"
+        },
+        {
+          "level": "h3",
+          "text": "2. 批量处理"
+        },
+        {
+          "level": "h3",
+          "text": "3. 选择合适的模型"
+        },
+        {
+          "level": "h3",
+          "text": "4. 控制 max_tokens"
+        },
+        {
+          "level": "h3",
+          "text": "5. 使用模型回退"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 6
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/guides/streaming",
+      "sourcePath": "/docs/zh/develop/guides/streaming",
+      "route": "/develop/guides/streaming",
+      "target": "develop/guides/streaming.md",
+      "kind": "develop",
+      "title": "流式响应",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "工作原理"
+        },
+        {
+          "level": "h2",
+          "text": "OpenAI 协议流式"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "Anthropic 协议流式"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "流式 + Function Calling"
+        },
+        {
+          "level": "h2",
+          "text": "错误处理和重连"
+        },
+        {
+          "level": "h2",
+          "text": "最佳实践"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 7
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/guides/structured-output",
+      "sourcePath": "/docs/zh/develop/guides/structured-output",
+      "route": "/develop/guides/structured-output",
+      "target": "develop/guides/structured-output.md",
+      "kind": "develop",
+      "title": "结构化输出",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "JSON Mode"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "JSON Schema 约束"
+        },
+        {
+          "level": "h2",
+          "text": "实际应用场景"
+        },
+        {
+          "level": "h3",
+          "text": "数据提取"
+        },
+        {
+          "level": "h3",
+          "text": "分类标注"
+        },
+        {
+          "level": "h2",
+          "text": "支持的模型"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 6
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/guides/vision",
+      "sourcePath": "/docs/zh/develop/guides/vision",
+      "route": "/develop/guides/vision",
+      "target": "develop/guides/vision.md",
+      "kind": "develop",
+      "title": "视觉理解",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "支持的模型"
+        },
+        {
+          "level": "h2",
+          "text": "图像分析"
+        },
+        {
+          "level": "h3",
+          "text": "通过 URL 发送图像"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h3",
+          "text": "通过 Base64 发送图像"
+        },
+        {
+          "level": "h2",
+          "text": "图像细节级别"
+        },
+        {
+          "level": "h2",
+          "text": "多图对比"
+        },
+        {
+          "level": "h2",
+          "text": "Anthropic 协议的视觉输入"
+        },
+        {
+          "level": "h2",
+          "text": "常见用例"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 7
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/models",
+      "sourcePath": "/docs/zh/develop/models",
+      "route": "/develop/models",
+      "target": "develop/models.md",
+      "kind": "develop",
+      "title": "模型目录",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "模型命名规范"
+        },
+        {
+          "level": "h2",
+          "text": "Models API 标准"
+        },
+        {
+          "level": "h3",
+          "text": "API 响应结构"
+        },
+        {
+          "level": "h2",
+          "text": "获取模型列表"
+        },
+        {
+          "level": "h3",
+          "text": "cURL"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 8
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/observability/dashboard",
+      "sourcePath": "/docs/zh/develop/observability/dashboard",
+      "route": "/develop/observability/dashboard",
+      "target": "develop/observability/dashboard.md",
+      "kind": "develop",
+      "title": "控制台总览",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "主要功能"
+        },
+        {
+          "level": "h3",
+          "text": "API Key 管理"
+        },
+        {
+          "level": "h3",
+          "text": "请求日志"
+        },
+        {
+          "level": "h3",
+          "text": "全局策略配置"
+        },
+        {
+          "level": "h2",
+          "text": "快速入门"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/observability/pricing",
+      "sourcePath": "/docs/zh/develop/observability/pricing",
+      "route": "/develop/observability/pricing",
+      "target": "develop/observability/pricing.md",
+      "kind": "develop",
+      "title": "计费说明",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "计费方式"
+        },
+        {
+          "level": "h3",
+          "text": "文本模型（按 Token 计费）"
+        },
+        {
+          "level": "h3",
+          "text": "其他模型"
+        },
+        {
+          "level": "h2",
+          "text": "使用流程"
+        },
+        {
+          "level": "h2",
+          "text": "费用查看"
+        },
+        {
+          "level": "h3",
+          "text": "控制台"
+        },
+        {
+          "level": "h3",
+          "text": "API 响应"
+        },
+        {
+          "level": "h2",
+          "text": "费用优化建议"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 1
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/develop/observability/usage-tracking",
+      "sourcePath": "/docs/zh/develop/observability/usage-tracking",
+      "route": "/develop/observability/usage-tracking",
+      "target": "develop/observability/usage-tracking.md",
+      "kind": "develop",
+      "title": "用量追踪",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "实时用量统计"
+        },
+        {
+          "level": "h3",
+          "text": "总览面板"
+        },
+        {
+          "level": "h3",
+          "text": "时间趋势"
+        },
+        {
+          "level": "h2",
+          "text": "多维度分析"
+        },
+        {
+          "level": "h3",
+          "text": "按模型分析"
+        },
+        {
+          "level": "h3",
+          "text": "按供应商分析"
+        },
+        {
+          "level": "h3",
+          "text": "按 API Key 分析"
+        },
+        {
+          "level": "h2",
+          "text": "异常告警"
+        },
+        {
+          "level": "h3",
+          "text": "告警规则"
+        },
+        {
+          "level": "h3",
+          "text": "通知渠道"
+        },
+        {
+          "level": "h2",
+          "text": "最佳实践"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations",
+      "sourcePath": "/docs/zh/integrations",
+      "route": "/integrations/",
+      "target": "integrations/index.md",
+      "kind": "integrations",
+      "title": "工具集成",
+      "headings": [],
+      "images": [],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/botgem",
+      "sourcePath": "/docs/zh/integrations/botgem",
+      "route": "/integrations/botgem",
+      "target": "integrations/botgem.md",
+      "kind": "integrations",
+      "title": "BotGem 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：进入 Service Provider"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：点击 + 选择协议"
+        },
+        {
+          "level": "h3",
+          "text": "第 4 步：填写配置信息"
+        },
+        {
+          "level": "h3",
+          "text": "第 5 步：检查连接并保存"
+        },
+        {
+          "level": "h2",
+          "text": "开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E6%89%93%E5%BC%80-botgem-%E8%AE%BE%E7%BD%AE.c9656f02.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-botgem-01.webp",
+          "downloaded": false,
+          "alt": "打开 BotGem 设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E8%BF%9B%E5%85%A5-service-provider.51a914a0.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-botgem-02.webp",
+          "downloaded": false,
+          "alt": "进入 Service Provider"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E9%80%89%E6%8B%A9-openai.9eb170a7.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-botgem-03.webp",
+          "downloaded": false,
+          "alt": "选择 OpenAI"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E5%A1%AB%E5%86%99%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.2665012b.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-botgem-04.webp",
+          "downloaded": false,
+          "alt": "填写配置信息"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F.9bdb9cc2.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-botgem-05.webp",
+          "downloaded": false,
+          "alt": "连接成功"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F06-%E5%BC%80%E5%A7%8B%E5%AF%B9%E8%AF%9D.33916d00.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-botgem-06.webp",
+          "downloaded": false,
+          "alt": "开始对话"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/cc-switch",
+      "sourcePath": "/docs/zh/integrations/cc-switch",
+      "route": "/integrations/cc-switch",
+      "target": "integrations/cc-switch.md",
+      "kind": "integrations",
+      "title": "CC-Switch 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：添加 HaoAI 提供商"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：启用用量查询"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：验证配置"
+        },
+        {
+          "level": "h2",
+          "text": "支持的模型"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-cc-switch-%E7%94%A8%E9%87%8F%E6%9F%A5%E8%AF%A2%E9%85%8D%E7%BD%AE.973a0d5e.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cc-switch-01.webp",
+          "downloaded": false,
+          "alt": "CC-Switch 用量查询配置"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/chatbox",
+      "sourcePath": "/docs/zh/integrations/chatbox",
+      "route": "/integrations/chatbox",
+      "target": "integrations/chatbox.md",
+      "kind": "integrations",
+      "title": "Chatbox 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：进入模型提供方，点击 + 添加"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：选择 API 模式"
+        },
+        {
+          "level": "h3",
+          "text": "第 4 步：填写配置信息"
+        },
+        {
+          "level": "h3",
+          "text": "第 5 步：选择模型"
+        },
+        {
+          "level": "h3",
+          "text": "第 6 步：测试连接"
+        },
+        {
+          "level": "h2",
+          "text": "手机端配置（iOS/Android）"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开设置并填写信息"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：配置模型参数"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：测试连接"
+        },
+        {
+          "level": "h2",
+          "text": "开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E6%89%93%E5%BC%80-chatbox-%E8%AE%BE%E7%BD%AE.24ceb77e.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-chatbox-01.webp",
+          "downloaded": false,
+          "alt": "打开 Chatbox 设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E6%A8%A1%E5%9E%8B%E6%8F%90%E4%BE%9B%E6%96%B9%E5%88%97%E8%A1%A8.54bc73f3.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-chatbox-02.webp",
+          "downloaded": false,
+          "alt": "模型提供方列表"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E9%80%89%E6%8B%A9-api-%E6%A8%A1%E5%BC%8F.121d55f7.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-chatbox-03.webp",
+          "downloaded": false,
+          "alt": "选择 API 模式"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E5%A1%AB%E5%86%99%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.7592ce48.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-chatbox-04.webp",
+          "downloaded": false,
+          "alt": "填写配置信息"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-%E9%80%89%E6%8B%A9%E6%A8%A1%E5%9E%8B.b84b7f1c.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-chatbox-05.webp",
+          "downloaded": false,
+          "alt": "选择模型"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F06-%E9%80%89%E6%8B%A9%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9E%8B.93ab8003.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-chatbox-06.webp",
+          "downloaded": false,
+          "alt": "选择测试模型"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F07-%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F.245e60aa.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-chatbox-07.webp",
+          "downloaded": false,
+          "alt": "连接成功"
+        },
+        {
+          "src": "https://hao.ai/docs/images/integrations/chatbox/08-%E6%89%8B%E6%9C%BA%E7%AB%AF%E8%AE%BE%E7%BD%AE.webp",
+          "local": "/imported/haoai/integrations-chatbox-08.webp",
+          "downloaded": false,
+          "alt": "手机端设置"
+        },
+        {
+          "src": "https://hao.ai/docs/images/integrations/chatbox/09-%E6%A8%A1%E5%9E%8B%E9%85%8D%E7%BD%AE.webp",
+          "local": "/imported/haoai/integrations-chatbox-09.webp",
+          "downloaded": false,
+          "alt": "模型配置"
+        },
+        {
+          "src": "https://hao.ai/docs/images/integrations/chatbox/10-%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.webp",
+          "local": "/imported/haoai/integrations-chatbox-10.webp",
+          "downloaded": false,
+          "alt": "测试成功"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F11-%E5%BC%80%E5%A7%8B%E5%AF%B9%E8%AF%9D.9bcf5b53.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-chatbox-11.webp",
+          "downloaded": false,
+          "alt": "开始对话"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/cherry-studio",
+      "sourcePath": "/docs/zh/integrations/cherry-studio",
+      "route": "/integrations/cherry-studio",
+      "target": "integrations/cherry-studio.md",
+      "kind": "integrations",
+      "title": "Cherry Studio 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "三种协议说明"
+        },
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：添加模型提供商"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：填写 API 配置"
+        },
+        {
+          "level": "h3",
+          "text": "第 4 步：添加模型"
+        },
+        {
+          "level": "h3",
+          "text": "第 5 步：验证配置"
+        },
+        {
+          "level": "h2",
+          "text": "开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E6%89%93%E5%BC%80-cherry-studio-%E8%AE%BE%E7%BD%AE.16a6a62b.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-01.webp",
+          "downloaded": false,
+          "alt": "打开 Cherry Studio 设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E6%B7%BB%E5%8A%A0-openai-chat-%E6%8F%90%E4%BE%9B%E5%95%86.252c213b.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-02.webp",
+          "downloaded": false,
+          "alt": "添加 OpenAI Chat 提供商"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E6%B7%BB%E5%8A%A0-openai-response-%E6%8F%90%E4%BE%9B%E5%95%86.d8d26104.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-03.webp",
+          "downloaded": false,
+          "alt": "添加 OpenAI Response 提供商"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E6%B7%BB%E5%8A%A0-claude-%E6%8F%90%E4%BE%9B%E5%95%86.ffe67620.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-04.webp",
+          "downloaded": false,
+          "alt": "添加 Claude 提供商"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F06-openai-chat-%E9%85%8D%E7%BD%AE.7db0eb66.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-05.webp",
+          "downloaded": false,
+          "alt": "OpenAI Chat 配置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F07-openai-response-%E9%85%8D%E7%BD%AE.a6ad3d09.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-06.webp",
+          "downloaded": false,
+          "alt": "OpenAI Response 配置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F08-claude-%E9%85%8D%E7%BD%AE.7e2257c8.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-07.webp",
+          "downloaded": false,
+          "alt": "Claude 配置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F10-openai-chat-%E6%A8%A1%E5%9E%8B%E5%88%97%E8%A1%A8.224aa3ce.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-08.webp",
+          "downloaded": false,
+          "alt": "OpenAI Chat 模型列表"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F11-openai-response-%E6%A8%A1%E5%9E%8B%E5%88%97%E8%A1%A8.129c9c6e.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-09.webp",
+          "downloaded": false,
+          "alt": "OpenAI Response 模型列表"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F12-claude-%E6%A8%A1%E5%9E%8B%E5%88%97%E8%A1%A8.a913517d.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-10.webp",
+          "downloaded": false,
+          "alt": "Claude 模型列表"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F14-openai-chat-%E9%AA%8C%E8%AF%81.adf952bc.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-11.webp",
+          "downloaded": false,
+          "alt": "OpenAI Chat 验证"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F15-openai-response-%E9%AA%8C%E8%AF%81.b65992d0.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-12.webp",
+          "downloaded": false,
+          "alt": "OpenAI Response 验证"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F16-claude-%E9%AA%8C%E8%AF%81.741bbefd.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-13.webp",
+          "downloaded": false,
+          "alt": "Claude 验证"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F18-%E9%80%89%E6%8B%A9%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%A7%8B%E5%AF%B9%E8%AF%9D.2039cc10.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cherry-studio-14.webp",
+          "downloaded": false,
+          "alt": "选择模型开始对话"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/claude-code",
+      "sourcePath": "/docs/zh/integrations/claude-code",
+      "route": "/integrations/claude-code",
+      "target": "integrations/claude-code.md",
+      "kind": "integrations",
+      "title": "Claude Code 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "为什么使用 HaoAI？"
+        },
+        {
+          "level": "h2",
+          "text": "快速开始"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-claude-code-in-terminal.d6a8640e.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-01.webp",
+          "downloaded": false,
+          "alt": "Claude Code in Terminal"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/claude-code/contextline",
+      "sourcePath": "/docs/zh/integrations/claude-code/contextline",
+      "route": "/integrations/claude-code/contextline",
+      "target": "integrations/claude-code/contextline.md",
+      "kind": "integrations",
+      "title": "CCometixLine 状态栏插件",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "安装"
+        },
+        {
+          "level": "h3",
+          "text": "通过 Claude Code 安装（推荐）"
+        },
+        {
+          "level": "h3",
+          "text": "手动安装"
+        },
+        {
+          "level": "h2",
+          "text": "自定义"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-ccometixline-%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88.8c1bddcc.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-contextline-01.webp",
+          "downloaded": false,
+          "alt": "CCometixLine 效果预览"
+        }
+      ],
+      "codeBlocks": 4
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/claude-code/installation",
+      "sourcePath": "/docs/zh/integrations/claude-code/installation",
+      "route": "/integrations/claude-code/installation",
+      "target": "integrations/claude-code/installation.md",
+      "kind": "integrations",
+      "title": "安装 Claude Code",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前置要求"
+        },
+        {
+          "level": "h2",
+          "text": "终端 CLI"
+        },
+        {
+          "level": "h3",
+          "text": "原生安装（推荐）"
+        },
+        {
+          "level": "h3",
+          "text": "Homebrew"
+        },
+        {
+          "level": "h3",
+          "text": "WinGet"
+        },
+        {
+          "level": "h2",
+          "text": "VS Code / Cursor"
+        },
+        {
+          "level": "h2",
+          "text": "JetBrains IDE"
+        },
+        {
+          "level": "h2",
+          "text": "验证安装"
+        },
+        {
+          "level": "h2",
+          "text": "更新与卸载"
+        },
+        {
+          "level": "h2",
+          "text": "下一步"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 7
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/claude-code/model-provider",
+      "sourcePath": "/docs/zh/integrations/claude-code/model-provider",
+      "route": "/integrations/claude-code/model-provider",
+      "target": "integrations/claude-code/model-provider.md",
+      "kind": "integrations",
+      "title": "Claude Code 模型供应商配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "1. 安装 CC Switch"
+        },
+        {
+          "level": "h3",
+          "text": "macOS"
+        },
+        {
+          "level": "h3",
+          "text": "Windows"
+        },
+        {
+          "level": "h3",
+          "text": "Linux"
+        },
+        {
+          "level": "h2",
+          "text": "2. 添加 HaoAI 供应商"
+        },
+        {
+          "level": "h3",
+          "text": "步骤一：新增供应商"
+        },
+        {
+          "level": "h3",
+          "text": "步骤二：填写配置"
+        },
+        {
+          "level": "h3",
+          "text": "步骤三：启用供应商"
+        },
+        {
+          "level": "h2",
+          "text": "3. 验证配置"
+        },
+        {
+          "level": "h2",
+          "text": "4. 使用其他模型"
+        },
+        {
+          "level": "h3",
+          "text": "步骤一：筛选兼容模型"
+        },
+        {
+          "level": "h3",
+          "text": "步骤二：复制模型名称"
+        },
+        {
+          "level": "h3",
+          "text": "步骤三：配置模型映射"
+        },
+        {
+          "level": "h2",
+          "text": "故障排除"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-cc-switch-%E6%B7%BB%E5%8A%A0%E4%BE%9B%E5%BA%94%E5%95%86.e3078d68.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-model-provider-01.webp",
+          "downloaded": false,
+          "alt": "CC Switch 添加供应商"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-cc-switch-%E4%BE%9B%E5%BA%94%E5%95%86%E9%85%8D%E7%BD%AE.578b5f34.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-model-provider-02.webp",
+          "downloaded": false,
+          "alt": "CC Switch 供应商配置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-cc-switch-%E5%90%AF%E7%94%A8%E4%BE%9B%E5%BA%94%E5%95%86.fe950c74.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-model-provider-03.webp",
+          "downloaded": false,
+          "alt": "CC Switch 启用供应商"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-claude-code-%E5%90%AF%E5%8A%A8%E7%95%8C%E9%9D%A2.e3942b4b.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-model-provider-04.webp",
+          "downloaded": false,
+          "alt": "Claude Code 启动界面"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-%E6%A8%A1%E5%9E%8B%E5%B9%BF%E5%9C%BA%E7%AD%9B%E9%80%89-anthropic-%E5%8D%8F%E8%AE%AE.1941d95b.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-model-provider-05.webp",
+          "downloaded": false,
+          "alt": "模型广场筛选 Anthropic 协议"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F06-%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%E6%A8%A1%E5%9E%8B%E5%90%8D%E7%A7%B0.0059c10e.webp&w=1920&q=75",
+          "local": "/imported/haoai/integrations-claude-code-model-provider-06.webp",
+          "downloaded": false,
+          "alt": "一键复制模型名称"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F07-claude-code-status-%E8%BE%93%E5%87%BA.64a53b0a.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-model-provider-07.webp",
+          "downloaded": false,
+          "alt": "Claude Code /status 输出"
+        }
+      ],
+      "codeBlocks": 4
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/claude-code/skills",
+      "sourcePath": "/docs/zh/integrations/claude-code/skills",
+      "route": "/integrations/claude-code/skills",
+      "target": "integrations/claude-code/skills.md",
+      "kind": "integrations",
+      "title": "配置 Skills",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "安装 Skills"
+        },
+        {
+          "level": "h3",
+          "text": "通过 /plugin 安装（推荐）"
+        },
+        {
+          "level": "h3",
+          "text": "通过命令行安装"
+        },
+        {
+          "level": "h2",
+          "text": "Skills 商店"
+        },
+        {
+          "level": "h3",
+          "text": "Skills.sh"
+        },
+        {
+          "level": "h3",
+          "text": "ClawHub"
+        },
+        {
+          "level": "h2",
+          "text": "项目级 Skills：CLAUDE.md"
+        },
+        {
+          "level": "h2",
+          "text": "了解更多"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-claude-code-plugin-%E7%95%8C%E9%9D%A2.f18ed812.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-skills-01.webp",
+          "downloaded": false,
+          "alt": "Claude Code /plugin 界面"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-skills-sh.f2f7536f.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-skills-02.webp",
+          "downloaded": false,
+          "alt": "Skills.sh"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-clawhub.59df4782.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-code-skills-03.webp",
+          "downloaded": false,
+          "alt": "ClawHub"
+        }
+      ],
+      "codeBlocks": 4
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/claude-coworks",
+      "sourcePath": "/docs/zh/integrations/claude-coworks",
+      "route": "/integrations/claude-coworks",
+      "target": "integrations/claude-coworks.md",
+      "kind": "integrations",
+      "title": "Claude Coworks 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：开启开发者模式"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：打开第三方推理配置"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：选择 Gateway"
+        },
+        {
+          "level": "h3",
+          "text": "第 4 步：填写凭据并应用"
+        },
+        {
+          "level": "h3",
+          "text": "第 5 步：浏览可用模型"
+        },
+        {
+          "level": "h3",
+          "text": "第 6 步：选择你的模型"
+        },
+        {
+          "level": "h3",
+          "text": "第 7 步：验证并开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-enable-developer-mode.626065c8.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-coworks-01.webp",
+          "downloaded": false,
+          "alt": "开启开发者模式"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-open-third-party-inference.08bea31f.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-coworks-02.webp",
+          "downloaded": false,
+          "alt": "打开配置面板"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-select-gateway.d8159315.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-coworks-03.webp",
+          "downloaded": false,
+          "alt": "选择 Gateway"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-gateway-credentials.e03a70f9.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-coworks-04.webp",
+          "downloaded": false,
+          "alt": "填写凭据并应用"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-browse-models.129c5ea6.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-coworks-05.webp",
+          "downloaded": false,
+          "alt": "浏览可用模型"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F06-select-model.baf83522.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-coworks-06.webp",
+          "downloaded": false,
+          "alt": "选择你的模型"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F07-verify-setup.a23c4211.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-claude-coworks-07.webp",
+          "downloaded": false,
+          "alt": "验证完成"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/cline",
+      "sourcePath": "/docs/zh/integrations/cline",
+      "route": "/integrations/cline",
+      "target": "integrations/cline.md",
+      "kind": "integrations",
+      "title": "Cline 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：安装 Cline"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：打开设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：填写配置并保存"
+        },
+        {
+          "level": "h2",
+          "text": "推荐模型"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E5%AE%89%E8%A3%85-cline.486ae1b6.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cline-01.webp",
+          "downloaded": false,
+          "alt": "安装 Cline"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E6%89%93%E5%BC%80-cline-%E8%AE%BE%E7%BD%AE.412e421a.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cline-02.webp",
+          "downloaded": false,
+          "alt": "打开 Cline 设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E5%A1%AB%E5%86%99%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.f1fe6abe.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-cline-03.webp",
+          "downloaded": false,
+          "alt": "填写配置信息"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/codex",
+      "sourcePath": "/docs/zh/integrations/codex",
+      "route": "/integrations/codex",
+      "target": "integrations/codex.md",
+      "kind": "integrations",
+      "title": "Codex 本地客户端配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "为什么使用 HaoAI？"
+        },
+        {
+          "level": "h2",
+          "text": "快速开始"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/codex/installation",
+      "sourcePath": "/docs/zh/integrations/codex/installation",
+      "route": "/integrations/codex/installation",
+      "target": "integrations/codex/installation.md",
+      "kind": "integrations",
+      "title": "安装 Codex CLI",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前置要求"
+        },
+        {
+          "level": "h2",
+          "text": "安装"
+        },
+        {
+          "level": "h2",
+          "text": "验证安装"
+        },
+        {
+          "level": "h2",
+          "text": "下一步"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E5%AE%89%E8%A3%85-codex-cli.ebc8298e.webp&w=1920&q=75",
+          "local": "/imported/haoai/integrations-codex-installation-01.webp",
+          "downloaded": false,
+          "alt": "安装 Codex CLI"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85.0d7cd2ba.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-codex-installation-02.webp",
+          "downloaded": false,
+          "alt": "验证安装"
+        }
+      ],
+      "codeBlocks": 2
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/codex/model-provider",
+      "sourcePath": "/docs/zh/integrations/codex/model-provider",
+      "route": "/integrations/codex/model-provider",
+      "target": "integrations/codex/model-provider.md",
+      "kind": "integrations",
+      "title": "Codex 模型供应商配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "使用 CC Switch 图形化配置"
+        },
+        {
+          "level": "h3",
+          "text": "1. 安装 CC Switch"
+        },
+        {
+          "level": "h3",
+          "text": "macOS"
+        },
+        {
+          "level": "h3",
+          "text": "Windows"
+        },
+        {
+          "level": "h3",
+          "text": "Linux"
+        },
+        {
+          "level": "h3",
+          "text": "2. 添加 HaoAI 供应商"
+        },
+        {
+          "level": "h3",
+          "text": "步骤一：新增供应商"
+        },
+        {
+          "level": "h3",
+          "text": "步骤二：填写配置"
+        },
+        {
+          "level": "h3",
+          "text": "步骤三：启用供应商"
+        },
+        {
+          "level": "h2",
+          "text": "验证配置"
+        },
+        {
+          "level": "h2",
+          "text": "下一步"
+        },
+        {
+          "level": "h2",
+          "text": "指定模型"
+        },
+        {
+          "level": "h2",
+          "text": "故障排除"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-cc-switch-codex-%E6%A0%87%E7%AD%BE%E9%A1%B5.a3976576.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-codex-model-provider-01.webp",
+          "downloaded": false,
+          "alt": "CC Switch Codex 标签页"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-cc-switch-codex-%E4%BE%9B%E5%BA%94%E5%95%86%E9%85%8D%E7%BD%AE.da27a7e8.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-codex-model-provider-02.webp",
+          "downloaded": false,
+          "alt": "CC Switch Codex 供应商配置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-cc-switch-%E5%86%99%E5%85%A5%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE.fed5cb3e.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-codex-model-provider-03.webp",
+          "downloaded": false,
+          "alt": "CC Switch 写入通用配置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-codex-cli-%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C.de3f9117.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-codex-model-provider-04.webp",
+          "downloaded": false,
+          "alt": "Codex CLI 运行效果"
+        }
+      ],
+      "codeBlocks": 4
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/codex/websocket",
+      "sourcePath": "/docs/zh/integrations/codex/websocket",
+      "route": "/integrations/codex/websocket",
+      "target": "integrations/codex/websocket.md",
+      "kind": "integrations",
+      "title": "开启 WebSocket",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "一键启用 WebSocket（推荐）"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 2
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/copilot",
+      "sourcePath": "/docs/zh/integrations/copilot",
+      "route": "/integrations/copilot",
+      "target": "integrations/copilot.md",
+      "kind": "integrations",
+      "title": "GitHub Copilot 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：安装扩展"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：打开配置界面"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：填写全局配置"
+        },
+        {
+          "level": "h3",
+          "text": "第 4 步：添加 Provider"
+        },
+        {
+          "level": "h3",
+          "text": "第 5 步：添加模型"
+        },
+        {
+          "level": "h3",
+          "text": "第 6 步：在聊天面板选择模型"
+        },
+        {
+          "level": "h3",
+          "text": "第 7 步：确认模型并开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "推荐模型"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E5%AE%89%E8%A3%85-oai-compatible-provider-for-copilot-%E6%89%A9%E5%B1%95.4acc8cb3.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-copilot-01.webp",
+          "downloaded": false,
+          "alt": "安装 OAI Compatible Provider for Copilot 扩展"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF%E6%89%93%E5%BC%80%E9%85%8D%E7%BD%AE%E7%95%8C%E9%9D%A2.7642f429.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-copilot-02.webp",
+          "downloaded": false,
+          "alt": "通过命令面板打开配置界面"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E5%A1%AB%E5%86%99-global-base-url-%E5%92%8C-api-key-%E5%B9%B6%E4%BF%9D%E5%AD%98.290e70da.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-copilot-03.webp",
+          "downloaded": false,
+          "alt": "填写 Global Base URL 和 API Key 并保存"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E6%B7%BB%E5%8A%A0-haoai-provider.2bf9459c.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-copilot-04.webp",
+          "downloaded": false,
+          "alt": "添加 HaoAI Provider"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B.f4eb2abb.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-copilot-05.webp",
+          "downloaded": false,
+          "alt": "添加自定义模型"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F06-%E5%9C%A8%E8%81%8A%E5%A4%A9%E9%9D%A2%E6%9D%BF%E5%88%87%E6%8D%A2%E5%88%B0-haoai-%E6%A8%A1%E5%9E%8B.8d40793e.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-copilot-06.webp",
+          "downloaded": false,
+          "alt": "在聊天面板切换到 HaoAI 模型"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F07-%E7%A1%AE%E8%AE%A4%E6%A8%A1%E5%9E%8B%E5%87%BA%E7%8E%B0%E5%9C%A8-oai-compatible-%E5%88%86%E7%BB%84%E4%B8%8B.089961ea.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-copilot-07.webp",
+          "downloaded": false,
+          "alt": "确认模型出现在 OAI Compatible 分组下"
+        }
+      ],
+      "codeBlocks": 1
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/cursor",
+      "sourcePath": "/docs/zh/integrations/cursor",
+      "route": "/integrations/cursor",
+      "target": "integrations/cursor.md",
+      "kind": "integrations",
+      "title": "Cursor 兼容性说明",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "推荐替代方案"
+        },
+        {
+          "level": "h2",
+          "text": "继续使用 Cursor 编辑器"
+        },
+        {
+          "level": "h2",
+          "text": "为什么 Cursor 不能正常使用？"
+        },
+        {
+          "level": "h3",
+          "text": "内联补全被锁定"
+        },
+        {
+          "level": "h3",
+          "text": "Agent 模式不支持第三方"
+        },
+        {
+          "level": "h3",
+          "text": "Auto 模式会覆盖自定义配置"
+        },
+        {
+          "level": "h3",
+          "text": "免费版无法使用自定义模型"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 1
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/immersive-translate",
+      "sourcePath": "/docs/zh/integrations/immersive-translate",
+      "route": "/integrations/immersive-translate",
+      "target": "integrations/immersive-translate.md",
+      "kind": "integrations",
+      "title": "沉浸式翻译配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "支持的协议"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开翻译服务设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：找到自定义服务入口"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：填写配置信息"
+        },
+        {
+          "level": "h3",
+          "text": "第 4 步：设为默认并开始翻译"
+        },
+        {
+          "level": "h2",
+          "text": "翻译效果"
+        },
+        {
+          "level": "h2",
+          "text": "可用模型示例"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E6%89%93%E5%BC%80%E7%BF%BB%E8%AF%91%E6%9C%8D%E5%8A%A1%E8%AE%BE%E7%BD%AE.ccdd1d50.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-immersive-translate-01.webp",
+          "downloaded": false,
+          "alt": "打开翻译服务设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E7%BF%BB%E8%AF%91%E6%9C%8D%E5%8A%A1%E5%88%97%E8%A1%A8.ba8310bf.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-immersive-translate-02.webp",
+          "downloaded": false,
+          "alt": "翻译服务列表"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BF%BB%E8%AF%91%E6%9C%8D%E5%8A%A1.4842cbb4.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-immersive-translate-03.webp",
+          "downloaded": false,
+          "alt": "添加自定义翻译服务"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E5%A1%AB%E5%86%99%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.47e92a22.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-immersive-translate-04.webp",
+          "downloaded": false,
+          "alt": "填写配置信息"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-%E7%BF%BB%E8%AF%91%E6%95%88%E6%9E%9C.81e1c840.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-immersive-translate-05.webp",
+          "downloaded": false,
+          "alt": "翻译效果"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/langchain",
+      "sourcePath": "/docs/zh/integrations/langchain",
+      "route": "/integrations/langchain",
+      "target": "integrations/langchain.md",
+      "kind": "integrations",
+      "title": "LangChain 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：安装依赖"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：配置并运行"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "JavaScript"
+        },
+        {
+          "level": "h2",
+          "text": "可用模型示例"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E5%AE%89%E8%A3%85-langchain-%E4%BE%9D%E8%B5%96.dcf1d149.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-langchain-01.webp",
+          "downloaded": false,
+          "alt": "安装 LangChain"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E8%BF%90%E8%A1%8C-langchain-%E7%A4%BA%E4%BE%8B.04b9f09d.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-langchain-02.webp",
+          "downloaded": false,
+          "alt": "运行效果"
+        }
+      ],
+      "codeBlocks": 4
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/llamaindex",
+      "sourcePath": "/docs/zh/integrations/llamaindex",
+      "route": "/integrations/llamaindex",
+      "target": "integrations/llamaindex.md",
+      "kind": "integrations",
+      "title": "LlamaIndex 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：安装依赖"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：配置并运行"
+        },
+        {
+          "level": "h2",
+          "text": "可用模型示例"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E5%AE%89%E8%A3%85-llamaindex.87f87166.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-llamaindex-01.webp",
+          "downloaded": false,
+          "alt": "安装 LlamaIndex"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C.c23482c1.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-llamaindex-02.webp",
+          "downloaded": false,
+          "alt": "运行效果"
+        }
+      ],
+      "codeBlocks": 3
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/lobehub",
+      "sourcePath": "/docs/zh/integrations/lobehub",
+      "route": "/integrations/lobehub",
+      "target": "integrations/lobehub.md",
+      "kind": "integrations",
+      "title": "LobeHub 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：进入 AI 服务商"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：填写配置信息"
+        },
+        {
+          "level": "h2",
+          "text": "开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E6%89%93%E5%BC%80-lobehub-%E8%AE%BE%E7%BD%AE.1945d72a.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-lobehub-01.webp",
+          "downloaded": false,
+          "alt": "打开 LobeHub 设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E8%BF%9B%E5%85%A5-ai-%E6%9C%8D%E5%8A%A1%E5%95%86.3a5f953d.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-lobehub-02.webp",
+          "downloaded": false,
+          "alt": "进入 AI 服务商"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E5%A1%AB%E5%86%99%E9%85%8D%E7%BD%AE%E5%B9%B6%E6%A3%80%E6%9F%A5%E8%BF%9E%E6%8E%A5.8b3696f2.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-lobehub-03.webp",
+          "downloaded": false,
+          "alt": "填写配置并检查连接"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E5%BC%80%E5%A7%8B%E5%AF%B9%E8%AF%9D.a822bf37.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-lobehub-04.webp",
+          "downloaded": false,
+          "alt": "开始对话"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/nextchat",
+      "sourcePath": "/docs/zh/integrations/nextchat",
+      "route": "/integrations/nextchat",
+      "target": "integrations/nextchat.md",
+      "kind": "integrations",
+      "title": "NextChat 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：配置模型服务商和 API Key"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：选择模型"
+        },
+        {
+          "level": "h2",
+          "text": "开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "可用模型示例"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E6%89%93%E5%BC%80-nextchat-%E8%AE%BE%E7%BD%AE.5c6a90e3.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-nextchat-01.webp",
+          "downloaded": false,
+          "alt": "打开 NextChat 设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9E%8B%E6%9C%8D%E5%8A%A1%E5%95%86%E5%92%8C-api-key.ef917548.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-nextchat-02.webp",
+          "downloaded": false,
+          "alt": "配置模型服务商和 API Key"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90%E5%90%8E%E9%80%89%E6%8B%A9%E6%A8%A1%E5%9E%8B.63b7df61.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-nextchat-03.webp",
+          "downloaded": false,
+          "alt": "配置完成后选择模型"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E9%80%89%E6%8B%A9%E6%A8%A1%E5%9E%8B.493408da.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-nextchat-04.webp",
+          "downloaded": false,
+          "alt": "选择模型"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-%E5%BC%80%E5%A7%8B%E5%AF%B9%E8%AF%9D.1ad1c88b.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-nextchat-05.webp",
+          "downloaded": false,
+          "alt": "开始对话"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/openai-sdk",
+      "sourcePath": "/docs/zh/integrations/openai-sdk",
+      "route": "/integrations/openai-sdk",
+      "target": "integrations/openai-sdk.md",
+      "kind": "integrations",
+      "title": "OpenAI SDK 兼容",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "迁移步骤"
+        },
+        {
+          "level": "h3",
+          "text": "只需修改两行代码"
+        },
+        {
+          "level": "h3",
+          "text": "Python"
+        },
+        {
+          "level": "h3",
+          "text": "TypeScript"
+        },
+        {
+          "level": "h2",
+          "text": "模型命名"
+        },
+        {
+          "level": "h2",
+          "text": "兼容性"
+        },
+        {
+          "level": "h2",
+          "text": "框架集成"
+        },
+        {
+          "level": "h3",
+          "text": "LangChain"
+        },
+        {
+          "level": "h3",
+          "text": "LlamaIndex"
+        },
+        {
+          "level": "h3",
+          "text": "Vercel AI SDK"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 5
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/opencat",
+      "sourcePath": "/docs/zh/integrations/opencat",
+      "route": "/integrations/opencat",
+      "target": "integrations/opencat.md",
+      "kind": "integrations",
+      "title": "OpenCat 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：进入服务商，选择 OpenAI 兼容"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：填写配置信息"
+        },
+        {
+          "level": "h3",
+          "text": "第 4 步：验证并保存"
+        },
+        {
+          "level": "h2",
+          "text": "开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "可用模型示例"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E6%89%93%E5%BC%80-opencat-%E8%AE%BE%E7%BD%AE.49f69a8a.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-opencat-01.webp",
+          "downloaded": false,
+          "alt": "打开 OpenCat 设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E9%80%89%E6%8B%A9-openai-%E5%85%BC%E5%AE%B9.e1f8a746.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-opencat-02.webp",
+          "downloaded": false,
+          "alt": "选择 OpenAI 兼容"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E5%A1%AB%E5%86%99%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.b3910efd.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-opencat-03.webp",
+          "downloaded": false,
+          "alt": "填写配置信息"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E9%AA%8C%E8%AF%81%E6%88%90%E5%8A%9F.a0e11684.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-opencat-04.webp",
+          "downloaded": false,
+          "alt": "验证成功"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-%E5%BC%80%E5%A7%8B%E5%AF%B9%E8%AF%9D.a9dfe688.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-opencat-05.webp",
+          "downloaded": false,
+          "alt": "开始对话"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/openclaw",
+      "sourcePath": "/docs/zh/integrations/openclaw",
+      "route": "/integrations/openclaw",
+      "target": "integrations/openclaw.md",
+      "kind": "integrations",
+      "title": "OpenClaw",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "为什么搭配 HaoAI？"
+        },
+        {
+          "level": "h2",
+          "text": "安装"
+        },
+        {
+          "level": "h2",
+          "text": "快速开始"
+        },
+        {
+          "level": "h3",
+          "text": "1. 获取 API Key"
+        },
+        {
+          "level": "h3",
+          "text": "2. 运行配置向导"
+        },
+        {
+          "level": "h3",
+          "text": "3. 启动验证"
+        },
+        {
+          "level": "h2",
+          "text": "完整配置"
+        },
+        {
+          "level": "h3",
+          "text": "Provider 配置"
+        },
+        {
+          "level": "h3",
+          "text": "Models 配置"
+        },
+        {
+          "level": "h3",
+          "text": "最强配置"
+        },
+        {
+          "level": "h3",
+          "text": "平衡组合"
+        },
+        {
+          "level": "h3",
+          "text": "最具性价比"
+        },
+        {
+          "level": "h3",
+          "text": "Agents 配置"
+        },
+        {
+          "level": "h2",
+          "text": "完整配置示例"
+        },
+        {
+          "level": "h2",
+          "text": "使用场景"
+        },
+        {
+          "level": "h2",
+          "text": "故障排除"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 10
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/opencode",
+      "sourcePath": "/docs/zh/integrations/opencode",
+      "route": "/integrations/opencode",
+      "target": "integrations/opencode.md",
+      "kind": "integrations",
+      "title": "OpenCode 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "1. 安装 OpenCode"
+        },
+        {
+          "level": "h3",
+          "text": "2. 配置环境变量"
+        },
+        {
+          "level": "h3",
+          "text": "3. 配置文件"
+        },
+        {
+          "level": "h3",
+          "text": "4. 验证"
+        },
+        {
+          "level": "h2",
+          "text": "推荐模型"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E5%AE%89%E8%A3%85-opencode.74d29b02.webp&w=2048&q=75",
+          "local": "/imported/haoai/integrations-opencode-01.webp",
+          "downloaded": false,
+          "alt": "安装 OpenCode"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C.32dbc134.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-opencode-02.webp",
+          "downloaded": false,
+          "alt": "运行效果"
+        }
+      ],
+      "codeBlocks": 5
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/others",
+      "sourcePath": "/docs/zh/integrations/others",
+      "route": "/integrations/others",
+      "target": "integrations/others.md",
+      "kind": "integrations",
+      "title": "其他工具集成",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "通用配置原则"
+        },
+        {
+          "level": "h2",
+          "text": "Continue (VS Code / JetBrains)"
+        },
+        {
+          "level": "h2",
+          "text": "Aider"
+        },
+        {
+          "level": "h2",
+          "text": "BoltAI (macOS)"
+        },
+        {
+          "level": "h2",
+          "text": "TypingMind"
+        },
+        {
+          "level": "h2",
+          "text": "ChatBox"
+        },
+        {
+          "level": "h2",
+          "text": "自定义集成"
+        }
+      ],
+      "images": [],
+      "codeBlocks": 3
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/workbuddy",
+      "sourcePath": "/docs/zh/integrations/workbuddy",
+      "route": "/integrations/workbuddy",
+      "target": "integrations/workbuddy.md",
+      "kind": "integrations",
+      "title": "WorkBuddy 配置",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "前提条件"
+        },
+        {
+          "level": "h2",
+          "text": "配置步骤"
+        },
+        {
+          "level": "h3",
+          "text": "第 1 步：打开设置"
+        },
+        {
+          "level": "h3",
+          "text": "第 2 步：进入模型配置"
+        },
+        {
+          "level": "h3",
+          "text": "第 3 步：填写配置信息"
+        },
+        {
+          "level": "h3",
+          "text": "第 4 步：确认模型已保存"
+        },
+        {
+          "level": "h3",
+          "text": "第 5 步：开始对话"
+        },
+        {
+          "level": "h2",
+          "text": "推荐模型"
+        },
+        {
+          "level": "h2",
+          "text": "常见问题"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F01-%E6%89%93%E5%BC%80-workbuddy-%E8%AE%BE%E7%BD%AE.e2403e7f.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-workbuddy-01.webp",
+          "downloaded": false,
+          "alt": "打开 WorkBuddy 设置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F02-%E8%BF%9B%E5%85%A5%E6%A8%A1%E5%9E%8B%E9%85%8D%E7%BD%AE.c17635dc.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-workbuddy-02.webp",
+          "downloaded": false,
+          "alt": "进入模型配置"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F03-%E5%A1%AB%E5%86%99%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.567243d4.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-workbuddy-03.webp",
+          "downloaded": false,
+          "alt": "填写配置信息"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F04-%E5%B7%B2%E4%BF%9D%E5%AD%98%E6%A8%A1%E5%9E%8B%E5%88%97%E8%A1%A8.b56ed78b.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-workbuddy-04.webp",
+          "downloaded": false,
+          "alt": "已保存模型列表"
+        },
+        {
+          "src": "https://hao.ai/docs/_next/image?url=%2Fdocs%2F_next%2Fstatic%2Fmedia%2F05-%E5%BC%80%E5%A7%8B%E5%AF%B9%E8%AF%9D.385d8101.webp&w=3840&q=75",
+          "local": "/imported/haoai/integrations-workbuddy-05.webp",
+          "downloaded": false,
+          "alt": "开始对话"
+        }
+      ],
+      "codeBlocks": 0
+    },
+    {
+      "sourceUrl": "https://hao.ai/docs/zh/integrations/zed",
+      "sourcePath": "/docs/zh/integrations/zed",
+      "route": "/integrations/zed",
+      "target": "integrations/zed.md",
+      "kind": "integrations",
+      "title": "Zed Editor",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "为什么选 Zed？"
+        },
+        {
+          "level": "h2",
+          "text": "快速开始"
+        },
+        {
+          "level": "h3",
+          "text": "1. 获取 API Key"
+        },
+        {
+          "level": "h3",
+          "text": "2. 添加 Provider"
+        },
+        {
+          "level": "h3",
+          "text": "Agent Panel 添加（推荐）"
+        },
+        {
+          "level": "h3",
+          "text": "settings.json 配置"
+        },
+        {
+          "level": "h2",
+          "text": "开始使用"
+        },
+        {
+          "level": "h2",
+          "text": "推荐模型"
+        },
+        {
+          "level": "h2",
+          "text": "添加更多模型"
+        },
+        {
+          "level": "h3",
+          "text": "高手实践"
+        },
+        {
+          "level": "h2",
+          "text": "故障排除"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://hao.ai/docs/images/integrations/zed/01-zed-editor-%E4%B8%AD%E9%85%8D%E7%BD%AE-haoai.webp",
+          "local": "/imported/haoai/integrations-zed-01.webp",
+          "downloaded": false,
+          "alt": "Zed Editor 中配置 HaoAI"
+        },
+        {
+          "src": "https://hao.ai/docs/images/integrations/zed/02-zed-%E6%B7%BB%E5%8A%A0-haoai-provider.webp",
+          "local": "/imported/haoai/integrations-zed-02.webp",
+          "downloaded": false,
+          "alt": "Zed 添加 HaoAI Provider"
+        },
+        {
+          "src": "https://hao.ai/docs/images/integrations/zed/03-zed-agent-panel-%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9.webp",
+          "local": "/imported/haoai/integrations-zed-03.webp",
+          "downloaded": false,
+          "alt": "Zed Agent Panel 模型选择"
+        },
+        {
+          "src": "https://hao.ai/docs/images/integrations/zed/04-zed-agent-%E5%AF%B9%E8%AF%9D%E6%BC%94%E7%A4%BA.webp",
+          "local": "/imported/haoai/integrations-zed-04.webp",
+          "downloaded": false,
+          "alt": "Zed Agent 对话演示"
+        },
+        {
+          "src": "https://hao.ai/docs/images/integrations/zed/05-edit-in-settings-json.webp",
+          "local": "/imported/haoai/integrations-zed-05.webp",
+          "downloaded": false,
+          "alt": "Edit in settings.json"
+        }
+      ],
+      "codeBlocks": 1
+    }
+  ]
+}

@@ -12,7 +12,7 @@ import { withBase } from "vitepress";
     <p>从注册、Key、Base URL、模型分组到工具配置，按真实接入流程整理。第一次接入先完成一条最小请求，再按你的客户端继续配置。</p>
     <div class="dd-portal-actions">
       <a class="dd-action dd-action--primary" :href="withBase('/quick-start')">快速开始</a>
-      <a class="dd-action dd-action--secondary" :href="withBase('/tools/choose-tool')">选择工具</a>
+      <a class="dd-action dd-action--secondary" :href="withBase('/integrations/')">选择工具</a>
     </div>
   </div>
   <aside class="dd-config-panel" aria-label="接入配置速查">
@@ -49,9 +49,9 @@ import { withBase } from "vitepress";
     <strong>第一次测试 DouDi</strong>
     <span>完成注册、Key、Base URL、模型名和第一次 curl 请求。</span>
   </a>
-  <a class="dd-start-card dd-start-card--lavender" :href="withBase('/tools/choose-tool')">
+  <a class="dd-start-card dd-start-card--lavender" :href="withBase('/integrations/')">
     <strong>配置客户端或代码工具</strong>
-    <span>按聊天、写代码、VS Code、自部署和 SDK 场景选择教程。</span>
+    <span>按聊天、写代码、VS Code、自部署和 SDK 场景选择集成教程。</span>
   </a>
   <a class="dd-start-card dd-start-card--mint" :href="withBase('/tools/troubleshooting')">
     <strong>请求失败或消耗异常</strong>
@@ -73,23 +73,23 @@ DouDi.ai 是一个 AI API 聚合网关。你可以把多个模型服务理解成
 ## 常用工具直达
 
 <div class="dd-tool-grid dd-tool-grid--compact">
-  <a class="dd-tool-card" href="tools/claude-code">
+  <a class="dd-tool-card" href="integrations/claude-code">
     <span class="dd-tool-icon"><img :src="withBase('/tool-icons/claude.ico')" alt=""></span>
     <span class="dd-tool-copy"><strong>Claude Code</strong><em>命令行代码协作</em></span>
   </a>
-  <a class="dd-tool-card" href="tools/codex-cli">
+  <a class="dd-tool-card" href="integrations/codex">
     <span class="dd-tool-icon"><img :src="withBase('/tool-icons/codex.svg')" alt=""></span>
     <span class="dd-tool-copy"><strong>Codex CLI</strong><em>Responses API 与 provider</em></span>
   </a>
-  <a class="dd-tool-card" href="tools/cherry-studio">
+  <a class="dd-tool-card" href="integrations/cherry-studio">
     <span class="dd-tool-icon"><img :src="withBase('/tool-icons/cherry.png')" alt=""></span>
     <span class="dd-tool-copy"><strong>Cherry Studio</strong><em>桌面多 Provider 管理</em></span>
   </a>
-  <a class="dd-tool-card" href="tools/chatbox">
+  <a class="dd-tool-card" href="integrations/chatbox">
     <span class="dd-tool-icon"><img :src="withBase('/tool-icons/chatbox.ico')" alt=""></span>
     <span class="dd-tool-copy"><strong>Chatbox</strong><em>聊天、翻译、总结</em></span>
   </a>
-  <a class="dd-tool-card" href="tools/cline">
+  <a class="dd-tool-card" href="integrations/cline">
     <span class="dd-tool-icon"><img :src="withBase('/tool-icons/cline.png')" alt=""></span>
     <span class="dd-tool-copy"><strong>Cline</strong><em>VS Code Agent</em></span>
   </a>
@@ -103,11 +103,11 @@ DouDi.ai 是一个 AI API 聚合网关。你可以把多个模型服务理解成
 
 | 你现在要做什么 | 推荐阅读 |
 | --- | --- |
-| 第一次测试 DouDi | [快速开始](/quick-start) → [OpenAI Compatible](/tools/openai-compatible) |
-| 配置桌面聊天软件 | [怎么选择工具](/tools/choose-tool) → [Chatbox](/tools/chatbox) 或 [Cherry Studio](/tools/cherry-studio) |
-| 配置代码工具 | [Claude Code](/tools/claude-code)、[Codex CLI](/tools/codex-cli)、[OpenCode](/tools/opencode) |
-| 在 VS Code 或编辑器里使用 | [Cline](/tools/cline)、[Cursor](/tools/cursor)、[Zed Editor](/tools/zed-editor) |
-| 自部署或写代码接入 | [Open WebUI](/tools/open-webui)、[LangChain / SDK](/tools/langchain-sdk)、[LlamaIndex / SDK](/tools/llamaindex) |
+| 第一次测试 DouDi | [快速开始](/quick-start) → [API 概览](/api/) |
+| 配置桌面聊天软件 | [工具集成总览](/integrations/) → [Chatbox](/integrations/chatbox) 或 [Cherry Studio](/integrations/cherry-studio) |
+| 配置代码工具 | [Claude Code](/integrations/claude-code)、[Codex CLI](/integrations/codex)、[OpenCode](/integrations/opencode) |
+| 在 VS Code 或编辑器里使用 | [Cline](/integrations/cline)、[Cursor](/integrations/cursor)、[Zed](/integrations/zed) |
+| 自部署或写代码接入 | [Open WebUI](/tools/open-webui)、[LangChain](/integrations/langchain)、[LlamaIndex](/integrations/llamaindex) |
 | 账户、余额和扣费不清楚 | [计费与额度](/billing-quota) → [账户概览](/account/) |
 
 ## 文档覆盖范围
@@ -119,7 +119,7 @@ DouDi.ai 是一个 AI API 聚合网关。你可以把多个模型服务理解成
   </div>
   <div class="ml-card">
     <strong>工具教程</strong>
-    <span>覆盖 Claude Code、Codex CLI、OpenCode、Cherry Studio、Chatbox、Cline、Trae、CodeBuddy 等常见工具。</span>
+    <span>覆盖 Claude Code、Codex CLI、OpenCode、Cherry Studio、Chatbox、Cline、Cursor、SDK 等常见工具。</span>
   </div>
   <div class="ml-card">
     <strong>账户排查</strong>
@@ -129,4 +129,4 @@ DouDi.ai 是一个 AI API 聚合网关。你可以把多个模型服务理解成
 
 ## 推荐阅读顺序
 
-从 [快速开始](/quick-start) 完成一次最小请求，然后阅读 [创建 API Key](/api-key)、[模型与分组](/models-groups) 和 [计费与额度](/billing-quota)。如果你已经知道要配置哪个客户端，可以直接进入 [怎么选择工具](/tools/choose-tool)。
+从 [快速开始](/quick-start) 完成一次最小请求，然后阅读 [开发指南](/develop/)、[API 概览](/api/) 和 [工具集成](/integrations/)。如果你已经知道要配置哪个客户端，可以直接进入对应集成页。
