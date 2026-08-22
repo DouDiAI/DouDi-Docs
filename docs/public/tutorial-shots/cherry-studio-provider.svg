@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="Cherry Studio 添加 DouDi 服务商示意图">
+  <rect width="1200" height="760" fill="#f7f4ff"/>
+  <rect x="62" y="52" width="1076" height="656" rx="8" fill="#fff" stroke="#ded8ea"/>
+  <rect x="92" y="92" width="226" height="576" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+  <text x="122" y="136" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="24" font-weight="700" fill="#111827">Cherry Studio</text>
+  <rect x="118" y="192" width="174" height="44" rx="7" fill="#dcfce7"/>
+  <text x="146" y="220" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#166534">模型服务</text>
+  <circle cx="306" cy="214" r="16" fill="#ef4444"/>
+  <text x="301" y="220" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">1</text>
+  <rect x="354" y="92" width="744" height="84" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="386" y="143" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="23" font-weight="700" fill="#0f172a">模型供应商</text>
+  <rect x="952" y="115" width="106" height="38" rx="7" fill="#2563eb"/>
+  <text x="980" y="140" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#fff">+ 添加</text>
+  <circle cx="1074" cy="134" r="16" fill="#ef4444"/>
+  <text x="1069" y="140" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">2</text>
+  <rect x="354" y="210" width="744" height="420" rx="8" fill="#fff" stroke="#dbe3ef"/>
+  <text x="392" y="258" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#0f172a">供应商类型</text>
+  <rect x="552" y="236" width="336" height="44" rx="6" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="574" y="264" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#1d4ed8">OpenAI / OpenAI Compatible</text>
+  <circle cx="912" cy="258" r="16" fill="#ef4444"/>
+  <text x="907" y="264" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">3</text>
+  <text x="392" y="338" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#0f172a">供应商名称</text>
+  <rect x="552" y="316" width="430" height="44" rx="6" fill="#fff" stroke="#cbd5e1"/>
+  <text x="572" y="344" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#0f172a">DouDi</text>
+  <circle cx="1008" cy="338" r="16" fill="#ef4444"/>
+  <text x="1003" y="344" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">4</text>
+  <text x="392" y="418" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#0f172a">API 地址</text>
+  <rect x="552" y="396" width="430" height="44" rx="6" fill="#fff" stroke="#cbd5e1"/>
+  <text x="572" y="424" font-family="Consolas,'Microsoft YaHei',monospace" font-size="15" fill="#0f172a">https://doudi.ai/v1</text>
+  <circle cx="1008" cy="418" r="16" fill="#ef4444"/>
+  <text x="1003" y="424" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">5</text>
+  <text x="392" y="498" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#0f172a">API Key</text>
+  <rect x="552" y="476" width="430" height="44" rx="6" fill="#fff" stroke="#cbd5e1"/>
+  <text x="572" y="504" font-family="Consolas,'Microsoft YaHei',monospace" font-size="15" fill="#0f172a">sk-xxxxxxxxxxxxxxxx</text>
+  <circle cx="1008" cy="498" r="16" fill="#ef4444"/>
+  <text x="1003" y="504" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">6</text>
+  <rect x="816" y="558" width="166" height="42" rx="7" fill="#0f766e"/>
+  <text x="866" y="585" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#fff">保存并添加模型</text>
+</svg>
+

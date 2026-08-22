@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="Codex Reconnect 代理配置示意图">
+  <rect width="1200" height="760" fill="#f6f8fb"/>
+  <rect x="72" y="64" width="1056" height="632" rx="8" fill="#fff" stroke="#d8dee8"/>
+  <text x="108" y="122" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="26" font-weight="700" fill="#0f172a">Codex 频繁 Reconnect：按图找端口并写入 .env</text>
+  <rect x="108" y="170" width="442" height="420" rx="8" fill="#f8fafc" stroke="#dbe3ef"/>
+  <text x="140" y="220" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="21" font-weight="700" fill="#0f172a">代理软件设置</text>
+  <text x="140" y="274" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="17" fill="#475569">HTTP Port</text>
+  <rect x="294" y="248" width="170" height="44" rx="6" fill="#fff" stroke="#cbd5e1"/>
+  <text x="346" y="277" font-family="Consolas,monospace" font-size="18" fill="#0f172a">7890</text>
+  <circle cx="486" cy="270" r="17" fill="#ef4444"/>
+  <text x="480" y="276" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#fff">1</text>
+  <text x="140" y="352" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="17" fill="#475569">Mixed Port</text>
+  <rect x="294" y="326" width="170" height="44" rx="6" fill="#fff" stroke="#cbd5e1"/>
+  <text x="346" y="355" font-family="Consolas,monospace" font-size="18" fill="#0f172a">7897</text>
+  <circle cx="486" cy="348" r="17" fill="#ef4444"/>
+  <text x="480" y="354" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#fff">2</text>
+  <rect x="650" y="170" width="442" height="420" rx="8" fill="#0f172a"/>
+  <text x="682" y="220" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="21" font-weight="700" fill="#e2e8f0">C:\Users\你的用户名\.codex\.env</text>
+  <text x="682" y="292" font-family="Consolas,'Microsoft YaHei',monospace" font-size="17" fill="#93c5fd">HTTP_PROXY=</text>
+  <text x="812" y="292" font-family="Consolas,'Microsoft YaHei',monospace" font-size="17" fill="#bbf7d0">"http://127.0.0.1:7897"</text>
+  <text x="682" y="342" font-family="Consolas,'Microsoft YaHei',monospace" font-size="17" fill="#93c5fd">HTTPS_PROXY=</text>
+  <text x="826" y="342" font-family="Consolas,'Microsoft YaHei',monospace" font-size="17" fill="#bbf7d0">"http://127.0.0.1:7897"</text>
+  <circle cx="1036" cy="316" r="17" fill="#ef4444"/>
+  <text x="1030" y="322" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#fff">3</text>
+  <path d="M540 348 C590 348 600 316 642 316" fill="none" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="642,316 624,306 624,326" fill="#0f766e"/>
+  <rect x="108" y="624" width="984" height="38" rx="7" fill="#ecfeff"/>
+  <text x="132" y="649" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#155e75">重点：用你代理软件里真实显示的端口，不要直接照抄 7897。保存后完全重启 Codex Desktop。</text>
+</svg>

@@ -16,12 +16,14 @@ https://doudi.ai/v1/chat/completions
 
 ## Chat Completions
 
+把 `<MODEL_ID>` 换成 DouDi 控制台当前可用的完整模型名。
+
 ```bash
 curl https://doudi.ai/v1/chat/completions \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "gpt-5.5",
+    "model": "<MODEL_ID>",
     "messages": [
       { "role": "user", "content": "写一个简短的接入检查清单" }
     ]

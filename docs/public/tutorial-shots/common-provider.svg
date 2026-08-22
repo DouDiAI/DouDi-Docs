@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="DouDi 通用 Provider 配置示意图">
+  <rect width="1200" height="760" fill="#f6f8fb"/>
+  <rect x="56" y="48" width="1088" height="664" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+  <rect x="56" y="48" width="1088" height="68" rx="8" fill="#0f766e"/>
+  <text x="92" y="91" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="26" font-weight="700" fill="#ffffff">OpenAI Compatible 配置</text>
+  <text x="92" y="154" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="18" fill="#475569">照着编号填写：名称方便识别，Base URL 必须带 /v1，Key 从 DouDi 控制台复制。</text>
+  <rect x="92" y="190" width="1016" height="92" rx="8" fill="#f8fafc" stroke="#dbe3ef"/>
+  <text x="126" y="226" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="17" font-weight="700" fill="#0f172a">Provider 名称</text>
+  <rect x="330" y="212" width="610" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="350" y="239" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="16" fill="#0f172a">DouDi</text>
+  <circle cx="982" cy="232" r="17" fill="#ef4444"/>
+  <text x="976" y="238" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#fff">1</text>
+  <rect x="92" y="304" width="1016" height="92" rx="8" fill="#f8fafc" stroke="#dbe3ef"/>
+  <text x="126" y="340" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="17" font-weight="700" fill="#0f172a">Base URL</text>
+  <rect x="330" y="326" width="610" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="350" y="353" font-family="Consolas,'Microsoft YaHei',monospace" font-size="16" fill="#0f172a">https://doudi.ai/v1</text>
+  <circle cx="982" cy="346" r="17" fill="#ef4444"/>
+  <text x="976" y="352" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#fff">2</text>
+  <rect x="92" y="418" width="1016" height="92" rx="8" fill="#f8fafc" stroke="#dbe3ef"/>
+  <text x="126" y="454" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="17" font-weight="700" fill="#0f172a">API Key</text>
+  <rect x="330" y="440" width="610" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="350" y="467" font-family="Consolas,'Microsoft YaHei',monospace" font-size="16" fill="#0f172a">sk-xxxxxxxxxxxxxxxxxxxxxxxx</text>
+  <circle cx="982" cy="460" r="17" fill="#ef4444"/>
+  <text x="976" y="466" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#fff">3</text>
+  <rect x="92" y="532" width="1016" height="92" rx="8" fill="#f8fafc" stroke="#dbe3ef"/>
+  <text x="126" y="568" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="17" font-weight="700" fill="#0f172a">Model</text>
+  <rect x="330" y="554" width="610" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="350" y="581" font-family="Consolas,'Microsoft YaHei',monospace" font-size="16" fill="#0f172a">从 DouDi 控制台复制完整模型名</text>
+  <circle cx="982" cy="574" r="17" fill="#ef4444"/>
+  <text x="976" y="580" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#fff">4</text>
+  <rect x="92" y="650" width="1016" height="34" rx="6" fill="#ecfeff"/>
+  <text x="112" y="672" font-family="Arial,'Microsoft YaHei',sans-serif" font-size="15" fill="#155e75">小白提醒：软件让你填 API Host、Endpoint、API 地址时，一般都填同一个 Base URL。</text>
+</svg>
+

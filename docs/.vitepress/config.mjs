@@ -21,7 +21,7 @@ export default defineConfig({
       { text: "快速开始", link: "/quick-start" },
       { text: "API Key", link: "/api-key" },
       { text: "计费与额度", link: "/billing-quota" },
-      { text: "工具接入", link: "/tools/" },
+      { text: "工具接入", link: "/tools" },
       { text: "账户", link: "/account/" },
     ],
     sidebar: [
@@ -39,14 +39,51 @@ export default defineConfig({
       {
         text: "工具接入",
         items: [
-          { text: "怎么选择工具", link: "/tools/" },
+          { text: "工具接入总览", link: "/tools" },
+          { text: "怎么选择工具", link: "/tools/choose-tool" },
           { text: "OpenAI Compatible", link: "/tools/openai-compatible" },
-          { text: "Codex CLI", link: "/tools/codex-cli" },
+          { text: "工具问题排查", link: "/tools/troubleshooting" },
+        ],
+      },
+      {
+        text: "代码与 Agent 工具",
+        collapsed: false,
+        items: [
           { text: "Claude Code", link: "/tools/claude-code" },
+          { text: "Claude Coworks", link: "/tools/claude-cowork" },
+          { text: "Codex CLI", link: "/tools/codex-cli" },
+          { text: "OpenCode", link: "/tools/opencode" },
+          { text: "CC Switch", link: "/tools/cc-switch" },
+          { text: "Zed Editor", link: "/tools/zed-editor" },
+          { text: "Trae", link: "/tools/trae" },
+          { text: "CodeBuddy", link: "/tools/codebuddy" },
+          { text: "WorkBuddy", link: "/tools/workbuddy" },
+        ],
+      },
+      {
+        text: "桌面、聊天与编辑器",
+        collapsed: false,
+        items: [
           { text: "Cursor", link: "/tools/cursor" },
           { text: "Cherry Studio", link: "/tools/cherry-studio" },
+          { text: "Chatbox", link: "/tools/chatbox" },
           { text: "Cline", link: "/tools/cline" },
+          { text: "BotGem", link: "/tools/botgem" },
+          { text: "LobeHub / LobeChat", link: "/tools/lobehub" },
+          { text: "OpenCat", link: "/tools/opencat" },
+          { text: "NextChat", link: "/tools/nextchat" },
+          { text: "GitHub Copilot", link: "/tools/github-copilot" },
+        ],
+      },
+      {
+        text: "自部署、SDK 与特殊场景",
+        collapsed: false,
+        items: [
           { text: "Open WebUI", link: "/tools/open-webui" },
+          { text: "LangChain / SDK", link: "/tools/langchain-sdk" },
+          { text: "LlamaIndex / SDK", link: "/tools/llamaindex" },
+          { text: "OpenClaw", link: "/tools/openclaw" },
+          { text: "Hermes / OpenClaw 403", link: "/tools/hermes-openclaw-403" },
         ],
       },
       {
