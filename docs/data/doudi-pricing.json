@@ -1,0 +1,8 @@
+{
+  "source": "https://doudi.ai/api/pricing",
+  "fetchedAt": null,
+  "ok": false,
+  "error": "fetch failed",
+  "data": [],
+  "lastAttemptAt": "2026-08-22T12:00:00.214Z"
+}
