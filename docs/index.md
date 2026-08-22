@@ -1,35 +1,63 @@
 ---
 layout: home
-
-hero:
-  name: DouDi 文档
-  text: 兜底 API 接入手册
-  tagline: 从注册、Key、Base URL、模型分组到工具配置，按真实接入流程整理。
-  image:
-    src: /logo.png
-    alt: DouDi.ai
-  actions:
-    - theme: brand
-      text: 快速开始
-      link: /quick-start
-    - theme: alt
-      text: 查看工具接入
-      link: /tools/choose-tool
-
-features:
-  - title: 面向真实接入
-    details: 把 API Key、Base URL、模型名、分组和额度拆开讲，先完成最小可用调用。
-  - title: 偏向稳定用量
-    details: 重点说明批量调用、下游接入、请求排查和成本确认，不只写面向散户的按钮教程。
-  - title: 独立维护
-    details: 文档站独立于兜底主服务源码，使用 VitePress 和公开数据快照长期维护。
 ---
 
 <script setup>
 import { withBase } from "vitepress";
 </script>
 
-<HomeDataCards />
+<section class="dd-portal-hero">
+  <div class="dd-portal-copy">
+    <h1>兜底 API 接入手册</h1>
+    <p>从注册、Key、Base URL、模型分组到工具配置，按真实接入流程整理。第一次接入先完成一条最小请求，再按你的客户端继续配置。</p>
+    <div class="dd-portal-actions">
+      <a class="dd-action dd-action--primary" :href="withBase('/quick-start')">快速开始</a>
+      <a class="dd-action dd-action--secondary" :href="withBase('/tools/choose-tool')">选择工具</a>
+    </div>
+  </div>
+  <aside class="dd-config-panel" aria-label="接入配置速查">
+    <div class="dd-config-head">
+      <img :src="withBase('/logo.png')" alt="DouDi.ai">
+      <div>
+        <strong>OpenAI Compatible</strong>
+        <span>接入时优先确认这 4 项</span>
+      </div>
+    </div>
+    <dl class="dd-config-list">
+      <div>
+        <dt>Base URL</dt>
+        <dd><code>https://doudi.ai/v1</code></dd>
+      </div>
+      <div>
+        <dt>API Key</dt>
+        <dd>控制台令牌页创建的专用 Key</dd>
+      </div>
+      <div>
+        <dt>Model</dt>
+        <dd>控制台显示的完整模型 ID</dd>
+      </div>
+      <div>
+        <dt>首测</dt>
+        <dd>先发短消息，再做长上下文、文件或批量任务</dd>
+      </div>
+    </dl>
+  </aside>
+</section>
+
+<section class="dd-start-board" aria-label="接入入口">
+  <a class="dd-start-card dd-start-card--yellow" :href="withBase('/quick-start')">
+    <strong>第一次测试 DouDi</strong>
+    <span>完成注册、Key、Base URL、模型名和第一次 curl 请求。</span>
+  </a>
+  <a class="dd-start-card dd-start-card--lavender" :href="withBase('/tools/choose-tool')">
+    <strong>配置客户端或代码工具</strong>
+    <span>按聊天、写代码、VS Code、自部署和 SDK 场景选择教程。</span>
+  </a>
+  <a class="dd-start-card dd-start-card--mint" :href="withBase('/tools/troubleshooting')">
+    <strong>请求失败或消耗异常</strong>
+    <span>按 Base URL、Key、模型名、分组、状态码和额度定位问题。</span>
+  </a>
+</section>
 
 ## DouDi.ai 是什么
 
@@ -41,52 +69,6 @@ DouDi.ai 是一个 AI API 聚合网关。你可以把多个模型服务理解成
 2. **Base URL**：客户端或代码里填写的 API 地址，OpenAI Compatible 场景使用 `https://doudi.ai/v1`。
 3. **模型**：决定请求能力和基础计费规则，例如文本、代码、图片或多模态模型。
 4. **分组**：决定可用线路、稳定性、价格倍率和调度范围。
-
-## 从这里开始
-
-<div class="ml-route-grid">
-  <a class="ml-route-card" href="quick-start">
-    <span>快速开始</span>
-    <p>完成注册、Key、Base URL、模型名和第一次 curl 请求。</p>
-  </a>
-  <a class="ml-route-card" href="tools/choose-tool">
-    <span>选择工具</span>
-    <p>按聊天、写代码、VS Code、自部署和 SDK 场景选择教程。</p>
-  </a>
-  <a class="ml-route-card" href="api-key">
-    <span>创建 API Key</span>
-    <p>按用途拆 Key、设置额度，并避免把 Key 泄露到截图或仓库。</p>
-  </a>
-  <a class="ml-route-card" href="tools/troubleshooting">
-    <span>配置失败排查</span>
-    <p>按 Base URL、Key、模型名、分组、接口格式和状态码定位问题。</p>
-  </a>
-</div>
-
-## 核心配置速查
-
-<div class="ml-field-table">
-  <div class="ml-field-row">
-    <div>Base URL</div>
-    <div><code>https://doudi.ai/v1</code></div>
-    <div>OpenAI Compatible、SDK、命令行工具的默认填写值。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>API Key</div>
-    <div>DouDi 控制台令牌页创建的专用 Key</div>
-    <div>每个客户端单独创建，方便限额、停用和排查消耗。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>Model</div>
-    <div>控制台显示的完整模型 ID</div>
-    <div>不要只写简称，也不要照抄其他站点的旧模型名。</div>
-  </div>
-  <div class="ml-field-row">
-    <div>测试方式</div>
-    <div>先发一条短消息</div>
-    <div>成功后再做长上下文、文件、图片、批量或 Agent 任务。</div>
-  </div>
-</div>
 
 ## 常用工具直达
 
