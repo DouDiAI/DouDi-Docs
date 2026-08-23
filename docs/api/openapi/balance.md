@@ -10,14 +10,11 @@
 GET https://doudi.ai/v1/user/balance
 ```
 
-同一接口也通过 Anthropic 入口暴露，方便已配置不同 Base URL 的客户端复用：
+当前只提供下列唯一入口：
 
 | URL |
 | --- |
 | `https://doudi.ai/v1/user/balance` |
-| `https://doudi.ai/anthropic/user/balance` |
-
-两个 URL 返回完全一致的响应结构。
 
 ## 认证
 

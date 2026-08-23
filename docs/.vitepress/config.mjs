@@ -174,7 +174,6 @@ const apiSidebar = {
         { text: "实时价格查询", link: "/api/openapi/provider-pricing" },
       ],
     },
-    { text: "旧版 API 参考", link: "/api-reference" },
   ],
 };
 
@@ -361,7 +360,6 @@ export default defineConfig({
     sidebar: {
       "/develop/": buildSidebar("develop"),
       "/api/": buildSidebar("api"),
-      "/api-reference": buildSidebar("api"),
       "/integrations/": buildSidebar("integrations"),
       "/account/": buildSidebar("account"),
       "/troubleshooting": buildSidebar("account"),
