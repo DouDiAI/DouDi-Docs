@@ -9,7 +9,7 @@ DouDi.ai 兼容 OpenAI / Anthropic 协议，并提供 Grok / xAI 协议入口。
 | 工具使用的协议 | Base URL | API Key Header |
 | --- | --- | --- |
 | OpenAI 兼容 | `https://doudi.ai/v1` | `Authorization: Bearer sk-xxx` |
-| Anthropic 原生 | `https://doudi.ai/anthropic` | `x-api-key: sk-xxx` |
+| Anthropic 原生 | `https://doudi.ai/v1` | `x-api-key: sk-xxx` |
 
 ## Continue (VS Code / JetBrains)
 

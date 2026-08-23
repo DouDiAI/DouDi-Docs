@@ -44,7 +44,7 @@ x-api-key: <你的 DOUDI_API_KEY>
 import anthropic
 
 client = anthropic.Anthropic(
-    base_url="https://doudi.ai/anthropic",
+    base_url="https://doudi.ai/v1",
     api_key="<你的 DOUDI_API_KEY>"
 )
 ```
@@ -78,7 +78,7 @@ OPENAI_API_KEY=<你的 DOUDI_API_KEY>
 OPENAI_BASE_URL=https://doudi.ai/v1
 
 ANTHROPIC_API_KEY=<你的 DOUDI_API_KEY>
-ANTHROPIC_BASE_URL=https://doudi.ai/anthropic
+ANTHROPIC_BASE_URL=https://doudi.ai/v1
 
 GROK_API_KEY=<你的 DOUDI_API_KEY>
 GROK_BASE_URL=https://doudi.ai/grok/v1

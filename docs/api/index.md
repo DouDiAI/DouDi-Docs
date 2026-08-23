@@ -30,7 +30,7 @@ DouDi.ai 提供三种协议的 API 接入方式，覆盖 OpenAI 兼容、Anthrop
 | 协议 | Base URL | 说明 |
 | --- | --- | --- |
 | **OpenAI 兼容** | `https://doudi.ai/v1` | 兼容 OpenAI SDK，支持 Chat Completions 和 Responses API |
-| **Anthropic 原生** | `https://doudi.ai/anthropic` | 兼容 Anthropic SDK，原生 Claude 体验 |
+| **Anthropic 原生** | `https://doudi.ai/v1` | 兼容 Anthropic SDK，原生 Claude 体验 |
 | **Grok / xAI 协议** | `https://doudi.ai/grok` | Grok / xAI 路由，文本 JSON/SSE 兼容 xAI OpenAI-compatible 格式 |
 
 ## 认证
@@ -63,11 +63,11 @@ DouDi.ai 提供三种协议的 API 接入方式，覆盖 OpenAI 兼容、Anthrop
 
 | 端点 | 方法 | 说明 |
 | --- | --- | --- |
-| `/anthropic/v1/messages` | POST | 创建 Messages（推荐） |
-| `/anthropic/v1/models` | GET | 列出所有可用模型 |
-| `/anthropic/v1/models/{provider}` | GET | 按供应商过滤模型 |
-| `/anthropic/v1/models/{provider}/{model_id}` | GET | 获取模型详情 |
-| `/anthropic/v1/models/count` | GET | 获取模型数量统计 |
+| `/v1/messages` | POST | 创建 Messages（推荐） |
+| `/v1/models` | GET | 列出所有可用模型 |
+| `/v1/models/{provider}` | GET | 按供应商过滤模型 |
+| `/v1/models/{provider}/{model_id}` | GET | 获取模型详情 |
+| `/v1/models/count` | GET | 获取模型数量统计 |
 
 ### Grok / xAI 协议
 

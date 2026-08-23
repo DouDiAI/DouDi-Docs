@@ -50,7 +50,7 @@ chmod +x CC-Switch-*.AppImage && ./CC-Switch-*.AppImage
 | ❶ 供应商名称 | `doudi-claude` | 自定义，方便识别 |
 | ❷ 官网链接 | `https://doudi.ai` | 供应商官网 |
 | ❸ API Key | 你的 DouDi.ai API Key | 在 [doudi.ai/keys](https://doudi.ai/keys)  获取 |
-| ❹ 请求地址 | `https://doudi.ai/anthropic` | 末尾不要加斜杠 |
+| ❹ 请求地址 | `https://doudi.ai/v1` | 末尾不要加斜杠 |
 | ❺ API 格式 / 认证字段 | `Anthropic Messages (原生)` / `ANTHROPIC_AUTH_TOKEN（默认）` | 保持默认 |
 | ❻ 模型配置 | 留空 | 留空使用默认 Claude 模型 |
 | ❼ 选项 | 勾选「隐藏 AI 署名」和「Teammates 模式」 | 按需勾选 |
@@ -89,7 +89,7 @@ claude
 
 确认以下关键字段：
 
-*   **❶ Anthropic base URL** 为 `https://doudi.ai/anthropic`
+*   **❶ Anthropic base URL** 为 `https://doudi.ai/v1`
 *   **❷ Model** 显示当前使用的模型
 
 ![Claude Code /status 输出](/assets/images/integrations-claude-code-model-provider-07.webp)
@@ -100,7 +100,7 @@ claude
 
 **Q: 连接超时**
 
-确认请求地址填写为 `https://doudi.ai/anthropic`，末尾不带斜杠。
+确认请求地址填写为 `https://doudi.ai/v1`，末尾不带斜杠。
 
 **Q: 流式响应卡顿**
 

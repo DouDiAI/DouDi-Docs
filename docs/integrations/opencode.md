@@ -30,7 +30,7 @@ export OPENAI_BASE_URL=https://doudi.ai/v1
 
 ```bash
 export ANTHROPIC_API_KEY=<你的 DOUDI_API_KEY>
-export ANTHROPIC_BASE_URL=https://doudi.ai/anthropic
+export ANTHROPIC_BASE_URL=https://doudi.ai/v1
 ```
 
 ### 3\. 配置文件

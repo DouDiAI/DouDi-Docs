@@ -160,7 +160,7 @@ Anthropic 使用 `tools` 参数，格式略有不同：
 import anthropic
 
 client = anthropic.Anthropic(
-    base_url="https://doudi.ai/anthropic",
+    base_url="https://doudi.ai/v1",
     api_key="<你的 DOUDI_API_KEY>"
 )
 

@@ -12,7 +12,7 @@ Cherry Studio 支持通过以下三种协议接入 DouDi.ai：
 
 **OpenAI Response** — 基于 `/v1/responses`，适用于当前支持 Responses 的模型。
 
-**Claude** — 基于 `/anthropic/v1/messages`，适用于当前支持 Anthropic Messages 的模型。
+**Claude** — 基于 `/v1/messages`，适用于当前支持 Anthropic Messages 的模型。
 
 ## 前提条件
 
@@ -76,7 +76,7 @@ Cherry Studio 支持通过以下三种协议接入 DouDi.ai：
 | 配置项 | 值 |
 | --- | --- |
 | **API 密钥** | 你的 DouDi.ai API Key |
-| **API 地址** | `https://doudi.ai/anthropic` |
+| **API 地址** | `https://doudi.ai/v1` |
 
 ![Claude 配置](/imported/haoai/integrations-cherry-studio-07.webp)
 

@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | **OpenAI Chat**（推荐） | OpenAI | `https://doudi.ai/v1` |
 | **OpenAI Response** | OpenAI | `https://doudi.ai/v1` |
-| **Claude** | Anthropic | `https://doudi.ai/anthropic` |
+| **Claude** | Anthropic | `https://doudi.ai/v1` |
 
 ## 前提条件
 
@@ -44,7 +44,7 @@
 | 协议 | 服务商 | API 代理地址 |
 | --- | --- | --- |
 | **OpenAI Chat / Response** | OpenAI | `https://doudi.ai/v1` |
-| **Claude** | Anthropic | `https://doudi.ai/anthropic` |
+| **Claude** | Anthropic | `https://doudi.ai/v1` |
 
 填写完成后，在「连通性检查」处选择一个模型，点击检查按钮，看到「**检查通过**」即配置成功。
 

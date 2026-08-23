@@ -35,7 +35,7 @@
 
 | 配置项 | 值 |
 | --- | --- |
-| Gateway base URL | `https://doudi.ai/anthropic` |
+| Gateway base URL | `https://doudi.ai/v1` |
 | Gateway API key | 你的 DouDi.ai API Key |
 | Gateway auth scheme | `x-api-key` |
 
@@ -73,7 +73,7 @@
 
 **Q: 点击 Apply locally 后状态指示器未变绿 / 连接失败**
 
-1.  确认 Gateway base URL 填写为 `https://doudi.ai/anthropic`，末尾不加斜杠
+1.  确认 Gateway base URL 填写为 `https://doudi.ai/v1`，末尾不加斜杠
 2.  确认 Gateway auth scheme 选择的是 `x-api-key`
 3.  确认 API Key 从 DouDi.ai 控制台 完整复制，无多余空格
 4.  确认网络连接正常

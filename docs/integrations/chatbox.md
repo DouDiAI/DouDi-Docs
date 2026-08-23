@@ -29,7 +29,7 @@
 | --- | --- | --- |
 | OpenAI API 兼容 | `https://doudi.ai/v1` | Chat Completions 兼容模式 |
 | OpenAI Responses API 兼容 | `https://doudi.ai/v1` | Responses 兼容模式 |
-| Anthropic Claude API 兼容 | `https://doudi.ai/anthropic/v1` | Anthropic Messages 兼容模式 |
+| Anthropic Claude API 兼容 | `https://doudi.ai/v1` | Anthropic Messages 兼容模式 |
 
 选择完成后点击 **添加**。
 
@@ -73,7 +73,7 @@ Chatbox 支持 iOS 和 Android，手机端配置步骤与桌面端基本相同�
 *   **名称**：自定义名称（如 “doudi”）
 *   **API 模式**：根据需要选择（如 Claude API 兼容）
 *   **API 密钥**：粘贴你的 DouDi.ai API Key
-*   **API 主机**：填写对应的 API 地址（如 Claude 为 `https://doudi.ai/anthropic/v1`）
+*   **API 主机**：填写对应的 API 地址（如 Claude 为 `https://doudi.ai/v1`）
 
 ![手机端设置](/imported/haoai/integrations-chatbox-08.webp)
 

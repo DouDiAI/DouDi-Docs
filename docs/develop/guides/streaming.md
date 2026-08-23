@@ -79,7 +79,7 @@ for await (const chunk of stream) {
 import anthropic
 
 client = anthropic.Anthropic(
-    base_url="https://doudi.ai/anthropic",
+    base_url="https://doudi.ai/v1",
     api_key="<你的 DOUDI_API_KEY>"
 )
 
@@ -98,7 +98,7 @@ with client.messages.stream(
 import Anthropic from '@anthropic-ai/sdk'
 
 const client = new Anthropic({
-  baseURL: 'https://doudi.ai/anthropic',
+  baseURL: 'https://doudi.ai/v1',
   apiKey: '<你的 DOUDI_API_KEY>'
 })
 

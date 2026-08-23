@@ -45,7 +45,7 @@ BotGem 暂不支持 OpenAI Responses 协议（`/v1/responses`）。该协议使�
 | 协议 | API Server |
 | --- | --- |
 | **OpenAI Chat**（推荐） | `https://doudi.ai` |
-| **Claude** | `https://doudi.ai/anthropic` |
+| **Claude** | `https://doudi.ai/v1` |
 
 以 OpenAI Chat 为例：
 

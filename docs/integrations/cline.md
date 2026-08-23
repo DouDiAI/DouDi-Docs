@@ -34,7 +34,7 @@
 
 ![填写配置信息](/imported/haoai/integrations-cline-03.webp)
 
-Cline 也支持 Anthropic 协议，对应的 Base URL 为 `https://doudi.ai/anthropic`。
+Cline 也支持 Anthropic 协议，对应的 Base URL 为 `https://doudi.ai/v1`。
 
 ## 常见问题
 
@@ -44,4 +44,4 @@ Cline 也支持 Anthropic 协议，对应的 Base URL 为 `https://doudi.ai/anth
 
 **Q: 无法使用 Tool Use 功能**
 
-切换 API Provider 为 Anthropic，Base URL 改为 `https://doudi.ai/anthropic`，可获得完整的 Tool Use 支持。
+切换 API Provider 为 Anthropic，Base URL 改为 `https://doudi.ai/v1`，可获得完整的 Tool Use 支持。

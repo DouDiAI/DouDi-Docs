@@ -17,7 +17,7 @@
 | --- | --- | --- | --- |
 | **OpenAI Chat** | 自定义翻译服务 | `https://doudi.ai/v1/chat/completions` | 所有模型 |
 | **OpenAI Response** | 自定义翻译服务 | `https://doudi.ai/v1/responses` | 所有模型 |
-| **Claude** | 内置 Claude 服务商 | `https://doudi.ai/anthropic` | Claude 系列 |
+| **Claude** | 内置 Claude 服务商 | `https://doudi.ai/v1` | Claude 系列 |
 
 ## 配置步骤
 
@@ -66,7 +66,7 @@
 | 配置项 | 值 |
 | --- | --- |
 | **APIKEY** | 你的 DouDi.ai API Key |
-| **自定义 API 接口地址** | `https://doudi.ai/anthropic` |
+| **自定义 API 接口地址** | `https://doudi.ai/v1` |
 | **模型** | 勾选「输入自定义模型名称」，填写 Anthropic 协议可用模型名 |
 
 填写完成后点击**点此测试服务**，通过后点击**保存**。

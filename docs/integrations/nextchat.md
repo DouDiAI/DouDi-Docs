@@ -9,7 +9,7 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 | 协议 | 模型服务商 | 接口地址 | 适用模型 |
 | --- | --- | --- | --- |
 | **OpenAI Chat** | OpenAI | `https://doudi.ai` | 所有模型（带 `厂商/` 前缀） |
-| **Anthropic** | Anthropic | `https://doudi.ai/anthropic` | Claude 系列 |
+| **Anthropic** | Anthropic | `https://doudi.ai/v1` | Claude 系列 |
 
 ## 前提条件
 
@@ -44,7 +44,7 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 | 配置项 | 值 |
 | --- | --- |
 | **模型服务商** | Anthropic |
-| **接口地址** | `https://doudi.ai/anthropic` |
+| **接口地址** | `https://doudi.ai/v1` |
 | **API Key** | 你的 DouDi.ai API Key |
 | **自定义模型名** | 填写 Anthropic 协议可用模型名，多个值用英文逗号分隔 |
 

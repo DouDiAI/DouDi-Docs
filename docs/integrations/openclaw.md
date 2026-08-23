@@ -48,7 +48,7 @@ openclaw onboard
 | 配置项 | 值 |
 | --- | --- |
 | **Provider Type** | `anthropic-messages` 或 `openai-responses` |
-| **Base URL** | Anthropic: `https://doudi.ai/anthropic`；OpenAI Responses: `https://doudi.ai/v1` |
+| **Base URL** | Anthropic: `https://doudi.ai/v1`；OpenAI Responses: `https://doudi.ai/v1` |
 | **API Key** | 你的 DouDi.ai API Key |
 | **Model** | 从模型广场复制的当前可用模型 ID |
 
@@ -73,7 +73,7 @@ Provider 定义在 `models.providers` 下，每个 Provider 需要指定 API 协
   "models": {
     "providers": {
       "doudi-anthropic": {
-        "baseUrl": "https://doudi.ai/anthropic",
+        "baseUrl": "https://doudi.ai/v1",
         "apiKey": "${DOUDI_API_KEY}",
         "api": "anthropic-messages",
         "models": []
@@ -245,7 +245,7 @@ OpenClaw 通过 `agents.defaults` 设置全局默认，通过 `agents.list` 数�
 
 确认 `baseUrl` 配置正确：
 
-*   Anthropic 协议：`https://doudi.ai/anthropic`
+*   Anthropic 协议：`https://doudi.ai/v1`
 *   OpenAI Responses 协议：`https://doudi.ai/v1`
 
 **模型不存在**

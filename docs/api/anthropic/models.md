@@ -7,13 +7,13 @@ Models API 与所有 DouDi.ai API 一样，需要 DouDi.ai API Key。Anthropic �
 ## 列出所有模型
 
 ```
-GET https://doudi.ai/anthropic/v1/models
+GET https://doudi.ai/v1/models
 ```
 
 ### 请求示例
 
 ```bash
-curl https://doudi.ai/anthropic/v1/models \
+curl https://doudi.ai/v1/models \
   -H "x-api-key: $DOUDI_API_KEY"
 ```
 
@@ -76,7 +76,7 @@ curl https://doudi.ai/anthropic/v1/models \
 ## 按供应商过滤模型
 
 ```
-GET https://doudi.ai/anthropic/v1/models/{provider}
+GET https://doudi.ai/v1/models/{provider}
 ```
 
 ### 路径参数
@@ -89,7 +89,7 @@ GET https://doudi.ai/anthropic/v1/models/{provider}
 
 ```bash
 # 按供应商过滤模型
-curl https://doudi.ai/anthropic/v1/models/anthropic \
+curl https://doudi.ai/v1/models/anthropic \
   -H "x-api-key: $DOUDI_API_KEY"
 ```
 
@@ -100,7 +100,7 @@ curl https://doudi.ai/anthropic/v1/models/anthropic \
 ## 获取模型详情
 
 ```
-GET https://doudi.ai/anthropic/v1/models/{provider}/{model_id}
+GET https://doudi.ai/v1/models/{provider}/{model_id}
 ```
 
 ### 路径参数
@@ -113,7 +113,7 @@ GET https://doudi.ai/anthropic/v1/models/{provider}/{model_id}
 ### 请求示例
 
 ```bash
-curl "https://doudi.ai/anthropic/v1/models/$PROVIDER/$MODEL_ID" \
+curl "https://doudi.ai/v1/models/$PROVIDER/$MODEL_ID" \
   -H "x-api-key: $DOUDI_API_KEY"
 ```
 

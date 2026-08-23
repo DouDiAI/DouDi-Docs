@@ -141,7 +141,7 @@ response = client.chat.completions.create(
 import anthropic
 
 client = anthropic.Anthropic(
-    base_url="https://doudi.ai/anthropic",
+    base_url="https://doudi.ai/v1",
     api_key="<你的 DOUDI_API_KEY>"
 )
 

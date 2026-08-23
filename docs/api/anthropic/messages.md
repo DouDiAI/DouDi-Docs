@@ -11,7 +11,7 @@
 ## 端点
 
 ```
-POST https://doudi.ai/anthropic/v1/messages
+POST https://doudi.ai/v1/messages
 ```
 
 ## 认证
@@ -112,7 +112,7 @@ Claude-family 模型的思考参数会随上游版本变化。请先在 [模型�
 ### cURL
 
 ```bash
-curl https://doudi.ai/anthropic/v1/messages \
+curl https://doudi.ai/v1/messages \
   -H "x-api-key: $DOUDI_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -H "Content-Type: application/json" \
@@ -132,7 +132,7 @@ curl https://doudi.ai/anthropic/v1/messages \
 import anthropic
 
 client = anthropic.Anthropic(
-    base_url="https://doudi.ai/anthropic",
+    base_url="https://doudi.ai/v1",
     api_key="<你的 DOUDI_API_KEY>"
 )
 
@@ -154,7 +154,7 @@ print(message.content[0].text)
 import Anthropic from '@anthropic-ai/sdk'
 
 const client = new Anthropic({
-  baseURL: 'https://doudi.ai/anthropic',
+  baseURL: 'https://doudi.ai/v1',
   apiKey: '<你的 DOUDI_API_KEY>'
 })
 
