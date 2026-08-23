@@ -5,6 +5,7 @@ const asset = (fileName) => `${base}${fileName}`.replace(/\/{2,}/g, "/");
 
 const gettingStartedSidebar = {
   text: "入门",
+  link: "/",
   items: [
     { text: "文档首页", link: "/" },
     { text: "快速开始", link: "/quick-start" },
@@ -15,8 +16,8 @@ const gettingStartedSidebar = {
 };
 
 const developSidebar = {
-  text: "开发文档",
-  collapsed: false,
+  text: "开发指南",
+  link: "/develop/",
   items: [
     { text: "开发指南总览", link: "/develop/" },
     {
@@ -29,20 +30,20 @@ const developSidebar = {
       ],
     },
     {
-      text: "进阶指南",
+      text: "能力指南",
       collapsed: false,
       items: [
         { text: "流式响应", link: "/develop/guides/streaming" },
         { text: "Function Calling", link: "/develop/guides/function-calling" },
         { text: "结构化输出", link: "/develop/guides/structured-output" },
         { text: "视觉输入", link: "/develop/guides/vision" },
-        { text: "错误处理", link: "/develop/guides/error-handling" },
       ],
     },
     {
-      text: "高级功能",
+      text: "稳定性与路由",
       collapsed: false,
       items: [
+        { text: "错误处理", link: "/develop/guides/error-handling" },
         { text: "频率限制", link: "/develop/guides/rate-limits" },
         { text: "供应商路由", link: "/develop/advanced/provider-routing" },
         { text: "故障回退", link: "/develop/advanced/fallback" },
@@ -63,7 +64,7 @@ const developSidebar = {
 
 const apiSidebar = {
   text: "API 参考",
-  collapsed: false,
+  link: "/api/",
   items: [
     { text: "API 概览", link: "/api/" },
     {
@@ -107,11 +108,11 @@ const apiSidebar = {
 
 const integrationsSidebar = {
   text: "工具集成",
-  collapsed: false,
+  link: "/integrations/",
   items: [
     { text: "工具集成总览", link: "/integrations/" },
     {
-      text: "代码与 Agent 工具",
+      text: "Agent 编程工具",
       collapsed: false,
       items: [
         { text: "Claude Code 总览", link: "/integrations/claude-code" },
@@ -124,9 +125,16 @@ const integrationsSidebar = {
         { text: "配置 Codex 模型", link: "/integrations/codex/model-provider" },
         { text: "Codex WebSocket", link: "/integrations/codex/websocket" },
         { text: "OpenCode", link: "/integrations/opencode" },
-        { text: "CC Switch", link: "/integrations/cc-switch" },
         { text: "Claude Coworks", link: "/integrations/claude-coworks" },
         { text: "OpenClaw", link: "/integrations/openclaw" },
+      ],
+    },
+    {
+      text: "模型与端点切换",
+      collapsed: false,
+      items: [
+        { text: "CC Switch", link: "/integrations/cc-switch" },
+        { text: "其他客户端", link: "/integrations/others" },
       ],
     },
     {
@@ -161,7 +169,6 @@ const integrationsSidebar = {
         { text: "LangChain", link: "/integrations/langchain" },
         { text: "LlamaIndex", link: "/integrations/llamaindex" },
         { text: "Open WebUI", link: "/tools/open-webui" },
-        { text: "其他客户端", link: "/integrations/others" },
       ],
     },
   ],
@@ -169,9 +176,10 @@ const integrationsSidebar = {
 
 const legacyToolsSidebar = {
   text: "旧版工具教程",
+  link: "/tools/",
   collapsed: true,
   items: [
-    { text: "旧版工具总览", link: "/tools" },
+    { text: "旧版工具总览", link: "/tools/" },
     { text: "怎么选择工具", link: "/tools/choose-tool" },
     { text: "OpenAI Compatible", link: "/tools/openai-compatible" },
     { text: "工具问题排查", link: "/tools/troubleshooting" },
@@ -183,6 +191,7 @@ const legacyToolsSidebar = {
 
 const accountSidebar = {
   text: "账户与排查",
+  link: "/account/",
   items: [
     { text: "账户概览", link: "/account/" },
     { text: "充值余额", link: "/account/recharge" },
@@ -191,6 +200,38 @@ const accountSidebar = {
     { text: "常见问题", link: "/troubleshooting" },
     { text: "账户问题排查", link: "/account/troubleshooting" },
   ],
+};
+
+const mapNestedGroups = (items, collapsed) =>
+  items.map((item) => (item.items ? { ...item, collapsed } : item));
+
+const sidebarSection = (section, active = false) => ({
+  ...section,
+  collapsed: !active,
+  items: mapNestedGroups(section.items, !active),
+});
+
+const buildSidebar = (activeSection) => {
+  const sections = [
+    sidebarSection(gettingStartedSidebar, activeSection === "getting-started"),
+    sidebarSection(developSidebar, activeSection === "develop"),
+    sidebarSection(apiSidebar, activeSection === "api"),
+    sidebarSection(integrationsSidebar, activeSection === "integrations"),
+    sidebarSection(accountSidebar, activeSection === "account"),
+  ];
+
+  if (activeSection === "tools") {
+    return [
+      sections[0],
+      sections[1],
+      sections[2],
+      sidebarSection(integrationsSidebar),
+      sidebarSection(legacyToolsSidebar, true),
+      sections[4],
+    ];
+  }
+
+  return sections;
 };
 
 export default defineConfig({
@@ -224,12 +265,14 @@ export default defineConfig({
       },
     ],
     sidebar: {
-      "/develop/": [developSidebar],
-      "/api/": [apiSidebar],
-      "/integrations/": [integrationsSidebar],
-      "/account/": [accountSidebar],
-      "/tools/": [legacyToolsSidebar, integrationsSidebar],
-      "/": [gettingStartedSidebar, developSidebar, apiSidebar, integrationsSidebar, accountSidebar, legacyToolsSidebar],
+      "/develop/": buildSidebar("develop"),
+      "/api/": buildSidebar("api"),
+      "/api-reference": buildSidebar("api"),
+      "/integrations/": buildSidebar("integrations"),
+      "/account/": buildSidebar("account"),
+      "/troubleshooting": buildSidebar("account"),
+      "/tools/": buildSidebar("tools"),
+      "/": buildSidebar("getting-started"),
     },
     outline: {
       label: "本页目录",
