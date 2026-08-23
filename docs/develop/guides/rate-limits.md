@@ -82,7 +82,7 @@ client.chat.completions.create(
 
 ### 3\. 选择合适的模型
 
-推荐模型请参考 [模型广场](https://doudi.ai/models) 。
+推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing) 。
 
 ### 4\. 控制 max\_tokens
 

@@ -6,7 +6,7 @@ Codex CLI 是 OpenAI 推出的 AI 编码命令行工具，可在终端中直接�
 
 ## 前置要求
 
-*   [DouDi.ai API Key](https://doudi.ai/console/api-keys)  （注册即可获取）
+*   [DouDi.ai API Key](https://doudi.ai/keys)  （注册即可获取）
 *   [Node.js](https://nodejs.org)  （建议 v18+）
 
 ## 安装

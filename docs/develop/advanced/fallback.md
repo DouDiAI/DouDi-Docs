@@ -96,7 +96,7 @@ response = client.chat.completions.create(
 
 ## 推荐回退方案
 
-推荐模型请参考 [模型广场](https://doudi.ai/models) 。
+推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing) 。
 
 ## 最佳实践
 

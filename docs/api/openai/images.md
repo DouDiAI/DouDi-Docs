@@ -120,7 +120,7 @@ curl -X POST 'https://doudi.ai/v1/images/generations' \
 *   **参考图输入**仅在 `/v1/images/edits` 上传参考图时产生（纯文生图无此项）。官方未公开可复算的参考图 token 计数公式，因此当前路径**不对参考图输入单独计量收费**；表中 $1.20/M 为对齐官方的折后费率（官方 $8/M × 0.15），仅当上游按官方口径上报该 token 时适用；
 *   `n` 大于 1 时按张数计；**生成失败不计费**。
 
-实时价格以[模型目录](https://doudi.ai/models) 为准。
+实时价格以[模型广场/价格页面](https://doudi.ai/pricing) 为准。
 
 ### 响应
 
@@ -256,7 +256,7 @@ curl -X POST 'https://doudi.ai/v1/images/edits' \
 
 与生成一致，`usage` 按官方口径返回。`num_input_images` 是输入图片张数。注意：参考图输入的 token 不计入（官方未公开可复算的输入图计数公式，详见上方计费说明），因此 `input_tokens_details` 只含 `text_tokens`。
 
-支持的模型与价格见 [模型目录](https://doudi.ai/models) 。
+支持的模型与价格见 [模型广场/价格页面](https://doudi.ai/pricing) 。
 
 > 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
 > 实际模型、分组、价格和权限以 DouDi 控制台为准。

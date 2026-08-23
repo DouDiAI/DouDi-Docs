@@ -49,7 +49,7 @@ chmod +x CC-Switch-*.AppImage && ./CC-Switch-*.AppImage
 | --- | --- | --- |
 | ❶ 供应商名称 | `haoai-claude` | 自定义，方便识别 |
 | ❷ 官网链接 | `https://doudi.ai` | 供应商官网 |
-| ❸ API Key | 你的 DouDi.ai API Key | 在 [doudi.ai/console/api-keys](https://doudi.ai/console/api-keys)  获取 |
+| ❸ API Key | 你的 DouDi.ai API Key | 在 [doudi.ai/keys](https://doudi.ai/keys)  获取 |
 | ❹ 请求地址 | `https://doudi.ai/anthropic` | 末尾不要加斜杠 |
 | ❺ API 格式 / 认证字段 | `Anthropic Messages (原生)` / `ANTHROPIC_AUTH_TOKEN（默认）` | 保持默认 |
 | ❻ 模型配置 | 留空 | 留空使用默认 Claude 模型 |
@@ -81,11 +81,11 @@ claude
 
 ## 4\. 使用其他模型
 
-通过 DouDi.ai，你可以在 Claude Code 中使用非 Claude 模型（如 Qwen、GLM、DeepSeek 等）。只需在模型广场筛选兼容模型，然后配置模型映射即可。
+通过 DouDi.ai，你可以在 Claude Code 中使用非 Claude 模型（如 Qwen、GLM、DeepSeek 等）。只需在 [模型广场/价格页面](https://doudi.ai/pricing) 筛选兼容模型，然后配置模型映射即可。
 
 ### 步骤一：筛选兼容模型
 
-前往 [DouDi.ai 模型广场](https://doudi.ai/models)  ，在左侧 **API 协议** 中选择 **Anthropic**，筛选出支持 Anthropic 协议的模型。
+前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  ，在左侧 **API 协议** 中选择 **Anthropic**，筛选出支持 Anthropic 协议的模型。
 
 ![模型广场筛选 Anthropic 协议](/imported/haoai/integrations-claude-code-model-provider-05.webp)
 
@@ -97,7 +97,7 @@ claude
 
 ### 步骤三：配置模型映射
 
-回到 CC Switch，在供应商配置中找到 **模型映射** 部分。将复制的模型名称填入对应的模型槽位，可前往 [DouDi.ai 模型广场](https://doudi.ai/models)  浏览可用模型：
+回到 CC Switch，在供应商配置中找到 **模型映射** 部分。将复制的模型名称填入对应的模型槽位，可前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  浏览可用模型：
 
 | 映射槽位 | 说明 |
 | --- | --- |

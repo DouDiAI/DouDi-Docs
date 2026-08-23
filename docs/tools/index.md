@@ -34,8 +34,8 @@ import { withBase } from "vitepress";
 | 配置项 | 推荐值 |
 | --- | --- |
 | Base URL | `https://doudi.ai/v1` |
-| API Key | DouDi 控制台令牌页创建的 Key |
-| 模型名 | 从 DouDi 控制台复制完整模型 ID |
+| API Key | 从 [API Key 管理页面](https://doudi.ai/keys) 创建的 Key |
+| 模型名 | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制完整模型 ID |
 
 部分客户端会自动补 `/v1/chat/completions`，因此它们只需要填写 `https://doudi.ai`。这类差异会写在对应教程里；不要把一个软件的地址规则照搬到另一个软件。
 
@@ -274,8 +274,8 @@ import { withBase } from "vitepress";
 
 <div class="ml-checklist">
 
-- 已经在 DouDi 控制台创建专用 API Key。
-- 已经复制当前账号可用的完整模型 ID。
+- 已经在 [API Key 管理页面](https://doudi.ai/keys) 创建专用 API Key。
+- 已经从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前账号可用的完整模型 ID。
 - 已经确认当前教程要求填写的是 `https://doudi.ai` 还是 `https://doudi.ai/v1`。
 - 第一次测试只发送一句短消息，成功后再做长上下文、文件上传或批量任务。
 - 截图、提问和提交 Issue 前已经隐藏 API Key。

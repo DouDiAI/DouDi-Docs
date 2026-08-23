@@ -6,7 +6,7 @@
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 OpenCat（[下载地址](https://opencat.app)  ）
 
 ## 配置步骤
@@ -53,14 +53,14 @@
 
 ## 可用模型示例
 
-推荐模型请参考 [DouDi.ai 模型广场](https://doudi.ai/models)  。
+推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 
 **Q: 验证提示失败**
 
 1.  确认基础 URL 填写的是 `https://doudi.ai/v1`（末尾不加斜杠）
-2.  确认 API Key 从 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)  完整复制，无多余空格
+2.  确认 API Key 从 [API Key 管理页面](https://doudi.ai/keys)  完整复制，无多余空格
 3.  确认网络连接正常
 
 **Q: 为什么不能用 OpenAI 原生，只能用 OpenAI 兼容？**

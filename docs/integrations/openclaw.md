@@ -29,7 +29,7 @@ Windows (PowerShell)
 
 ### 1\. 获取 API Key
 
-前往 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)   创建 API Key。
+前往 [API Key 管理页面](https://doudi.ai/keys)   创建 API Key。
 
 ### 2\. 运行配置向导
 
@@ -392,7 +392,7 @@ OpenClaw 单次任务消耗较大，建议：
 
 1.  日常任务使用 `claude-haiku-4.5` 或性价比模型
 2.  仅在复杂任务时切换到 `research` Agent（使用 `claude-opus-4.6`）
-3.  在 [DouDi.ai 控制台](https://doudi.ai/console/analytics)   监控用量
+3.  在 [使用日志页面](https://doudi.ai/usage-logs/common) 查看请求明细，并用 [数据看板页面](https://doudi.ai/dashboard/models) 监控模型维度用量
 
 **如何快速切换模型**
 

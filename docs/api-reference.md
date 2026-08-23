@@ -52,6 +52,6 @@ curl https://doudi.ai/v1/models \
 | 403 | 当前 Key、账户或分组无权访问 |
 | 429 | 频率、并发或上游容量限制 |
 | 413 | 请求体过大 |
-| 500+ | 网关或上游返回错误，需要结合请求日志排查 |
+| 500+ | 网关或上游返回错误，需要结合 [使用日志](https://doudi.ai/usage-logs/common) 排查 |
 
-排查时请保留请求时间、模型名、分组、状态码和请求日志里的 request ID。
+排查时请保留请求时间、模型名、分组、状态码和 [使用日志](https://doudi.ai/usage-logs/common) 里的 request ID。

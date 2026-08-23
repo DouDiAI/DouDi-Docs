@@ -63,7 +63,7 @@ opencode "Hello, 你好吗？"
 
 ## 推荐模型
 
-推荐模型请参考 [模型广场](https://doudi.ai/models)  。
+推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 OpenCode 的具体配置方式可能随版本更新变化，请参考 [OpenCode 官方文档](https://github.com/opencode-ai/opencode)  。
 

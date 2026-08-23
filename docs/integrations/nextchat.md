@@ -13,7 +13,7 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 NextChat（[下载地址](https://nextchat.dev)  ）或使用 Web 版
 
 ## 配置步骤
@@ -72,7 +72,7 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 
 ## 可用模型示例
 
-推荐模型请参考 [DouDi.ai 模型广场](https://doudi.ai/models)  。
+推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

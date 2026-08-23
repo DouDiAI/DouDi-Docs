@@ -4,7 +4,7 @@ CC-Switch 是一个功能强大的多模型管理工具，支持在单一界面�
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装并配置 [CC-Switch](https://github.com/cc-dayx/cc-switch) 
 
 ## 配置步骤
@@ -46,7 +46,7 @@ CC-Switch 是一个功能强大的多模型管理工具，支持在单一界面�
 
 ## 支持的模型
 
-CC-Switch 通过 DouDi.ai 可以访问全球顶级模型。详见 [DouDi.ai 模型广场](https://doudi.ai/models)  。
+CC-Switch 通过 DouDi.ai 可以访问全球顶级模型。详见 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

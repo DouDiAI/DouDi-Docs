@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 Python 3.10+
 
 ## 配置步骤
@@ -47,7 +47,7 @@ python3 -W ignore test_llamaindex.py
 
 ## 可用模型示例
 
-推荐模型请参考 [DouDi.ai 模型广场](https://doudi.ai/models)  。
+推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 LlamaIndex 的具体 API 可能随版本更新变化，请参考 [LlamaIndex 官方文档](https://docs.llamaindex.ai)  。
 
@@ -63,7 +63,7 @@ Python 版本过低，需要升级到 Python 3.10 或以上版本。
 
 **Q: 提示 API Key 无效**
 
-确认 `api_key` 填写的是 DouDi.ai 的 API Key，可在 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)  获取。
+确认 `api_key` 填写的是 DouDi.ai 的 API Key，可在 [API Key 管理页面](https://doudi.ai/keys)  获取。
 
 > 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
 > 实际模型、分组、价格和权限以 DouDi 控制台为准。

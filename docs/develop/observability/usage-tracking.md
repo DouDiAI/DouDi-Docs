@@ -1,12 +1,12 @@
 # 用量追踪
 
-DouDi.ai 控制台提供全方位的用量统计和性能监控。
+DouDi.ai 的用量排查主要看两个入口：[使用日志页面](https://doudi.ai/usage-logs/common) 负责请求明细，[数据看板页面](https://doudi.ai/dashboard/models) 负责模型维度趋势。
 
 ## 实时用量统计
 
 ### 总览面板
 
-控制台首页展示关键指标：
+[数据看板页面](https://doudi.ai/dashboard/models) 展示关键指标：
 
 *   **总请求数** — 当前周期内的 API 调用总数
 *   **总 Token 数** — 消耗的 prompt + completion token 总数
@@ -28,7 +28,7 @@ DouDi.ai 控制台提供全方位的用量统计和性能监控。
 
 ### 按模型分析
 
-查看各模型的使用情况：
+在 [数据看板页面](https://doudi.ai/dashboard/models) 查看各模型的使用情况：
 
 *   请求次数占比
 *   Token 消耗占比
@@ -45,7 +45,7 @@ DouDi.ai 控制台提供全方位的用量统计和性能监控。
 
 ### 按 API Key 分析
 
-查看各 API Key 的使用情况：
+结合 [使用日志页面](https://doudi.ai/usage-logs/common) 查看各 API Key 的使用情况：
 
 *   各 Key 的请求量
 *   各 Key 的费用
@@ -71,7 +71,7 @@ DouDi.ai 控制台提供全方位的用量统计和性能监控。
 *   邮件通知
 *   Webhook（可集成到 Slack、飞书、钉钉等）
 
-告警配置在控制台 设置 → 告警规则 中管理。
+告警配置以 [DouDi 控制台](https://doudi.ai/dashboard) 当前可见入口为准。
 
 ## 最佳实践
 

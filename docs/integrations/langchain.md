@@ -4,7 +4,7 @@ LangChain 是一个用于构建 AI 应用的开发框架，支持 Python 和 Jav
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 Python 3.8+
 
 ## 配置步骤
@@ -65,7 +65,7 @@ console.log(response.content);
 
 ## 可用模型示例
 
-推荐模型请参考 [DouDi.ai 模型广场](https://doudi.ai/models)  。
+推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

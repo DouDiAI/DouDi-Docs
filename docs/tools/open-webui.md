@@ -87,7 +87,7 @@ Open WebUI 如果给多人使用，要额外注意额度和权限：
 - 为 Open WebUI 单独创建 Key，不和个人客户端共用。
 - 给 Key 设置额度上限，避免团队误用。
 - 只开放常用模型，减少误选高成本模型的概率。
-- 定期查看 DouDi 控制台日志和余额。
+- 定期查看 [使用日志](https://doudi.ai/usage-logs/common) 和 [钱包余额](https://doudi.ai/wallet)。
 
 ## 常见问题
 

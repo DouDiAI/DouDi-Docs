@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 WorkBuddy（[下载地址](https://workbuddy.ai)  ）
 
 ## 配置步骤
@@ -32,7 +32,7 @@
 | **API KEY** | 你的 DouDi.ai API Key |
 | **模型名称** | 想使用的模型 ID，如 `openai/gpt-5.4-mini` |
 
-WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completions` 接口，可以访问 GPT、Claude、Grok、DeepSeek 等当前可用模型，只需在**模型名称**中填入对应的模型 ID，详见 [模型广场](https://doudi.ai/models)  。
+WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completions` 接口，可以访问 GPT、Claude、Grok、DeepSeek 等当前可用模型，只需在**模型名称**中填入对应的模型 ID，详见 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 按需勾选高级配置：
 
@@ -60,13 +60,13 @@ WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completi
 
 ## 推荐模型
 
-推荐模型请参考 [模型广场](https://doudi.ai/models)  。
+推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 
 **Q: 能否使用 Claude 模型？**
 
-可以。WorkBuddy 通过 DouDi.ai 的 OpenAI 兼容接口可访问当前可用的兼容模型，在**模型名称**中填入对应 ID 即可，详见 [模型广场](https://doudi.ai/models)  。
+可以。WorkBuddy 通过 DouDi.ai 的 OpenAI 兼容接口可访问当前可用的兼容模型，在**模型名称**中填入对应 ID 即可，详见 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 **Q: 保存后模型未出现在选择列表中**
 
@@ -74,7 +74,7 @@ WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completi
 
 **Q: 请求失败或提示接口错误**
 
-检查接口地址是否填写完整（`https://doudi.ai/v1/chat/completions`），以及 API KEY 是否从 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)  完整复制，无多余空格。
+检查接口地址是否填写完整（`https://doudi.ai/v1/chat/completions`），以及 API KEY 是否从 [API Key 管理页面](https://doudi.ai/keys)  完整复制，无多余空格。
 
 > 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
 > 实际模型、分组、价格和权限以 DouDi 控制台为准。

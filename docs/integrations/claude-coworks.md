@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys) ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys) ）
 *   已安装 Claude Coworks（[下载地址](https://claudecoworks.com) ）
 
 ## 配置步骤
@@ -45,7 +45,7 @@
 
 ### 第 5 步：浏览可用模型
 
-连接建立后，即可在 Claude Coworks 中查看所有可用模型。前往 [DouDi.ai 模型广场](https://doudi.ai/models)  浏览完整的支持模型列表及其功能说明。
+连接建立后，即可在 Claude Coworks 中查看所有可用模型。前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  浏览完整的支持模型列表及其功能说明。
 
 ![浏览可用模型](/imported/haoai/integrations-claude-coworks-05.webp)
 
@@ -63,7 +63,7 @@
 
 ## 开始使用
 
-配置生效后，Claude Coworks 的所有推理请求将通过 DouDi.ai Gateway 转发。可前往 [DouDi.ai 模型广场](https://doudi.ai/models)  查看支持的模型列表。
+配置生效后，Claude Coworks 的所有推理请求将通过 DouDi.ai Gateway 转发。可前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  查看支持的模型列表。
 
 ## 常见问题
 

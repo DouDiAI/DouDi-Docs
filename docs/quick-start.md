@@ -4,9 +4,9 @@
 
 ## 1. 注册并登录
 
-打开 [DouDi 控制台](https://doudi.ai)，按页面提示注册或登录账号。公开配置显示当前支持密码登录、GitHub OAuth、LinuxDo OAuth、Passkey 等方式，实际可用入口以登录页为准。
+打开 [DouDi 控制台](https://doudi.ai/dashboard)，按页面提示注册或登录账号。公开配置显示当前支持密码登录、GitHub OAuth、LinuxDo OAuth、Passkey 等方式，实际可用入口以登录页为准。
 
-登录后进入控制台，先确认账户余额或额度状态。如果账号没有额度，请先按控制台里的充值、兑换码或套餐入口完成额度准备。
+登录后进入控制台，先确认账户余额或额度状态。如果账号没有额度，请先到 [钱包充值页面](https://doudi.ai/wallet) 完成额度准备。
 
 ## 2. 选择 API 地址
 
@@ -22,7 +22,7 @@ https://doudi.ai/v1
 
 ## 3. 创建 API Key
 
-进入 [令牌/API Key 页面](https://doudi.ai)，创建一个新的 Key。新手建议：
+进入 [API Key 管理页面](https://doudi.ai/keys)，创建一个新的 Key。新手建议：
 
 - 名称写清用途，例如 `cherry-studio-main` 或 `codex-cli-test`。
 - 分组优先选择 `auto`，让系统自动选择可用分组。
@@ -33,7 +33,7 @@ https://doudi.ai/v1
 
 ## 4. 选择模型
 
-在 DouDi 控制台或目标软件的模型选择框中，选择当前可用模型。新手可以按用途选择：
+在 [模型广场/价格页面](https://doudi.ai/pricing) 或目标软件的模型选择框中，选择当前可用模型。新手可以按用途选择：
 
 - 日常对话和文本生成：搜索 `gpt`、`claude`、`deepseek`。
 - 代码协作：搜索 `codex`、`claude-sonnet`。

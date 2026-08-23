@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 [VS Code](https://code.visualstudio.com/) 
 
 ## 配置步骤
@@ -38,7 +38,7 @@ Cline 也支持 Anthropic 协议，对应的 Base URL 为 `https://doudi.ai/anth
 
 ## 推荐模型
 
-推荐模型请参考 [模型广场](https://doudi.ai/models)  。
+推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

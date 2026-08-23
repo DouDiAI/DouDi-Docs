@@ -1,6 +1,6 @@
 # 模型目录
 
-DouDi.ai 提供主流大模型的统一访问。你可以在 [DouDi.ai 模型目录](https://doudi.ai/models)   浏览所有可用模型，也可以通过 [Models API](/api/openai/models) 以编程方式获取完整模型信息。
+DouDi.ai 提供主流大模型的统一访问。你可以在 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing) 浏览所有可用模型，也可以通过 [Models API](/api/openai/models) 以编程方式获取完整模型信息。
 
 ## 模型命名规范
 
@@ -167,7 +167,7 @@ for (const model of data) {
 }
 ```
 
-查看完整的实时模型列表和定价，请访问 DouDi.ai 模型目录 。 API 端点详情请参阅 Models API 参考。
+查看完整的实时模型列表和定价，请访问 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)。API 端点详情请参阅 [Models API 参考](/api/openai/models)。
 
 > 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
 > 实际模型、分组、价格和权限以 DouDi 控制台为准。

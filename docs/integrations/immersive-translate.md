@@ -6,7 +6,7 @@
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装沉浸式翻译插件（[下载地址](https://immersivetranslate.com)  ）
 
 ## 支持的协议
@@ -85,13 +85,13 @@
 
 ## 可用模型示例
 
-推荐模型请参考 [DouDi.ai 模型广场](https://doudi.ai/models)  。
+推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 
 **Q: 测试服务时报错 `String contains non ISO-8859-1 code point`**
 
-API Key 中包含了非 ASCII 字符（如全角空格、中文字符）。请重新从 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)  复制 API Key，确保没有多余字符。
+API Key 中包含了非 ASCII 字符（如全角空格、中文字符）。请重新从 [API Key 管理页面](https://doudi.ai/keys)  复制 API Key，确保没有多余字符。
 
 **Q: 如何切换不同的翻译服务？**
 

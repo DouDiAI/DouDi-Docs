@@ -54,7 +54,7 @@ DouDi.ai 使用 `provider/model-name` 格式标识模型：
 | `gpt-4o-mini` | `openai/gpt-4o-mini` |
 | `gpt-5.2` | `openai/gpt-5.4-mini` |
 
-通过 DouDi.ai，你还可以使用其他厂商的模型，推荐模型请参考 [DouDi.ai 模型广场](https://doudi.ai/models) 。
+通过 DouDi.ai，你还可以使用其他厂商的模型，推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing) 。
 
 ## 兼容性
 

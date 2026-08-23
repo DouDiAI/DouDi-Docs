@@ -16,7 +16,7 @@ Cherry Studio 支持通过以下三种协议接入 DouDi.ai：
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 Cherry Studio（[下载地址](https://cherry-ai.com)  ）
 
 ## 配置步骤
@@ -128,7 +128,7 @@ Cherry Studio 支持通过以下三种协议接入 DouDi.ai：
 
 **Q: 检测时提示连接失败**
 
-1.  确认 API Key 从 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)  完整复制，无多余空格
+1.  确认 API Key 从 [API Key 管理页面](https://doudi.ai/keys)  完整复制，无多余空格
 2.  确认 API 地址填写正确
 3.  确认网络连接正常
 

@@ -16,7 +16,7 @@
 
 ### 1\. 获取 API Key
 
-前往 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)  创建 API Key。
+前往 [API Key 管理页面](https://doudi.ai/keys)  创建 API Key。
 
 ### 2\. 添加 Provider
 
@@ -133,7 +133,7 @@ Zed Agent Panel 有两种模式：
 
 ## 推荐模型
 
-推荐模型请参考 [模型广场](https://doudi.ai/models) 。
+推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing) 。
 
 ## 添加更多模型
 

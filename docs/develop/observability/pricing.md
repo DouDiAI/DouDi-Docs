@@ -22,17 +22,18 @@ DouDi.ai 采用**纯按量付费**模式 — 用多少付多少，没有订阅�
 
 ## 使用流程
 
-1.  **注册** — 前往 [DouDi.ai 控制台](https://doudi.ai/console/overview)   注册账号
-2.  **充值** — 按需充值，余额永不过期
+1.  **注册** — 前往 [DouDi.ai 控制台](https://doudi.ai/dashboard)   注册账号
+2.  **充值** — 前往 [钱包充值页面](https://doudi.ai/wallet) 按需充值，余额永不过期
 3.  **调用** — 按实际用量扣费，实时结算
 
 ## 费用查看
 
 ### 控制台
 
-1.  登录 [DouDi.ai 控制台](https://doudi.ai/console/wallet)  
-2.  进入 **账单** 页面
-3.  查看实时费用明细，按模型、按日期维度统计
+1.  登录 [DouDi.ai 控制台](https://doudi.ai/dashboard)。
+2.  在 [钱包充值页面](https://doudi.ai/wallet) 查看余额和充值记录。
+3.  在 [使用日志页面](https://doudi.ai/usage-logs/common) 查看实时费用明细。
+4.  在 [数据看板页面](https://doudi.ai/dashboard/models) 按模型维度统计用量变化。
 
 ### API 响应
 
@@ -55,7 +56,7 @@ DouDi.ai 采用**纯按量付费**模式 — 用多少付多少，没有订阅�
 3.  **控制 max\_tokens** — 设置合理的输出长度限制，避免不必要的 token 消耗
 4.  **合并请求** — 将多个短请求合并为一个，减少重复的 prompt 开销
 
-各模型实时定价，请查看 模型目录 。
+各模型实时定价，请查看 [模型广场/价格页面](https://doudi.ai/pricing)。
 
 > 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
 > 实际模型、分组、价格和权限以 DouDi 控制台为准。

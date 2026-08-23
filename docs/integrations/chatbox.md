@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 Chatbox（[下载地址](https://chatboxai.app/zh)  ）
 
 ## 配置步骤
@@ -81,7 +81,7 @@ Chatbox 支持 iOS 和 Android，手机端配置步骤与桌面端基本相同�
 
 点击 **保存** 后，进入模型配置页面。填写以下信息：
 
-*   **模型 ID**：从 [DouDi.ai 模型广场](https://doudi.ai/models)  复制模型 ID 填入
+*   **模型 ID**：从 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  复制模型 ID 填入
 *   **模型类型**：选择 **聊天**
 *   **能力**：根据需要勾选（视觉、推理、工具使用等）
 
@@ -107,7 +107,7 @@ Chatbox 支持 iOS 和 Android，手机端配置步骤与桌面端基本相同�
 
 **Q: 检查时提示连接失败**
 
-1.  确认 API Key 从 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)  完整复制，无多余空格
+1.  确认 API Key 从 [API Key 管理页面](https://doudi.ai/keys)  完整复制，无多余空格
 2.  确认 API 主机填写正确
 3.  确认网络连接正常
 

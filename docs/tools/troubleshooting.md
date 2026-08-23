@@ -5,9 +5,9 @@
 | 检查项 | 正确状态 |
 | --- | --- |
 | Base URL | 包含 `/v1` |
-| API Key | 以控制台创建的完整 Key 为准 |
+| API Key | 以 [API Key 管理页面](https://doudi.ai/keys) 创建的完整 Key 为准 |
 | 鉴权头 | `Authorization: Bearer YOUR_API_KEY` |
-| 模型名 | 和 DouDi 控制台里的完整模型 ID 完全一致 |
+| 模型名 | 和 [模型广场/价格页面](https://doudi.ai/pricing) 里的完整模型 ID 完全一致 |
 | 分组 | 当前 Key 的分组支持该模型 |
 | 接口格式 | OpenAI、Anthropic、Responses 不要混用 |
 
@@ -28,7 +28,7 @@
 2. curl 可用，再检查客户端配置。
 3. 换一个低倍率常用模型测试。
 4. 换备用 API 地址测试。
-5. 到控制台日志里看失败原因和实际扣费情况。
+5. 到 [使用日志页面](https://doudi.ai/usage-logs/common) 看失败原因和实际扣费情况。
 
 ## Codex 频繁 Reconnect
 

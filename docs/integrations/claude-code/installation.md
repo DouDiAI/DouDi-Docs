@@ -4,7 +4,7 @@ Claude Code 是一个由 AI 驱动的编码助手，理解你的整个代码库�
 
 ## 前置要求
 
-*   [DouDi.ai API Key](https://doudi.ai/console/api-keys)  （注册即可获取，无需 Claude 订阅）
+*   [DouDi.ai API Key](https://doudi.ai/keys)  （注册即可获取，无需 Claude 订阅）
 
 ## 终端 CLI
 

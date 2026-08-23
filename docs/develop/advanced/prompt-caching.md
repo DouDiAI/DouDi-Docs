@@ -98,7 +98,7 @@ print(f"缓存命中 token: {response.usage.cache_read_input_tokens}")
 *   **Anthropic Claude 系列** — 缓存命中可节省约 **90%** 输入成本
 *   **OpenAI GPT 系列** — 缓存命中可节省约 **50%** 输入成本
 
-实际节省比例取决于缓存命中率和各云厂商的计费策略，请参考 DouDi.ai 控制台的用量统计查看详情。
+实际节省比例取决于缓存命中率和各云厂商的计费策略，请参考 [数据看板页面](https://doudi.ai/dashboard/models) 的用量统计查看详情。
 
 ## 最佳实践
 
@@ -119,7 +119,7 @@ messages = [
 ]
 ```
 
-缓存命中可以在 API 响应的 usage 字段中查看，也可以在 DouDi.ai 控制台的用量统计中查看缓存命中率。
+缓存命中可以在 API 响应的 usage 字段中查看，也可以在 [数据看板页面](https://doudi.ai/dashboard/models) 的用量统计中查看缓存命中率。
 
 > 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
 > 实际模型、分组、价格和权限以 DouDi 控制台为准。

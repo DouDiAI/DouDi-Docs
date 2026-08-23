@@ -4,7 +4,7 @@ API Key 是你调用 DouDi 的凭证。任何拿到 Key 的人都可能消耗你
 
 ## 创建步骤
 
-1. 打开 [令牌页面](https://doudi.ai)。
+1. 打开 [API Key 管理页面](https://doudi.ai/keys)。
 2. 点击创建或添加令牌。
 3. 填写名称，建议用用途命名，例如 `claude-code`、`cherry-studio`、`test-script`。
 4. 选择分组。新手优先选择 `auto`，需要固定线路时再选择具体分组。

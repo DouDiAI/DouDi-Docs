@@ -12,7 +12,7 @@
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/console/api-keys)  ）
+*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
 *   已安装 LobeHub（[下载地址](https://lobehub.com/zh/download)  ）
 
 ## 配置步骤
@@ -63,7 +63,7 @@
 **Q: 连通性检查提示失败**
 
 1.  确认 API 代理地址填写正确（见上方表格）
-2.  确认 API Key 从 [DouDi.ai 控制台](https://doudi.ai/console/api-keys)  完整复制，无多余空格
+2.  确认 API Key 从 [API Key 管理页面](https://doudi.ai/keys)  完整复制，无多余空格
 3.  确认网络连接正常
 
 **Q: OpenAI Chat 和 OpenAI Response 有什么区别？**
@@ -75,7 +75,7 @@
 
 **Q: 模型列表里没有我想用的模型**
 
-点击「获取模型列表」按钮自动拉取，或点击 **+** 手动添加自定义模型。手动添加时模型 ID 需使用 `厂商/模型名` 格式，完整模型列表可在 [DouDi.ai 模型广场](https://doudi.ai/models)  查看。
+点击「获取模型列表」按钮自动拉取，或点击 **+** 手动添加自定义模型。手动添加时模型 ID 需使用 `厂商/模型名` 格式，完整模型列表可在 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  查看。
 
 > 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
 > 实际模型、分组、价格和权限以 DouDi 控制台为准。

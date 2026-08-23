@@ -249,7 +249,7 @@ for await (const event of stream) {
 | `anthropic/claude-sonnet-4.5` | Claude Sonnet 4.5 — 支持手动思考模式 |
 | `anthropic/claude-haiku-4.5` | Claude Haiku 4.5 — 快速响应 |
 
-DouDi.ai 的 Anthropic 协议支持全部原生功能，包括 Vision、Tool Use、Prompt Caching、Extended Thinking 等。完整可用模型以 Models API 和模型广场为准。
+DouDi.ai 的 Anthropic 协议支持全部原生功能，包括 Vision、Tool Use、Prompt Caching、Extended Thinking 等。完整可用模型以 Models API 和 [模型广场/价格页面](https://doudi.ai/pricing) 为准。
 
 > 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
 > 实际模型、分组、价格和权限以 DouDi 控制台为准。

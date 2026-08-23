@@ -4,8 +4,8 @@
 
 ## 获取 API Key
 
-1.  前往 [DouDi.ai 控制台](https://doudi.ai/console/overview) 
-2.  进入 [API Keys 页面](https://doudi.ai/console/api-keys) 
+1.  前往 [DouDi.ai 控制台](https://doudi.ai/dashboard) 
+2.  进入 [API Key 管理页面](https://doudi.ai/keys) 
 3.  点击创建 API Key
 4.  复制并安全保存你的 API Key
 
@@ -91,7 +91,7 @@ GROK_BASE_URL=https://doudi.ai/grok/v1
 1.  **使用环境变量** — 永远不要在代码中硬编码 API Key
 2.  **定期轮换密钥** — 建议每 90 天更换一次
 3.  **区分环境** — 开发和生产环境使用不同的 API Key
-4.  **监控用量** — 定期检查控制台的 API 用量和异常调用
+4.  **监控用量** — 定期检查 [使用日志](https://doudi.ai/usage-logs/common) 和 [数据看板](https://doudi.ai/dashboard/models) 中的异常调用
 5.  **限制权限** — 为不同项目创建独立的 API Key，便于追踪和管理
 
 切勿将 API Key 提交到 Git 仓库或暴露在客户端代码中。使用 .gitignore 排除 .env 文件。
