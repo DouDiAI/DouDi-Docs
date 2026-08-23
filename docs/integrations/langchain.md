@@ -21,9 +21,7 @@ pip3 install langchain langchain-openai
 
 ### Python
 
-example.py
-
-```
+```python
 from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(
@@ -44,9 +42,7 @@ python3 -W ignore example.py
 
 ### JavaScript
 
-example.js
-
-```
+```javascript
 import { ChatOpenAI } from "@langchain/openai";
 
 const llm = new ChatOpenAI({

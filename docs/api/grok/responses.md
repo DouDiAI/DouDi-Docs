@@ -30,9 +30,7 @@ Authorization: Bearer <你的 DOUDI_API_KEY>
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/grok/v1/responses \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
@@ -46,9 +44,7 @@ curl https://doudi.ai/grok/v1/responses \
 
 ### Python
 
-grok\_responses.py
-
-```
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -68,9 +64,7 @@ print(response.output_text)
 
 ### TypeScript
 
-grok-responses.ts
-
-```
+```typescript
 import OpenAI from 'openai'
 
 const client = new OpenAI({
@@ -92,9 +86,7 @@ console.log(response.output_text)
 
 设置 `stream: true` 后，服务会返回 xAI-compatible SSE 事件：
 
-grok\_responses\_stream.py
-
-```
+```python
 stream = client.responses.create(
     model="grok/grok-4.5",
     input="写一段简短的欢迎语。",

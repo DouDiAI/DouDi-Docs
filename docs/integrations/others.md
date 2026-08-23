@@ -15,9 +15,9 @@ DouDi.ai 兼容 OpenAI / Anthropic 协议，并提供 Grok / xAI 协议入口。
 
 [Continue](https://continue.dev)   是一款开源的 AI 编码助手，支持 VS Code 和 JetBrains IDE。
 
-~/.continue/config.json
+在 `~/.continue/config.json` 中添加模型配置：
 
-```
+```json
 {
   "models": [
     {
@@ -42,9 +42,9 @@ DouDi.ai 兼容 OpenAI / Anthropic 协议，并提供 Grok / xAI 协议入口。
 
 [Aider](https://aider.chat)   是一款命令行 AI 配对编程工具。
 
-~/.zshrc
+在 `~/.zshrc` 中写入环境变量：
 
-```
+```bash
 export OPENAI_API_KEY=<你的 DOUDI_API_KEY>
 export OPENAI_API_BASE=https://doudi.ai/v1
 ```

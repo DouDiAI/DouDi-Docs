@@ -15,9 +15,7 @@ DouDi.ai 支持多供应商架构，同一模型可通过不同供应商节点�
 
 通过 `provider.routing` 扩展参数配置路由策略：
 
-routing.py
-
-```
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -36,9 +34,7 @@ response = client.chat.completions.create(
 )
 ```
 
-routing.ts
-
-```
+```typescript
 const response = await client.chat.completions.create({
   model: 'openai/gpt-4o',
   messages: [{ role: 'user', content: '你好' }],

@@ -36,9 +36,7 @@ GET https://doudi.ai/api/provider/pricing
 
 ### cURL
 
-Terminal
-
-```
+```bash
 ts=$(date +%s)
 sign=$(printf '%s' "$ts" | openssl dgst -sha256 -hmac "$HVOY_PRICING_SECRET" -r | cut -d' ' -f1)
 
@@ -49,9 +47,7 @@ curl https://doudi.ai/api/provider/pricing \
 
 ### Python
 
-provider\_pricing.py
-
-```
+```python
 import hashlib
 import hmac
 import os
@@ -75,9 +71,7 @@ for model in data["models"]:
 
 ### TypeScript
 
-provider-pricing.ts
-
-```
+```typescript
 import { createHmac } from "node:crypto";
 
 const ts = String(Math.floor(Date.now() / 1000));

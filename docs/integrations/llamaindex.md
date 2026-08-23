@@ -21,9 +21,7 @@ pip3 install llama-index llama-index-llms-openai-like
 
 创建文件 `test_llamaindex.py`：
 
-test\_llamaindex.py
-
-```
+```python
 from llama_index.llms.openai_like import OpenAILike
 
 llm = OpenAILike(

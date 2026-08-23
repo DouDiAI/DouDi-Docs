@@ -129,18 +129,14 @@ Models API 与所有 DouDi.ai API 一样，需要 DouDi.ai API Key。OpenAI 兼�
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/v1/models \
   -H "Authorization: Bearer $DOUDI_API_KEY"
 ```
 
 ### Python
 
-models.py
-
-```
+```python
 import os
 import requests
 
@@ -154,9 +150,7 @@ for model in resp.json()["data"]:
 
 ### TypeScript
 
-models.ts
-
-```
+```typescript
 const resp = await fetch("https://doudi.ai/v1/models", {
   headers: { Authorization: "Bearer " + process.env.DOUDI_API_KEY },
 });

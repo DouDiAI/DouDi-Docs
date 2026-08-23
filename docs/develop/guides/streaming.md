@@ -15,8 +15,6 @@ DouDi.ai 使用 **Server-Sent Events (SSE)** 协议实现流式响应：
 
 ### cURL
 
-Terminal
-
 ```
 curl https://doudi.ai/v1/chat/completions \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
@@ -30,8 +28,6 @@ curl https://doudi.ai/v1/chat/completions \
 ```
 
 ### Python
-
-stream\_openai.py
 
 ```
 from openai import OpenAI
@@ -54,8 +50,6 @@ for chunk in stream:
 ```
 
 ### TypeScript
-
-stream\_openai.ts
 
 ```
 import OpenAI from 'openai'
@@ -81,8 +75,6 @@ for await (const chunk of stream) {
 
 ### Python
 
-stream\_anthropic.py
-
 ```
 import anthropic
 
@@ -101,8 +93,6 @@ with client.messages.stream(
 ```
 
 ### TypeScript
-
-stream\_anthropic.ts
 
 ```
 import Anthropic from '@anthropic-ai/sdk'
@@ -128,8 +118,6 @@ for await (const event of stream) {
 ## 流式 + Function Calling
 
 流式响应也支持函数调用场景。模型会先流式输出工具调用请求，你处理完成后继续对话：
-
-stream\_with\_tools.py
 
 ```
 stream = client.chat.completions.create(
@@ -164,8 +152,6 @@ for chunk in stream:
 ## 错误处理和重连
 
 流式连接可能因网络问题中断。建议实现重连逻辑。
-
-stream\_retry.py
 
 ```
 import time

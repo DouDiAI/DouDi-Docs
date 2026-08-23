@@ -16,9 +16,7 @@ DouDi.ai 支持多模态模型的视觉输入，可以分析图像、截图、�
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/v1/chat/completions \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
@@ -36,9 +34,7 @@ curl https://doudi.ai/v1/chat/completions \
 
 ### Python
 
-vision\_url.py
-
-```
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -65,9 +61,7 @@ print(response.choices[0].message.content)
 
 ### TypeScript
 
-vision\_url.ts
-
-```
+```typescript
 const response = await client.chat.completions.create({
   model: 'openai/gpt-4o',
   messages: [{
@@ -87,9 +81,7 @@ const response = await client.chat.completions.create({
 
 适用于本地文件或截图场景：
 
-vision\_base64.py
-
-```
+```python
 import base64
 
 # 读取本地图片

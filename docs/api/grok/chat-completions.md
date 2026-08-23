@@ -45,9 +45,7 @@ Authorization: Bearer <你的 DOUDI_API_KEY>
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/grok/v1/chat/completions \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
@@ -62,9 +60,7 @@ curl https://doudi.ai/grok/v1/chat/completions \
 
 ### Python
 
-grok\_chat.py
-
-```
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -85,9 +81,7 @@ print(response.choices[0].message.content)
 
 ### TypeScript
 
-grok-chat.ts
-
-```
+```typescript
 import OpenAI from 'openai'
 
 const client = new OpenAI({
@@ -110,9 +104,7 @@ console.log(response.choices[0].message.content)
 
 设置 `stream: true` 后，服务会以 xAI-compatible Chat Completions SSE 格式持续返回内容：
 
-grok\_stream.py
-
-```
+```python
 stream = client.chat.completions.create(
     model="grok/grok-4.5",
     messages=[{"role": "user", "content": "写一段简短的欢迎语。"}],

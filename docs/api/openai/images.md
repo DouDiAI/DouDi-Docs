@@ -12,9 +12,7 @@ POST https://doudi.ai/v1/images/generations
 
 ### Python
 
-gen.py
-
-```
+```python
 import base64
 from openai import OpenAI
 
@@ -34,9 +32,7 @@ with open("output.png", "wb") as f:
 
 ### TypeScript
 
-gen.ts
-
-```
+```typescript
 import OpenAI from 'openai'
 import fs from 'node:fs'
 
@@ -55,9 +51,7 @@ fs.writeFileSync('output.png', Buffer.from(resp.data[0].b64_json!, 'base64'))
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl -X POST 'https://doudi.ai/v1/images/generations' \
   -H 'Authorization: Bearer YOUR_DOUDI_API_KEY' \
   -H 'Content-Type: application/json' \
@@ -158,9 +152,7 @@ POST https://doudi.ai/v1/images/edits
 
 ### Python
 
-edit.py
-
-```
+```python
 import base64
 from openai import OpenAI
 
@@ -181,9 +173,7 @@ with open("apple_edited.png", "wb") as out:
 
 ### TypeScript
 
-edit.ts
-
-```
+```typescript
 import OpenAI, { toFile } from 'openai'
 import fs from 'node:fs'
 
@@ -202,9 +192,7 @@ fs.writeFileSync('apple_edited.png', Buffer.from(resp.data[0].b64_json!, 'base64
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl -X POST 'https://doudi.ai/v1/images/edits' \
   -H 'Authorization: Bearer YOUR_DOUDI_API_KEY' \
   -F 'model="openai/gpt-image-2"' \

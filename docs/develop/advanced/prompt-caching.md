@@ -29,9 +29,7 @@ DouDi.ai 的模型资源分别由 **AWS Bedrock**、**Azure OpenAI**、**Google 
 
 OpenAI 模型的 Prompt Caching 是自动的 — 当检测到重复的 prompt 前缀时自动启用：
 
-caching\_openai.py
-
-```
+```python
 # 长 system prompt 会被自动缓存
 SYSTEM_PROMPT = """你是 DouDi.ai 的技术支持助手。
 
@@ -65,9 +63,7 @@ response2 = client.chat.completions.create(
 
 Anthropic 模型支持显式的 cache control：
 
-caching\_anthropic.py
-
-```
+```python
 import anthropic
 
 client = anthropic.Anthropic(

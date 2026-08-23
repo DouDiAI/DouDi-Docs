@@ -13,9 +13,7 @@ DouDi.ai 的故障回退机制在主模型不可用时，自动切换到备选�
 
 通过 `provider.fallback` 参数为单个请求配置回退：
 
-fallback.py
-
-```
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -40,9 +38,7 @@ response = client.chat.completions.create(
 print(response.model)
 ```
 
-fallback.ts
-
-```
+```typescript
 const response = await client.chat.completions.create({
   model: 'openai/gpt-4o',
   messages: [{ role: 'user', content: '你好' }],

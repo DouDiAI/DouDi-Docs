@@ -14,18 +14,14 @@ GET https://doudi.ai/v1/models
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/v1/models \
   -H "Authorization: Bearer $DOUDI_API_KEY"
 ```
 
 ### Python
 
-models.py
-
-```
+```python
 import os
 import requests
 
@@ -39,9 +35,7 @@ for model in resp.json()["data"]:
 
 ### TypeScript
 
-models.ts
-
-```
+```typescript
 const resp = await fetch('https://doudi.ai/v1/models', {
   headers: { Authorization: 'Bearer ' + process.env.DOUDI_API_KEY }
 })
@@ -135,9 +129,7 @@ GET https://doudi.ai/v1/models/{provider}
 
 ### 请求示例
 
-Terminal
-
-```
+```bash
 # 列出所有 Anthropic 模型
 curl https://doudi.ai/v1/models/anthropic \
   -H "Authorization: Bearer $DOUDI_API_KEY"
@@ -166,9 +158,7 @@ GET https://doudi.ai/v1/models/{provider}/{model_id}
 
 ### 请求示例
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/v1/models/anthropic/claude-sonnet-4.6 \
   -H "Authorization: Bearer $DOUDI_API_KEY"
 ```

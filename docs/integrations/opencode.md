@@ -18,32 +18,26 @@ go install github.com/opencode-ai/opencode@latest
 
 ### 2\. 配置环境变量
 
-OpenCode 支持多种 Provider 配置。推荐使用 OpenAI 兼容模式：
+OpenCode 支持多种 Provider 配置。推荐在 `~/.zshrc` 中写入 OpenAI 兼容模式配置：
 
-~/.zshrc
-
-```
+```bash
 # OpenAI 兼容模式
 export OPENAI_API_KEY=<你的 DOUDI_API_KEY>
 export OPENAI_BASE_URL=https://doudi.ai/v1
 ```
 
-如果主要使用 Claude 模型，也可以配置 Anthropic 模式：
+如果主要使用 Claude 模型，也可以在 `~/.zshrc` 中写入 Anthropic 模式配置：
 
-~/.zshrc
-
-```
+```bash
 export ANTHROPIC_API_KEY=<你的 DOUDI_API_KEY>
 export ANTHROPIC_BASE_URL=https://doudi.ai/anthropic
 ```
 
 ### 3\. 配置文件
 
-也可以通过 OpenCode 的配置文件设置：
+也可以通过 `~/.config/opencode/config.toml` 设置：
 
-~/.config/opencode/config.toml
-
-```
+```toml
 [providers.haoai]
 api_key = "<你的 DOUDI_API_KEY>"
 base_url = "https://doudi.ai/v1"

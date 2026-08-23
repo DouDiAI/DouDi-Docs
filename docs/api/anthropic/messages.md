@@ -119,9 +119,7 @@ Claude 不同版本的思考模式参数不同。请按具体模型版本配置�
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/anthropic/v1/messages \
   -H "x-api-key: $DOUDI_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
@@ -138,9 +136,7 @@ curl https://doudi.ai/anthropic/v1/messages \
 
 ### Python
 
-anthropic\_chat.py
-
-```
+```python
 import anthropic
 
 client = anthropic.Anthropic(
@@ -162,9 +158,7 @@ print(message.content[0].text)
 
 ### TypeScript
 
-anthropic\_chat.ts
-
-```
+```typescript
 import Anthropic from '@anthropic-ai/sdk'
 
 const client = new Anthropic({
@@ -210,9 +204,7 @@ console.log(message.content[0].text)
 
 ### Python
 
-anthropic\_stream.py
-
-```
+```python
 with client.messages.stream(
     model="anthropic/claude-sonnet-4.6",
     max_tokens=1024,
@@ -224,9 +216,7 @@ with client.messages.stream(
 
 ### TypeScript
 
-anthropic\_stream.ts
-
-```
+```typescript
 const stream = client.messages.stream({
   model: 'anthropic/claude-sonnet-4.6',
   max_tokens: 1024,

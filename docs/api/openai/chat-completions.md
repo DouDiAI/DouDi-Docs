@@ -48,9 +48,7 @@ type ContentPart =
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/v1/chat/completions \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
@@ -66,9 +64,7 @@ curl https://doudi.ai/v1/chat/completions \
 
 ### Python
 
-chat.py
-
-```
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -90,9 +86,7 @@ print(response.choices[0].message.content)
 
 ### TypeScript
 
-chat.ts
-
-```
+```typescript
 import OpenAI from 'openai'
 
 const client = new OpenAI({
@@ -144,9 +138,7 @@ console.log(response.choices[0].message.content)
 
 ### Python
 
-stream.py
-
-```
+```python
 stream = client.chat.completions.create(
     model="openai/gpt-5.4-mini",
     messages=[{"role": "user", "content": "讲一个故事"}],
@@ -161,9 +153,7 @@ for chunk in stream:
 
 ### TypeScript
 
-stream.ts
-
-```
+```typescript
 const stream = await client.chat.completions.create({
   model: 'openai/gpt-5.4-mini',
   messages: [{ role: 'user', content: '讲一个故事' }],

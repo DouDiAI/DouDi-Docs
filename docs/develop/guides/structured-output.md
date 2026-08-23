@@ -8,9 +8,7 @@
 
 ### Python
 
-json\_mode.py
-
-```
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -35,9 +33,7 @@ print(result)
 
 ### TypeScript
 
-json\_mode.ts
-
-```
+```typescript
 const response = await client.chat.completions.create({
   model: 'openai/gpt-4o',
   messages: [
@@ -56,9 +52,7 @@ const result = JSON.parse(response.choices[0].message.content!)
 
 更精确地控制输出结构，确保字段名称和类型符合预期：
 
-json\_schema.py
-
-```
+```python
 response = client.chat.completions.create(
     model="openai/gpt-4o",
     messages=[

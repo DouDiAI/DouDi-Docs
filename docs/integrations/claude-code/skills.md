@@ -50,9 +50,7 @@ npx skills find <query>
 
 在项目根目录创建 `CLAUDE.md`，Claude Code 启动时自动加载，作为项目级上下文和规范：
 
-CLAUDE.md
-
-```
+```markdown
 # 项目规范
 
 ## 技术栈

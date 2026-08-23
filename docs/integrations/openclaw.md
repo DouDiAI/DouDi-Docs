@@ -66,9 +66,7 @@ OpenClaw 通过 `~/.openclaw/openclaw.json` 管理所有配置（支持 JSON5 �
 
 Provider 定义在 `models.providers` 下，每个 Provider 需要指定 API 协议类型、地址和密钥：
 
-~/.openclaw/openclaw.json
-
-```
+```json
 {
   "models": {
     "providers": {
@@ -99,9 +97,7 @@ apiKey 支持 `${ENV_VAR}` 语法引用环境变量，避免明文写入配置�
 
 **全 Claude 阵容** — 追求最强能力，适合高要求场景。
 
-openclaw.json — models.providers
-
-```
+```json
 {
   "models": {
     "providers": {
@@ -151,9 +147,7 @@ Claude 思考模式需要按模型版本配置。Sonnet 4.5 使用 `enabled + bu
 
 **OpenAI Codex 组合** — 代码能力突出，通用任务均衡。
 
-openclaw.json — models.providers
-
-```
+```json
 {
   "models": {
     "providers": {
@@ -195,9 +189,7 @@ OpenAI 模型通过 haoai-openai Provider 接入，使用 openai-responses 协�
 
 **国产模型性价比之选** — Token 单价低，适合高频日常使用。
 
-openclaw.json — models.providers
-
-```
+```json
 {
   "models": {
     "providers": {
@@ -236,9 +228,7 @@ openclaw.json — models.providers
 
 OpenClaw 通过 `agents.defaults` 设置全局默认，通过 `agents.list` 数组定义不同 Agent，每个 Agent 可覆盖默认配置：
 
-openclaw.json — agents 部分
-
-```
+```json
 {
   "agents": {
     "defaults": {
@@ -289,9 +279,7 @@ openclaw.json — agents 部分
 
 以下是一份完整的 `openclaw.json`，整合了 Provider、Models 和 Agents 配置（最强配置方案）：
 
-~/.openclaw/openclaw.json
-
-```
+```json
 {
   "models": {
     "providers": {

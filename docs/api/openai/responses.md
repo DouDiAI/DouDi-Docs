@@ -68,9 +68,7 @@ type ContentPart =
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/v1/responses \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
@@ -84,9 +82,7 @@ curl https://doudi.ai/v1/responses \
 
 ### Python
 
-responses.py
-
-```
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -106,9 +102,7 @@ print(response.output_text)
 
 ### TypeScript
 
-responses.ts
-
-```
+```typescript
 import OpenAI from 'openai'
 
 const client = new OpenAI({
@@ -176,9 +170,7 @@ console.log(response.output_text)
 
 ### Python
 
-multi\_turn.py
-
-```
+```python
 response = client.responses.create(
     model="openai/gpt-5.4-mini",
     input=[
@@ -213,9 +205,7 @@ print(response.output_text)
 
 ### TypeScript
 
-multi\_turn.ts
-
-```
+```typescript
 const response = await client.responses.create({
   model: 'openai/gpt-5.4-mini',
   input: [
@@ -254,9 +244,7 @@ console.log(response.output_text)
 
 ### Python
 
-stream.py
-
-```
+```python
 stream = client.responses.create(
     model="openai/gpt-5.4-mini",
     input="讲一个关于编程的笑话",
@@ -270,9 +258,7 @@ for event in stream:
 
 ### TypeScript
 
-stream.ts
-
-```
+```typescript
 const stream = await client.responses.create({
   model: 'openai/gpt-5.4-mini',
   input: '讲一个关于编程的笑话',
@@ -325,9 +311,7 @@ Responses API 原生支持工具调用：
 
 ### Python
 
-tools.py
-
-```
+```python
 response = client.responses.create(
     model="openai/gpt-5.4-mini",
     input="北京今天天气怎么样？",
@@ -364,9 +348,7 @@ for item in response.output:
 
 ### TypeScript
 
-tools.ts
-
-```
+```typescript
 const response = await client.responses.create({
   model: 'openai/gpt-5.4-mini',
   input: '北京今天天气怎么样？',

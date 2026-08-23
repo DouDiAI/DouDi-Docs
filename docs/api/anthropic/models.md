@@ -12,9 +12,7 @@ GET https://doudi.ai/anthropic/v1/models
 
 ### 请求示例
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/anthropic/v1/models \
   -H "x-api-key: $DOUDI_API_KEY"
 ```
@@ -89,9 +87,7 @@ GET https://doudi.ai/anthropic/v1/models/{provider}
 
 ### 请求示例
 
-Terminal
-
-```
+```bash
 # 仅列出 Claude 系列模型
 curl https://doudi.ai/anthropic/v1/models/anthropic \
   -H "x-api-key: $DOUDI_API_KEY"
@@ -116,9 +112,7 @@ GET https://doudi.ai/anthropic/v1/models/{provider}/{model_id}
 
 ### 请求示例
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/anthropic/v1/models/anthropic/claude-sonnet-4.6 \
   -H "x-api-key: $DOUDI_API_KEY"
 ```

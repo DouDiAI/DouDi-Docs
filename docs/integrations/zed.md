@@ -46,11 +46,9 @@
 通过 `settings.json` 批量配置所有模型。
 
 1.  按 `⌘ + ,` 打开设置，点击右上角 **Edit in settings.json**
-2.  添加以下配置：
+2.  在 `~/.config/zed/settings.json` 中添加以下配置：
 
-~/.config/zed/settings.json
-
-```
+```json
 {
   "language_models": {
     "openai_compatible": {

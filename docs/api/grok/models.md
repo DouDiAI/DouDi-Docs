@@ -19,9 +19,7 @@ GET https://doudi.ai/grok/v1/models/{model_id}
 
 ## 列出可用 Grok 模型
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/grok/v1/models \
   -H "Authorization: Bearer $DOUDI_API_KEY"
 ```
@@ -52,9 +50,7 @@ curl https://doudi.ai/grok/v1/models \
 
 详情路径支持 canonical ID 或裸 Grok 模型名称。例如：
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/grok/v1/models/grok-4.5 \
   -H "Authorization: Bearer $DOUDI_API_KEY"
 ```

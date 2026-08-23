@@ -33,18 +33,14 @@ Authorization: Bearer sk-xxx
 
 ### cURL
 
-Terminal
-
-```
+```bash
 curl https://doudi.ai/v1/user/balance \
   -H "Authorization: Bearer $DOUDI_API_KEY"
 ```
 
 ### Python
 
-balance.py
-
-```
+```python
 import os
 import requests
 
@@ -58,9 +54,7 @@ print(f"可用余额: ${data['balance']:.4f} {data['currency']}")
 
 ### TypeScript
 
-balance.ts
-
-```
+```typescript
 const resp = await fetch('https://doudi.ai/v1/user/balance', {
   headers: { Authorization: `Bearer ${process.env.DOUDI_API_KEY}` },
 })

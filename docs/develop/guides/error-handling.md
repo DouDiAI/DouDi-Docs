@@ -71,9 +71,7 @@
 
 推荐使用\*\*指数退避（Exponential Backoff）\*\*策略：
 
-retry.py
-
-```
+```python
 import time
 import random
 from openai import OpenAI, APIError, RateLimitError, APIConnectionError

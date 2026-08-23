@@ -16,9 +16,7 @@
 
 ### Python
 
-function\_calling.py
-
-```
+```python
 from openai import OpenAI
 import json
 
@@ -90,9 +88,7 @@ if message.tool_calls:
 
 ### TypeScript
 
-function\_calling.ts
-
-```
+```typescript
 import OpenAI from 'openai'
 
 const client = new OpenAI({
@@ -160,9 +156,7 @@ if (message.tool_calls) {
 
 Anthropic 使用 `tools` 参数，格式略有不同：
 
-anthropic\_tools.py
-
-```
+```python
 import anthropic
 
 client = anthropic.Anthropic(

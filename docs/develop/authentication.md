@@ -68,11 +68,9 @@ client = OpenAI(
 
 ## 环境变量配置
 
-推荐使用环境变量管理 API Key，避免硬编码：
+推荐使用 `.env` 或部署平台的环境变量管理 API Key，避免硬编码：
 
-.env
-
-```
+```ini
 DOUDI_API_KEY=<你的 DOUDI_API_KEY>
 
 # 也可以设置协议专用的环境变量

@@ -42,9 +42,7 @@ npm install -g ccline
 
 将以下配置添加到 `~/.claude/settings.json`：
 
-~/.claude/settings.json
-
-```
+```json
 {
   "env": {
     "CLAUDE_CODE_STATUSLINE": "ccline"
