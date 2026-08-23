@@ -16,7 +16,7 @@
 
 在 VS Code 扩展市场搜索 **OAI Compatible Provider for Copilot**（作者：Johnny Zhao），点击 **Install** 安装。
 
-![安装 OAI Compatible Provider for Copilot 扩展](/imported/haoai/integrations-copilot-01.webp)
+![安装 OAI Compatible Provider for Copilot 扩展](/assets/images/integrations-copilot-01.webp)
 
 ### 第 2 步：打开配置界面
 
@@ -26,7 +26,7 @@
 OAICopilot: Open Configuration UI
 ```
 
-![通过命令面板打开配置界面](/imported/haoai/integrations-copilot-02.webp)
+![通过命令面板打开配置界面](/assets/images/integrations-copilot-02.webp)
 
 ### 第 3 步：填写全局配置
 
@@ -37,7 +37,7 @@ OAICopilot: Open Configuration UI
 | **Global Base URL** | `https://doudi.ai/v1` |
 | **Global API Key** | 你的 DouDi.ai API Key |
 
-![填写 Global Base URL 和 API Key 并保存](/imported/haoai/integrations-copilot-03.webp)
+![填写 Global Base URL 和 API Key 并保存](/assets/images/integrations-copilot-03.webp)
 
 ### 第 4 步：添加 Provider
 
@@ -50,7 +50,7 @@ OAICopilot: Open Configuration UI
 | **API Key**（标注 ④） | 你的 DouDi.ai API Key |
 | **API Mode**（标注 ⑤） | `Anthropic` |
 
-![添加 DouDi.ai Provider](/imported/haoai/integrations-copilot-04.webp)
+![添加 DouDi.ai Provider](/assets/images/integrations-copilot-04.webp)
 
 ### 第 5 步：添加模型
 
@@ -61,7 +61,7 @@ OAICopilot: Open Configuration UI
 | **Provider ID**（标注 ②） | `doudi` |
 | **Model ID**（标注 ③） | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID |
 
-![添加自定义模型](/imported/haoai/integrations-copilot-05.webp)
+![添加自定义模型](/assets/images/integrations-copilot-05.webp)
 
 可重复此步骤添加多个模型，模型 ID 请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
@@ -71,13 +71,13 @@ OAICopilot: Open Configuration UI
 
 若看不到模型，点击 **Manage Models…** 进入模型列表页面。
 
-![在聊天面板切换到 DouDi.ai 模型](/imported/haoai/integrations-copilot-06.webp)
+![在聊天面板切换到 DouDi.ai 模型](/assets/images/integrations-copilot-06.webp)
 
 ### 第 7 步：确认模型并开始使用
 
 在 Language Models 面板中，**OAI Compatible** 分组下会显示已添加的 DouDi.ai 模型。在右下角聊天框选中模型后即可开始对话。
 
-![确认模型出现在 OAI Compatible 分组下](/imported/haoai/integrations-copilot-07.webp)
+![确认模型出现在 OAI Compatible 分组下](/assets/images/integrations-copilot-07.webp)
 
 ## 常见问题
 

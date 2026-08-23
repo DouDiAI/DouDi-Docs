@@ -226,7 +226,6 @@ const integrationsSidebar = {
       items: [
         { text: "Cursor", link: "/integrations/cursor" },
         { text: "Cline", link: "/integrations/cline" },
-        { text: "Zed", link: "/integrations/zed" },
         { text: "GitHub Copilot", link: "/integrations/copilot" },
       ],
     },
@@ -235,11 +234,6 @@ const integrationsSidebar = {
       collapsed: false,
       items: [
         { text: "Cherry Studio", link: "/integrations/cherry-studio" },
-        { text: "Chatbox", link: "/integrations/chatbox" },
-        { text: "BotGem", link: "/integrations/botgem" },
-        { text: "LobeHub / LobeChat", link: "/integrations/lobehub" },
-        { text: "OpenCat", link: "/integrations/opencat" },
-        { text: "NextChat", link: "/integrations/nextchat" },
         { text: "WorkBuddy", link: "/integrations/workbuddy" },
         { text: "沉浸式翻译", link: "/integrations/immersive-translate" },
       ],

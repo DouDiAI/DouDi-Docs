@@ -46,10 +46,6 @@ DouDi.ai 兼容 OpenAI、Anthropic 和 Grok / xAI 协议。选择教程时先按
     <span>Cursor</span>
     <p>确认 Cursor 当前兼容性边界，并查看可用替代方案。</p>
   </a>
-  <a class="ml-route-card" href="/integrations/zed">
-    <span>Zed</span>
-    <p>配置 Zed Assistant 的模型、Base URL 和 Key。</p>
-  </a>
   <a class="ml-route-card" href="/integrations/copilot">
     <span>GitHub Copilot</span>
     <p>在 VS Code 侧配置可接入的 OpenAI 兼容端点。</p>
@@ -64,26 +60,6 @@ DouDi.ai 兼容 OpenAI、Anthropic 和 Grok / xAI 协议。选择教程时先按
   <a class="ml-route-card" href="/integrations/cherry-studio">
     <span>Cherry Studio</span>
     <p>配置自定义 Provider、模型列表和 OpenAI / Anthropic 协议。</p>
-  </a>
-  <a class="ml-route-card" href="/integrations/chatbox">
-    <span>Chatbox</span>
-    <p>配置聊天客户端的 API Host、Key 和模型。</p>
-  </a>
-  <a class="ml-route-card" href="/integrations/botgem">
-    <span>BotGem</span>
-    <p>配置服务商、模型和 DouDi API Key。</p>
-  </a>
-  <a class="ml-route-card" href="/integrations/lobehub">
-    <span>LobeHub / LobeChat</span>
-    <p>配置 OpenAI 兼容模型服务和可用模型列表。</p>
-  </a>
-  <a class="ml-route-card" href="/integrations/opencat">
-    <span>OpenCat</span>
-    <p>配置桌面聊天客户端的 OpenAI provider。</p>
-  </a>
-  <a class="ml-route-card" href="/integrations/nextchat">
-    <span>NextChat</span>
-    <p>配置自定义接口、模型和基础聊天功能。</p>
   </a>
   <a class="ml-route-card" href="/integrations/workbuddy">
     <span>WorkBuddy</span>
@@ -125,7 +101,7 @@ DouDi.ai 兼容 OpenAI、Anthropic 和 Grok / xAI 协议。选择教程时先按
 | 想先跑通代码调用 | [快速开始](/quick-start) 或 [OpenAI SDK](/integrations/openai-sdk) |
 | 想配置 Claude Code | [Claude Code 总览](/integrations/claude-code) → [模型提供商](/integrations/claude-code/model-provider) |
 | 想配置 Codex CLI | [Codex CLI 总览](/integrations/codex) → [模型提供商](/integrations/codex/model-provider) |
-| 想用桌面聊天软件 | [Cherry Studio](/integrations/cherry-studio) 或 [Chatbox](/integrations/chatbox) |
+| 想用桌面聊天软件 | [Cherry Studio](/integrations/cherry-studio) |
 | 请求失败、模型不显示或扣费异常 | [工具问题排查](/tools/troubleshooting) |
 
 ## 旧版工具教程

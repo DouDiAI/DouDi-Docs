@@ -13,7 +13,7 @@
 
 在菜单栏点击 **Help → Troubleshooting → Enable Developer Mode**。
 
-![开启开发者模式](/imported/haoai/integrations-claude-coworks-01.webp)
+![开启开发者模式](/assets/images/integrations-claude-coworks-01.webp)
 
 开启开发者模式后，菜单栏会出现 **Developer** 菜单。
 
@@ -21,13 +21,13 @@
 
 在菜单栏点击 **Developer → Configure Third-Party Inference…**，打开配置面板。
 
-![打开配置面板](/imported/haoai/integrations-claude-coworks-02.webp)
+![打开配置面板](/assets/images/integrations-claude-coworks-02.webp)
 
 ### 第 3 步：选择 Gateway
 
 在 **Connection** 页面选中 **Gateway（Anthropic-compatible）**。
 
-![选择 Gateway](/imported/haoai/integrations-claude-coworks-03.webp)
+![选择 Gateway](/assets/images/integrations-claude-coworks-03.webp)
 
 ### 第 4 步：填写凭据并应用
 
@@ -39,7 +39,7 @@
 | Gateway API key | 你的 DouDi.ai API Key |
 | Gateway auth scheme | `x-api-key` |
 
-![填写凭据并应用](/imported/haoai/integrations-claude-coworks-04.webp)
+![填写凭据并应用](/assets/images/integrations-claude-coworks-04.webp)
 
 右上角状态指示器变为绿色即表示已成功接入。
 
@@ -47,19 +47,19 @@
 
 连接建立后，即可在 Claude Coworks 中查看当前可用模型。需要核对模型能力、价格和账号权限时，前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)。
 
-![浏览可用模型](/imported/haoai/integrations-claude-coworks-05.webp)
+![浏览可用模型](/assets/images/integrations-claude-coworks-05.webp)
 
 ### 第 6 步：选择你的模型
 
 在 Claude Coworks 界面中选取要使用的特定模型。你可以随时根据需求在不同模型之间切换。选定的模型将用于所有推理请求。
 
-![选择你的模型](/imported/haoai/integrations-claude-coworks-06.webp)
+![选择你的模型](/assets/images/integrations-claude-coworks-06.webp)
 
 ### 第 7 步：验证并开始使用
 
 设置已完成！Claude Coworks 将通过 DouDi.ai Gateway 以你选定的模型转发所有推理请求。现在即可正常使用 Claude Coworks，所有请求都将通过 DouDi.ai 基础设施处理。
 
-![验证完成](/imported/haoai/integrations-claude-coworks-07.webp)
+![验证完成](/assets/images/integrations-claude-coworks-07.webp)
 
 ## 开始使用
 

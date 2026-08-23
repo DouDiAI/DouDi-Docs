@@ -13,13 +13,13 @@
 
 在 VS Code 扩展市场搜索 **Cline** 并安装。
 
-![安装 Cline](/imported/haoai/integrations-cline-01.webp)
+![安装 Cline](/assets/images/integrations-cline-01.webp)
 
 ### 第 2 步：打开设置
 
 点击左侧活动栏的 **Cline 图标**，进入 Cline 面板，然后点击右上角的 **设置图标**。
 
-![打开 Cline 设置](/imported/haoai/integrations-cline-02.webp)
+![打开 Cline 设置](/assets/images/integrations-cline-02.webp)
 
 ### 第 3 步：填写配置并保存
 
@@ -32,7 +32,7 @@
 | **OpenAI Compatible API Key** | 你的 DouDi.ai API Key |
 | **Model ID** | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID |
 
-![填写配置信息](/imported/haoai/integrations-cline-03.webp)
+![填写配置信息](/assets/images/integrations-cline-03.webp)
 
 Cline 也支持 Anthropic 协议，对应的 Base URL 为 `https://doudi.ai/v1`。
 

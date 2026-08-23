@@ -23,7 +23,7 @@ CC-Switch 是一个功能强大的多模型管理工具，支持在单一界面�
 
 下图展示了如何在 CC-Switch 中配置用量查询：
 
-![CC-Switch 用量查询配置](/imported/haoai/integrations-cc-switch-01.webp)
+![CC-Switch 用量查询配置](/assets/images/integrations-cc-switch-01.webp)
 
 **配置要点：**
 
