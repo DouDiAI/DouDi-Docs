@@ -116,6 +116,3 @@ messages = [
 ```
 
 缓存命中可以在 API 响应的 usage 字段中查看，也可以在 [数据看板页面](https://doudi.ai/dashboard/models) 的用量统计中查看缓存命中率。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

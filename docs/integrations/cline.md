@@ -49,6 +49,3 @@ Cline 也支持 Anthropic 协议，对应的 Base URL 为 `https://doudi.ai/anth
 **Q: 无法使用 Tool Use 功能**
 
 切换 API Provider 为 Anthropic，Base URL 改为 `https://doudi.ai/anthropic`，可获得完整的 Tool Use 支持。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

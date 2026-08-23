@@ -65,6 +65,3 @@ CC-Switch 通过 DouDi.ai 可以访问全球顶级模型。详见 [DouDi.ai 模�
 **Q: 支持多个 DouDi.ai 账户吗？**
 
 支持。在 CC-Switch 中可以添加多个 DouDi.ai 提供商配置，使用不同的 API Key。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

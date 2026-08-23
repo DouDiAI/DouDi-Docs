@@ -72,6 +72,3 @@ npx skills find <query>
 *   [Anthropic Skills 文档](https://docs.anthropic.com/en/docs/claude-code/skills) 
 *   [Skills.sh — 开放 Skills 生态](https://skills.sh/) 
 *   [ClawHub — Skills 发布平台](https://clawhub.ai/skills)
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

@@ -178,6 +178,3 @@ def stream_with_retry(client, max_retries=3, **kwargs):
 2.  **处理不完整的 chunk** — 某些 chunk 可能没有 content
 3.  **实现重连机制** — 使用指数退避策略
 4.  **前端使用 `flush`** — 确保内容即时显示
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

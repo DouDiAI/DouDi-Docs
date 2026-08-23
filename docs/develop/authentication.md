@@ -93,6 +93,3 @@ GROK_BASE_URL=https://doudi.ai/grok/v1
 5.  **限制权限** — 为不同项目创建独立的 API Key，便于追踪和管理
 
 切勿将 API Key 提交到 Git 仓库或暴露在客户端代码中。使用 .gitignore 排除 .env 文件。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

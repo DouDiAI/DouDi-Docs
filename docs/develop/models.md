@@ -162,6 +162,3 @@ for (const model of data) {
 ```
 
 查看完整的实时模型列表和定价，请访问 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)。API 端点详情请参阅 [Models API 参考](/api/openai/models)。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

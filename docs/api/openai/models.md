@@ -166,6 +166,3 @@ curl https://doudi.ai/v1/models/anthropic/claude-sonnet-4.6 \
 ### 响应格式
 
 返回单个 Model 对象，结构与列表接口中的对象一致。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

@@ -468,6 +468,3 @@ print(response.output_text)
 | Token 字段 | `prompt_tokens` / `completion_tokens` | `input_tokens` / `output_tokens` |
 
 两个 API 均可用于生产环境。如果你已有 Chat Completions 集成，无需迁移。 推荐新项目使用 Responses API，尤其是需要复杂工具调用流程或高频调用（可充分利用缓存降低成本）的场景。 详见 函数调用指南。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

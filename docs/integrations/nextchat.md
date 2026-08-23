@@ -91,6 +91,3 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 **Q: Anthropic 服务商的模型名需要带前缀吗？**
 
 不需要。使用 Anthropic 服务商时，模型名直接填 `claude-sonnet-4.6`。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

@@ -221,6 +221,3 @@ if message.tool_calls:
 *   OpenAI: gpt-4o、gpt-4o-mini、o1、o3-mini
 *   Anthropic: claude-opus-4、claude-sonnet-4、claude-3-5-haiku
 *   国产: deepseek-chat、qwen-max、glm-4
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

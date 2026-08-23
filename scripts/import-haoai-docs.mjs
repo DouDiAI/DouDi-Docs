@@ -264,11 +264,7 @@ async function extractPage(url) {
   }
 
   const route = routeFromSource(sourcePath);
-  const sourceNote = [
-    "> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。",
-    "> 实际模型、分组、价格和权限以 DouDi 控制台为准。",
-  ].join("\n");
-  body = `${body.replace(/^# .+?\n/, `# ${title}\n`)}\n\n${sourceNote}\n`;
+  body = `${body.replace(/^# .+?\n/, `# ${title}\n`).trimEnd()}\n`;
 
   return {
     sourceUrl: url,

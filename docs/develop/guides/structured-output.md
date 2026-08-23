@@ -184,6 +184,3 @@ response = client.chat.completions.create(
 | `anthropic/claude-sonnet-4.6` | ✅ | — |
 
 不支持 JSON Schema 的模型可以通过在 system prompt 中详细描述期望的 JSON 格式来实现类似效果。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

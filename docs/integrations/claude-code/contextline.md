@@ -67,6 +67,3 @@ ccline config
 *   Git 信息显示粒度
 
 更多详情参考 [GitHub 仓库](https://github.com/Haleclipse/CCometixLine)  。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

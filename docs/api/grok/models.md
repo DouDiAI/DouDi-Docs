@@ -63,6 +63,3 @@ curl https://doudi.ai/grok/v1/models/grok-4.5 \
 | `grok/grok-composer-2.5-fast` | 200,000 token | 仅文本 |
 
 在 [Grok Chat Completions](/api/grok/chat-completions) 或 [Grok Responses](/api/grok/responses) 请求中使用这些 canonical model ID。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

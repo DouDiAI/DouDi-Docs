@@ -71,6 +71,3 @@ const response = await client.chat.completions.create({
 4.  **配合故障回退** — 路由策略可以和 `fallback` 参数组合使用
 
 你也可以在 DouDi.ai 控制台中设置全局默认路由策略，无需在每次请求中指定。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

@@ -118,6 +118,3 @@ for chunk in stream:
 ```
 
 需要使用 xAI-compatible Responses 格式时，请参考 [Grok Responses API](/api/grok/responses)。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

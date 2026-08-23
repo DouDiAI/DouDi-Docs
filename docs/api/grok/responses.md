@@ -118,6 +118,3 @@ GET https://doudi.ai/grok/v1/responses
 | `grok/grok-composer-2.5-fast` | 纯文本编程模型，上下文窗口为 200,000 token；不支持图像输入。 |
 
 如需使用 Chat Completions 格式，请参考 [Grok Chat Completions](/api/grok/chat-completions)。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

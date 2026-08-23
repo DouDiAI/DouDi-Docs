@@ -154,6 +154,3 @@ DouDi.ai 在标准协议基础上提供扩展参数，用于高级路由和回�
 ```
 
 详见 [供应商路由](/develop/advanced/provider-routing) 和 [故障回退](/develop/advanced/fallback)。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

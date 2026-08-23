@@ -111,6 +111,3 @@ console.log(`可用余额: $${data.balance.toFixed(4)} ${data.currency}`)
 *   `is_active` 用于状态校验
 *   `balance` 对应 cc-switch 的 remaining 字段
 *   `total` / `used` 用于消耗进度展示
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

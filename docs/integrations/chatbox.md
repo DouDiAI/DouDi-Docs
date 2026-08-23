@@ -110,6 +110,3 @@ Chatbox 支持 iOS 和 Android，手机端配置步骤与桌面端基本相同�
 1.  确认 API Key 从 [API Key 管理页面](https://doudi.ai/keys)  完整复制，无多余空格
 2.  确认 API 主机填写正确
 3.  确认网络连接正常
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

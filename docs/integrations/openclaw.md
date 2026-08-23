@@ -385,6 +385,3 @@ OpenClaw 单次任务消耗较大，建议：
 **如何快速切换模型**
 
 在对话中使用别名切换：`/model opus`、`/model sonnet`、`/model haiku`（需要在 `agents.defaults.models` 中配置别名）。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

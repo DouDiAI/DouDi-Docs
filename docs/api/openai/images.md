@@ -245,6 +245,3 @@ curl -X POST 'https://doudi.ai/v1/images/edits' \
 与生成一致，`usage` 按官方口径返回。`num_input_images` 是输入图片张数。注意：参考图输入的 token 不计入（官方未公开可复算的输入图计数公式，详见上方计费说明），因此 `input_tokens_details` 只含 `text_tokens`。
 
 支持的模型与价格见 [模型广场/价格页面](https://doudi.ai/pricing) 。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

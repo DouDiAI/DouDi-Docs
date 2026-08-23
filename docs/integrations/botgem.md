@@ -85,6 +85,3 @@ API Server 填 `https://doudi.ai` 后，BotGem 会自动补全为 `https://doudi
 点击 Models 右侧的 **Refresh** 按钮可自动拉取模型列表，列表中的名称**不带前缀**（如 `gpt-4.1`）。
 
 如果想使用列表之外的模型，需要**手动输入完整模型名**，格式为 `厂商/模型名`。完整模型列表可在 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  查看。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

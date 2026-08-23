@@ -60,6 +60,3 @@ opencode "Hello, 你好吗？"
 推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 OpenCode 的具体配置方式可能随版本更新变化，请参考 [OpenCode 官方文档](https://github.com/opencode-ai/opencode)  。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

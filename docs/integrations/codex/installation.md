@@ -31,6 +31,3 @@ codex --version
 ## 下一步
 
 *   [配置模型供应商](/integrations/codex/model-provider) — 使用 CC Switch 管理 DouDi.ai API Key 和请求地址
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

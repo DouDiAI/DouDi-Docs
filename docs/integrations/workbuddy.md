@@ -75,6 +75,3 @@ WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completi
 **Q: 请求失败或提示接口错误**
 
 检查接口地址是否填写完整（`https://doudi.ai/v1/chat/completions`），以及 API KEY 是否从 [API Key 管理页面](https://doudi.ai/keys)  完整复制，无多余空格。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

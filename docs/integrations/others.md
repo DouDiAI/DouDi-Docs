@@ -89,6 +89,3 @@ aider --model openai/gpt-4o
 4.  模型名称使用 `provider/model-name` 格式
 
 如果你成功在某个工具中配置了 DouDi.ai，欢迎提交 PR 补充到本文档： GitHub 仓库
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

@@ -14,6 +14,3 @@
 ## 快速开始
 
 [1\. 安装 Claude Code](/integrations/claude-code/installation)[2\. 配置模型供应商](/integrations/claude-code/model-provider)[3\. CCometixLine 状态栏](/integrations/claude-code/contextline)[4\. 配置 Skills](/integrations/claude-code/skills)
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

@@ -167,6 +167,3 @@ Zed Agent Panel 有两种模式：
 **模型不支持工具调用**
 
 将 `capabilities.tools` 设为 `false`。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

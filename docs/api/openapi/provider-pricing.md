@@ -179,6 +179,3 @@ for (const model of body.data.models) {
 | 503 | `provider pricing disabled` | 站点未开启价格导出功能 |
 | 503 | `provider pricing signature secret unavailable` | 服务端签名密钥未配置 |
 | 503 | `service temporarily unavailable` | 服务内部错误，请稍后重试 |
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

@@ -13,6 +13,3 @@
 ## 快速开始
 
 [1\. 安装 Codex CLI](/integrations/codex/installation)[2\. 配置模型供应商](/integrations/codex/model-provider)[3\. 开启 WebSocket（推荐）](/integrations/codex/websocket)
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

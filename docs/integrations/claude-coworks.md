@@ -77,6 +77,3 @@
 2.  确认 Gateway auth scheme 选择的是 `x-api-key`
 3.  确认 API Key 从 DouDi.ai 控制台 完整复制，无多余空格
 4.  确认网络连接正常
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

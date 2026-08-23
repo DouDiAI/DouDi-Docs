@@ -72,6 +72,3 @@ console.log(response.content);
 **Q: 提示 API Key 无效**
 
 确认 `openai_api_key` 填写的是 DouDi.ai 的 API Key，而不是 OpenAI 官方的 Key。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

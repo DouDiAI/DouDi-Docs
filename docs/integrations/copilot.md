@@ -112,6 +112,3 @@ OAICopilot: Open Configuration UI
 **Q: 我是 Copilot Business / Enterprise 用户，能用吗？**
 
 暂不支持。该扩展目前仅适用于 **GitHub Copilot 个人版（Individual）** 用户，Business 和 Enterprise 用户需等待后续版本支持。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

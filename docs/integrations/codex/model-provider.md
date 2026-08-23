@@ -99,6 +99,3 @@ Codex CLI 需要使用 **Responses 协议格式**（`wire_api = "responses"`）�
 **Q: 连接超时**
 
 确认请求地址为 `https://doudi.ai/v1`，末尾不带斜杠。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

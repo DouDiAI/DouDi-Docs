@@ -88,6 +88,3 @@ brew uninstall claude-code   # Homebrew
 *   [配置模型供应商](/integrations/claude-code/model-provider) — 使用 DouDi.ai 作为 API 提供商
 *   [CCometixLine 状态栏](/integrations/claude-code/contextline) — 实时显示 Git 状态、模型、上下文用量
 *   [配置 Skills](/integrations/claude-code/skills) — 扩展 Claude Code 能力
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

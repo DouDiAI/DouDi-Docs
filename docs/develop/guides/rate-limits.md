@@ -113,6 +113,3 @@ response = client.chat.completions.create(
 ```
 
 详见 [故障回退](/develop/advanced/fallback)。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。

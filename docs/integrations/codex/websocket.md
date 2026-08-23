@@ -21,6 +21,3 @@ supports_websockets = true
 API Key 仍在 CC Switch 的 Codex 供应商设置里管理。这个命令只负责开启 Codex 所需的协议格式和 WebSocket 连接。
 
 如果你的配置使用 `[model_providers]` 下的 inline table 写法，脚本也会在原有供应商里补字段，不会强制改成另一种格式。
-
-> 本页按 DouDi.ai 接入语境整理，覆盖同类教程的结构和步骤。
-> 实际模型、分组、价格和权限以 DouDi 控制台为准。
