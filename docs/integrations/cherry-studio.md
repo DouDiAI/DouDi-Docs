@@ -1,137 +1,71 @@
 # Cherry Studio 配置
 
-[Cherry Studio](https://cherry-ai.com)  是一款跨平台的 AI 桌面客户端（支持 Windows、macOS、Linux），支持多模型对话、知识库和工作流，是目前功能最丰富的开源 AI 客户端之一。
-
-通过配置 DouDi.ai 作为服务商，你可以在 Cherry Studio 中使用当前账号可用模型，只需一个 API Key。
-
-## 三种协议说明
-
-Cherry Studio 支持通过以下三种协议接入 DouDi.ai：
-
-**OpenAI Chat** — 基于 `/v1/chat/completions`，适用于当前支持 Chat Completions 的模型。
-
-**OpenAI Response** — 基于 `/v1/responses`，适用于当前支持 Responses 的模型。
-
-**Claude** — 基于 `/v1/messages`，适用于当前支持 Anthropic Messages 的模型。
+[Cherry Studio](https://cherry-ai.com) 是一款跨平台 AI 桌面客户端，支持多模型对话、知识库和常用办公工作流。通过添加一个 DouDi.ai 自定义提供商，可以在 Cherry Studio 中使用当前账号可用模型。
 
 ## 前提条件
 
-*   已注册 DouDi.ai 账号并获取 API Key（[前往获取](https://doudi.ai/keys)  ）
-*   已安装 Cherry Studio（[下载地址](https://cherry-ai.com)  ）
+- 已注册 DouDi.ai 账号，并在 [API Key 管理页面](https://doudi.ai/keys) 获取 API Key
+- 已安装 Cherry Studio（[下载地址](https://cherry-ai.com)）
 
 ## 配置步骤
 
 ### 第 1 步：打开设置
 
-启动 Cherry Studio，点击左下角的 **设置** 图标。
+启动 Cherry Studio 后，点击左下角的 **设置** 图标。
 
-![打开 Cherry Studio 设置](/imported/haoai/integrations-cherry-studio-01.webp)
+![打开 Cherry Studio 设置](/assets/images/integrations-cherry-studio-01.webp)
 
-### 第 2 步：添加模型提供商
+### 第 2 步：添加自定义提供商
 
-进入左侧 **模型服务**，滚动到底部，点击 **\+ 添加**。在弹出的对话框中填写提供商名称，并选择对应的提供商类型。
+进入 **模型服务**，在提供商列表底部点击 **添加服务商**，选择添加自定义提供商。
 
-**OpenAI Chat**
+在弹窗中填写：
 
-提供商类型选择 `OpenAI`，点击确定。
-
-![添加 OpenAI Chat 提供商](/imported/haoai/integrations-cherry-studio-02.webp)
-
-**OpenAI Response**
-
-提供商类型选择 `OpenAI`（后续在配置页开启 Response 模式），点击确定。
-
-![添加 OpenAI Response 提供商](/imported/haoai/integrations-cherry-studio-03.webp)
-
-**Claude**
-
-提供商类型选择 `Anthropic`，点击确定。
-
-![添加 Claude 提供商](/imported/haoai/integrations-cherry-studio-04.webp)
-
-### 第 3 步：填写 API 配置
-
-在对应提供商的配置页中填写 API 密钥和 API 地址。
-
-**OpenAI Chat**
-
-| 配置项 | 值 |
+| 配置项 | 填写内容 |
 | --- | --- |
+| **提供商名称** | `DouDi.ai` |
 | **API 密钥** | 你的 DouDi.ai API Key |
-| **API 地址** | `https://doudi.ai/v1` |
+| **OpenAI API 地址** | `https://doudi.ai/` |
+| **Anthropic API 地址** | `https://doudi.ai/` |
 
-![OpenAI Chat 配置](/imported/haoai/integrations-cherry-studio-05.webp)
+Cherry Studio 会根据这里的 API 地址自动拼出请求路径：OpenAI Chat 使用 `https://doudi.ai/v1/chat/completions`，Anthropic Messages 使用 `https://doudi.ai/v1/messages`。不要在输入框里手动填写完整请求路径。
 
-**OpenAI Response**
+![添加 DouDi.ai 自定义提供商](/assets/images/integrations-cherry-studio-02.webp)
 
-| 配置项 | 值 |
-| --- | --- |
-| **API 密钥** | 你的 DouDi.ai API Key |
-| **API 地址** | `https://doudi.ai/v1` |
+填写完成后点击 **添加**。
 
-![OpenAI Response 配置](/imported/haoai/integrations-cherry-studio-06.webp)
+### 第 3 步：获取模型列表
 
-**Claude**
+添加完成后，在提供商列表中选择 **DouDi.ai**。确认 API 密钥和 API 地址已保存，然后点击右侧的 **获取模型列表**。
 
-| 配置项 | 值 |
-| --- | --- |
-| **API 密钥** | 你的 DouDi.ai API Key |
-| **API 地址** | `https://doudi.ai/v1` |
+![获取 DouDi.ai 模型列表](/assets/images/integrations-cherry-studio-03.webp)
 
-![Claude 配置](/imported/haoai/integrations-cherry-studio-07.webp)
+如果模型列表为空，先确认 API Key 是否完整复制，再确认账号在 [模型广场/价格页面](https://doudi.ai/pricing) 中拥有对应模型权限。
 
-确认页面右上角的开关处于 **开启（ON）** 状态，否则该提供商不会出现在模型选择器中。
+### 第 4 步：添加要使用的模型
 
-### 第 4 步：添加模型
+模型列表弹出后，可以点击右上角 **添加全部模型**，也可以只点击单个模型右侧的 **+** 添加需要的模型。
 
-点击模型区域的 **管理** 按钮自动拉取模型列表，点击模型右侧的 **+** 添加到启用列表。
+![添加 DouDi.ai 模型](/assets/images/integrations-cherry-studio-04.webp)
 
-**OpenAI Chat**
+模型名称、能力和权限会随 DouDi.ai 当前账号状态变化，文档不单独维护固定模型清单。需要核对模型能力和价格时，以 [模型广场/价格页面](https://doudi.ai/pricing) 为准。
 
-![OpenAI Chat 模型列表](/imported/haoai/integrations-cherry-studio-08.webp)
+### 第 5 步：开始使用
 
-**OpenAI Response**
+回到聊天主界面，点击顶部模型选择器，在 **DouDi.ai** 分组下选择刚添加的模型，即可开始对话。
 
-![OpenAI Response 模型列表](/imported/haoai/integrations-cherry-studio-09.webp)
-
-**Claude**
-
-![Claude 模型列表](/imported/haoai/integrations-cherry-studio-10.webp)
-
-### 第 5 步：验证配置
-
-点击 **检测** 按钮，选择任意模型进行测试，显示检测通过即配置成功。
-
-**OpenAI Chat**
-
-![OpenAI Chat 验证](/imported/haoai/integrations-cherry-studio-11.webp)
-
-**OpenAI Response**
-
-![OpenAI Response 验证](/imported/haoai/integrations-cherry-studio-12.webp)
-
-**Claude**
-
-![Claude 验证](/imported/haoai/integrations-cherry-studio-13.webp)
-
-## 开始使用
-
-回到主界面，点击对话顶部的模型选择器，在对应提供商分组下选择模型，即可开始对话。
-
-![选择模型开始对话](/imported/haoai/integrations-cherry-studio-14.webp)
+![选择 DouDi.ai 模型开始对话](/assets/images/integrations-cherry-studio-05.webp)
 
 ## 常见问题
 
-**Q: 点击「管理」后模型列表为空**
+**Q: API 地址应该填 `https://doudi.ai/` 还是完整接口地址？**
 
-检查 API 地址是否填写正确（末尾不加斜杠），以及 API 密钥是否完整复制，无多余空格。
+在 Cherry Studio 当前自定义提供商界面里填写 `https://doudi.ai/`。界面会自动生成 `https://doudi.ai/v1/chat/completions` 和 `https://doudi.ai/v1/messages` 请求路径。
 
-**Q: 检测时提示连接失败**
+**Q: 点击获取模型列表后没有模型**
 
-1.  确认 API Key 从 [API Key 管理页面](https://doudi.ai/keys)  完整复制，无多余空格
-2.  确认 API 地址填写正确
-3.  确认网络连接正常
+检查 API Key 是否来自 [API Key 管理页面](https://doudi.ai/keys)，并确认没有多余空格。随后到 [模型广场/价格页面](https://doudi.ai/pricing) 核对账号可用模型和权限。
 
-**Q: 提供商不出现在模型选择器中**
+**Q: 聊天页看不到 DouDi.ai 模型**
 
-检查配置页右上角的开关是否已开启。
+确认已经在模型列表里点击 **添加全部模型** 或单个模型右侧的 **+**。如果仍未出现，重启 Cherry Studio 后再打开模型选择器。
