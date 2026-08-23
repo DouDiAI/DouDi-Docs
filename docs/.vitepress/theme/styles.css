@@ -333,6 +333,7 @@ summary:focus-visible {
 .VPDoc div[class*="language-"] {
   --dd-code-accent: rgba(255, 255, 255, 0.62);
   --dd-code-gutter: rgba(255, 255, 255, 0.34);
+  --dd-code-line-prefix: 0px;
   position: relative;
   overflow: hidden;
   margin: 20px 0 24px;
@@ -373,18 +374,27 @@ summary:focus-visible {
 }
 
 .VPDoc div[class*="language-"] pre code {
+  box-sizing: border-box;
   display: block;
+  width: max-content;
+  min-width: 100%;
+  padding: 0;
+  background: transparent;
   color: var(--dd-code-text);
   font-family: var(--vp-font-family-mono);
   font-size: 14px;
   line-height: 1.58;
-  min-width: max-content;
   tab-size: 2;
   white-space: pre;
 }
 
 .VPDoc div[class*="language-"] .line {
+  position: relative;
+  display: inline-block;
+  min-width: 100%;
   min-height: 1.58em;
+  margin: 0;
+  padding: 0 0 0 var(--dd-code-line-prefix);
 }
 
 .VPDoc div[class*="language-"] code span {
@@ -392,7 +402,16 @@ summary:focus-visible {
 }
 
 .VPDoc div[class*="language-"] .line.highlighted {
+  margin: 0;
+  padding: 0 0 0 var(--dd-code-line-prefix);
+  width: auto;
   background-color: rgba(255, 255, 255, 0.07);
+}
+
+.VPDoc div[class*="language-"] .line.diff {
+  margin: 0;
+  padding: 0 0 0 var(--dd-code-line-prefix);
+  width: auto;
 }
 
 .VPDoc div[class*="language-"] .line.diff.add {
@@ -490,6 +509,7 @@ summary:focus-visible {
   ) {
   --dd-code-accent: var(--dd-terminal-green);
   --dd-code-gutter: rgba(39, 201, 63, 0.68);
+  --dd-code-line-prefix: 2.6ch;
   --dd-code-prompt: "$";
 }
 
@@ -505,23 +525,6 @@ summary:focus-visible {
     [class~="language-bat"]
   ) {
   --dd-code-prompt: ">";
-}
-
-.VPDoc div:is(
-    [class~="language-bash"],
-    [class~="language-sh"],
-    [class~="language-shell"],
-    [class~="language-zsh"],
-    [class~="language-curl"],
-    [class~="language-powershell"],
-    [class~="language-ps1"],
-    [class~="language-cmd"],
-    [class~="language-bat"]
-  ) .line {
-  position: relative;
-  display: inline-block;
-  min-width: 100%;
-  padding-left: 2.6ch;
 }
 
 .VPDoc div:is(
@@ -582,6 +585,7 @@ summary:focus-visible {
     [class~="language-http"]
   ) {
   --dd-editor-gutter-width: 4.5ch;
+  --dd-code-line-prefix: var(--dd-editor-gutter-width);
 }
 
 .VPDoc div:is(
@@ -613,10 +617,6 @@ summary:focus-visible {
     [class~="language-ini"],
     [class~="language-http"]
   ) .line {
-  position: relative;
-  display: inline-block;
-  min-width: 100%;
-  padding-left: var(--dd-editor-gutter-width);
   counter-increment: dd-code-line;
 }
 
