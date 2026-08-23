@@ -53,7 +53,7 @@ except RateLimitError as e:
 
 ```
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[
         # 较长的 system prompt 会被自动缓存
         {"role": "system", "content": "你是一个专业的...（此处省略长文本）"},
@@ -82,7 +82,7 @@ client.chat.completions.create(
 
 ### 3\. 选择合适的模型
 
-推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing) 。
+根据任务复杂度、价格和能力选择当前可用模型；实时信息以 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 为准。
 
 ### 4\. 控制 max\_tokens
 
@@ -90,7 +90,7 @@ client.chat.completions.create(
 
 ```
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[{"role": "user", "content": "一句话总结"}],
     max_tokens=100  # 限制输出长度
 )
@@ -102,11 +102,11 @@ response = client.chat.completions.create(
 
 ```
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<PRIMARY_MODEL_ID>",
     messages=[...],
     extra_body={
         "provider": {
-            "fallback": ["anthropic/claude-sonnet-4.6", "grok/grok-4.5"]
+            "fallback": ["<FALLBACK_MODEL_ID_1>", "<FALLBACK_MODEL_ID_2>"]
         }
     }
 )

@@ -1,6 +1,6 @@
 # GitHub Copilot 配置
 
-通过 VS Code 扩展 **OAI Compatible Provider for Copilot**，可以将 DouDi.ai 接入 GitHub Copilot Chat，在熟悉的编辑器中使用 Claude、GPT-4o、Grok 等当前可用模型。
+通过 VS Code 扩展 **OAI Compatible Provider for Copilot**，可以将 DouDi.ai 接入 GitHub Copilot Chat，在熟悉的编辑器中使用当前账号可用模型。
 
 本扩展需要 **GitHub Copilot 个人版（Individual）订阅**，暂不支持 Copilot Business 和 Enterprise 用户。若无 Copilot 订阅，建议改用 [Cursor](/integrations/cursor) 或 [Cherry Studio](/integrations/cherry-studio)。
 
@@ -45,7 +45,7 @@ OAICopilot: Open Configuration UI
 
 | 字段 | 值 |
 | --- | --- |
-| **Provider ID**（标注 ②） | `haoai` |
+| **Provider ID**（标注 ②） | `doudi` |
 | **Base URL**（标注 ③） | `https://doudi.ai` |
 | **API Key**（标注 ④） | 你的 DouDi.ai API Key |
 | **API Mode**（标注 ⑤） | `Anthropic` |
@@ -58,8 +58,8 @@ OAICopilot: Open Configuration UI
 
 | 字段 | 值 |
 | --- | --- |
-| **Provider ID**（标注 ②） | `haoai` |
-| **Model ID**（标注 ③） | 模型名称，如 `anthropic/claude-opus-4.5` |
+| **Provider ID**（标注 ②） | `doudi` |
+| **Model ID**（标注 ③） | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID |
 
 ![添加自定义模型](/imported/haoai/integrations-copilot-05.webp)
 
@@ -78,10 +78,6 @@ OAICopilot: Open Configuration UI
 在 Language Models 面板中，**OAI Compatible** 分组下会显示已添加的 DouDi.ai 模型。在右下角聊天框选中模型后即可开始对话。
 
 ![确认模型出现在 OAI Compatible 分组下](/imported/haoai/integrations-copilot-07.webp)
-
-## 推荐模型
-
-推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

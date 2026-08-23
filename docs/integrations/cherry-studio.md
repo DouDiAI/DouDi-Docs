@@ -2,17 +2,17 @@
 
 [Cherry Studio](https://cherry-ai.com)  是一款跨平台的 AI 桌面客户端（支持 Windows、macOS、Linux），支持多模型对话、知识库和工作流，是目前功能最丰富的开源 AI 客户端之一。
 
-通过配置 DouDi.ai 作为服务商，你可以在 Cherry Studio 中使用 GPT、Claude、Grok、DeepSeek 等当前可用模型，只需一个 API Key。
+通过配置 DouDi.ai 作为服务商，你可以在 Cherry Studio 中使用当前账号可用模型，只需一个 API Key。
 
 ## 三种协议说明
 
 Cherry Studio 支持通过以下三种协议接入 DouDi.ai：
 
-**OpenAI Chat** — 基于 `/v1/chat/completions`，适用于 GPT 系列模型，如 `openai/gpt-4.1`、`openai/gpt-5.3-chat`。
+**OpenAI Chat** — 基于 `/v1/chat/completions`，适用于当前支持 Chat Completions 的模型。
 
-**OpenAI Response** — 基于 `/v1/responses`，适用于 GPT 系列模型，如 `openai/gpt-4.1`、`openai/gpt-5.4-mini`。
+**OpenAI Response** — 基于 `/v1/responses`，适用于当前支持 Responses 的模型。
 
-**Claude** — 基于 `/anthropic/v1/messages`，适用于 Claude 系列模型，如 `anthropic/claude-sonnet-4.6`、`anthropic/claude-opus-4.6`。
+**Claude** — 基于 `/anthropic/v1/messages`，适用于当前支持 Anthropic Messages 的模型。
 
 ## 前提条件
 

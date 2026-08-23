@@ -25,11 +25,11 @@
 
 在弹出的对话框中，填写名称并选择对应的 **API 模式**，DouDi.ai 支持以下三种：
 
-| API 模式 | API 主机 | 示例模型 |
+| API 模式 | API 主机 | 说明 |
 | --- | --- | --- |
-| OpenAI API 兼容 | `https://doudi.ai/v1` | `openai/gpt-4.1`、`openai/gpt-5.3-chat` |
-| OpenAI Responses API 兼容 | `https://doudi.ai/v1` | `openai/gpt-4.1`、`openai/gpt-5.3-chat` |
-| Anthropic Claude API 兼容 | `https://doudi.ai/anthropic/v1` | `anthropic/claude-sonnet-4.6`、`anthropic/claude-opus-4.6` |
+| OpenAI API 兼容 | `https://doudi.ai/v1` | Chat Completions 兼容模式 |
+| OpenAI Responses API 兼容 | `https://doudi.ai/v1` | Responses 兼容模式 |
+| Anthropic Claude API 兼容 | `https://doudi.ai/anthropic/v1` | Anthropic Messages 兼容模式 |
 
 选择完成后点击 **添加**。
 
@@ -70,7 +70,7 @@ Chatbox 支持 iOS 和 Android，手机端配置步骤与桌面端基本相同�
 
 启动 Chatbox，进入设置页面，点击 **\+ 添加模型提供方**，填写配置信息：
 
-*   **名称**：自定义名称（如 “haoai”）
+*   **名称**：自定义名称（如 “doudi”）
 *   **API 模式**：根据需要选择（如 Claude API 兼容）
 *   **API 密钥**：粘贴你的 DouDi.ai API Key
 *   **API 主机**：填写对应的 API 地址（如 Claude 为 `https://doudi.ai/anthropic/v1`）

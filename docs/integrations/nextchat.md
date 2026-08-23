@@ -37,7 +37,7 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 | **模型服务商** | OpenAI |
 | **接口地址** | `https://doudi.ai` |
 | **API Key** | 你的 DouDi.ai API Key |
-| **自定义模型名** | 例如 `openai/gpt-5.3-chat,anthropic/claude-sonnet-4.6,deepseek/deepseek-v3.2` |
+| **自定义模型名** | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID，多个值用英文逗号分隔 |
 
 **Anthropic（Claude 系列）**
 
@@ -46,7 +46,7 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 | **模型服务商** | Anthropic |
 | **接口地址** | `https://doudi.ai/anthropic` |
 | **API Key** | 你的 DouDi.ai API Key |
-| **自定义模型名** | 例如 `claude-sonnet-4.6,claude-opus-4.6,claude-haiku-4.5` |
+| **自定义模型名** | 填写 Anthropic 协议可用模型名，多个值用英文逗号分隔 |
 
 ![配置模型服务商和 API Key](/imported/haoai/integrations-nextchat-02.webp)
 
@@ -70,10 +70,6 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 
 ![开始对话](/imported/haoai/integrations-nextchat-05.webp)
 
-## 可用模型示例
-
-推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
-
 ## 常见问题
 
 **Q: 报错 `No providers support endpoint 'chat_completions'`**
@@ -86,8 +82,8 @@ NextChat 支持以下两种方式接入 DouDi.ai：
 
 **Q: OpenAI 服务商可以调用 Claude 和其他当前可用模型吗？**
 
-可以。在自定义模型名中填写带厂商前缀的完整模型名（如 `anthropic/claude-sonnet-4.6`），DouDi.ai 会自动路由到对应厂商。
+可以。在自定义模型名中填写带厂商前缀的完整模型名，DouDi.ai 会自动路由到对应厂商。
 
 **Q: Anthropic 服务商的模型名需要带前缀吗？**
 
-不需要。使用 Anthropic 服务商时，模型名直接填 `claude-sonnet-4.6`。
+不需要。使用 Anthropic 服务商时，模型名按该协议的模型名称填写即可。

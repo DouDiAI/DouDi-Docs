@@ -27,10 +27,10 @@
 
 DouDi.ai 支持以下协议，推荐选择 **OpenAI**：
 
-| 协议 | 选择 | 适用模型 |
+| 协议 | 选择 | 适用范围 |
 | --- | --- | --- |
-| **OpenAI Chat**（推荐） | OpenAI | `openai/gpt-4.1`、`openai/gpt-4.1-mini`、`openai/gpt-5.4-mini` 等（部分示例） |
-| **Claude** | Claude | `anthropic/claude-sonnet-4.6`、`anthropic/claude-opus-4.6`、`anthropic/claude-haiku-4.5` |
+| **OpenAI Chat**（推荐） | OpenAI | OpenAI-compatible Chat Completions |
+| **Claude** | Claude | Anthropic Messages |
 
 BotGem 暂不支持 OpenAI Responses 协议（`/v1/responses`）。该协议使用 `input` 字段而非 `messages`，BotGem 目前仅支持标准 Chat Completions 格式。
 
@@ -51,14 +51,14 @@ BotGem 暂不支持 OpenAI Responses 协议（`/v1/responses`）。该协议使�
 
 | 配置项 | 值 |
 | --- | --- |
-| **Name** | `haoai`（或任意名称） |
+| **Name** | `doudi`（或任意名称） |
 | **API Server** | `https://doudi.ai` |
 | **API Key** | 你的 DouDi.ai API Key |
-| **Models** | 点击 Refresh 自动拉取，或手动输入，例如 `gpt-4.1` |
+| **Models** | 点击 Refresh 自动拉取，或从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID 手动输入 |
 
 ![填写配置信息](/imported/haoai/integrations-botgem-04.webp)
 
-API Server 填 `https://doudi.ai` 后，BotGem 会自动补全为 `https://doudi.ai/v1/chat/completions`。通过 OpenAI Chat 协议可调用所有厂商模型，手动输入时使用 `厂商/模型名` 格式，例如 `anthropic/claude-opus-4.5`、`deepseek/deepseek-v3.2`。
+API Server 填 `https://doudi.ai` 后，BotGem 会自动补全为 `https://doudi.ai/v1/chat/completions`。通过 OpenAI Chat 协议可调用当前兼容模型，手动输入时使用 `厂商/模型名` 格式，并以 [模型广场/价格页面](https://doudi.ai/pricing) 的实时 ID 为准。
 
 ### 第 5 步：检查连接并保存
 
@@ -82,6 +82,6 @@ API Server 填 `https://doudi.ai` 后，BotGem 会自动补全为 `https://doudi
 
 **Q: 模型列表里没有我想用的模型**
 
-点击 Models 右侧的 **Refresh** 按钮可自动拉取模型列表，列表中的名称**不带前缀**（如 `gpt-4.1`）。
+点击 Models 右侧的 **Refresh** 按钮可自动拉取模型列表。不同协议和客户端版本对前缀显示方式可能不同，请以实际拉取结果为准。
 
 如果想使用列表之外的模型，需要**手动输入完整模型名**，格式为 `厂商/模型名`。完整模型列表可在 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  查看。

@@ -1,6 +1,6 @@
 # WorkBuddy 配置
 
-[WorkBuddy](https://workbuddy.ai)  是腾讯推出的 AI Agent 桌面应用，支持日常办公、代码开发、文档处理等多种场景。通过接入 DouDi.ai，可以使用 GPT、Claude、Grok、DeepSeek 等当前可用模型，只需一个 API Key。
+[WorkBuddy](https://workbuddy.ai)  是腾讯推出的 AI Agent 桌面应用，支持日常办公、代码开发、文档处理等多种场景。通过接入 DouDi.ai，可以使用当前账号可用模型，只需一个 API Key。
 
 ## 前提条件
 
@@ -30,9 +30,9 @@
 | **提供商** | `自定义 / Custom` |
 | **接口地址** | `https://doudi.ai/v1/chat/completions` |
 | **API KEY** | 你的 DouDi.ai API Key |
-| **模型名称** | 想使用的模型 ID，如 `openai/gpt-5.4-mini` |
+| **模型名称** | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID |
 
-WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completions` 接口，可以访问 GPT、Claude、Grok、DeepSeek 等当前可用模型，只需在**模型名称**中填入对应的模型 ID，详见 [模型广场/价格页面](https://doudi.ai/pricing)  。
+WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completions` 接口，可以访问当前兼容模型，只需在**模型名称**中填入对应的模型 ID，详见 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 按需勾选高级配置：
 
@@ -57,10 +57,6 @@ WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completi
 回到主界面，点击底部模型选择器，在「自定义模型」分组下选择刚配置的模型，即可开始对话。
 
 ![开始对话](/imported/haoai/integrations-workbuddy-05.webp)
-
-## 推荐模型
-
-推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

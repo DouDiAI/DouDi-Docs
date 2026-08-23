@@ -1,27 +1,27 @@
 # OpenClaw
 
-[OpenClaw](https://openclaw.ai)   是一款开源的本地 AI 助手，通过 WhatsApp、Telegram、Slack 等消息应用与你交互，能执行实际操作 — 管理邮件、日历、航班值机、浏览网页等。它完全在本地运行，数据不离开你的设备。
+[OpenClaw](https://openclaw.ai) 是一款开源的本地 AI 助手，通过 WhatsApp、Telegram、Slack 等消息应用与你交互，能执行邮件、日历、网页浏览等任务。它完全在本地运行，数据不离开你的设备。
 
 ## 为什么搭配 DouDi.ai？
 
-*   **全球顶级模型统一调用** — 一个 API Key 访问 Claude、GPT、Grok、Qwen、豆包等当前可用模型
-*   **灵活的 Agent 策略** — 不同 Agent 分配不同模型，主力用 Sonnet、推理用 Opus、轻量用 Haiku
-*   **99.9% SLA** — 多节点冗余，自动故障切换
-*   **成本可控** — 统一计费面板，实时监控 Token 消耗
+*   **统一入口** — 一个 API Key 接入 DouDi.ai 当前可用模型
+*   **灵活的 Agent 策略** — 不同 Agent 可绑定不同用途的模型
+*   **成本可控** — 通过 [使用日志页面](https://doudi.ai/usage-logs/common) 和 [数据看板页面](https://doudi.ai/dashboard/models) 观察消耗
+*   **回退能力** — 可以给主模型配置 fallback，降低单个上游异常对任务的影响
 
-OpenClaw 作为 Agentic AI 助手，单次任务的 Token 消耗较大（通常 10K-100K+ tokens）。建议根据任务复杂度选择模型，避免不必要的成本。本文提供三种配置方案供参考。
+OpenClaw 作为 Agentic AI 助手，单次任务的 Token 消耗较大。建议根据任务复杂度、模型价格和上下文窗口选择模型；实时模型和价格以 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 为准。
 
 ## 安装
 
 macOS / Linux
 
-```
+```bash
 curl -sSL https://openclaw.ai/install.sh | bash
 ```
 
 Windows (PowerShell)
 
-```
+```powershell
 & ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1)))
 ```
 
@@ -29,13 +29,17 @@ Windows (PowerShell)
 
 ### 1\. 获取 API Key
 
-前往 [API Key 管理页面](https://doudi.ai/keys)   创建 API Key。
+前往 [API Key 管理页面](https://doudi.ai/keys) 创建 API Key。
 
-### 2\. 运行配置向导
+### 2\. 选择模型 ID
 
-OpenClaw 提供交互式向导，输入以下命令即可快速完成配置：
+打开 [模型广场/价格页面](https://doudi.ai/pricing)，复制当前账号可用的模型 ID。使用 OpenClaw 前，请同时确认模型支持你需要的输入能力，例如文本、图片、文件或工具调用。
 
-```
+### 3\. 运行配置向导
+
+OpenClaw 提供交互式向导：
+
+```bash
 openclaw onboard
 ```
 
@@ -43,20 +47,18 @@ openclaw onboard
 
 | 配置项 | 值 |
 | --- | --- |
-| **Provider Type** | `anthropic-messages` |
-| **Base URL** | `https://doudi.ai/anthropic` |
+| **Provider Type** | `anthropic-messages` 或 `openai-responses` |
+| **Base URL** | Anthropic: `https://doudi.ai/anthropic`；OpenAI Responses: `https://doudi.ai/v1` |
 | **API Key** | 你的 DouDi.ai API Key |
-| **Model** | `anthropic/claude-sonnet-4.6` |
+| **Model** | 从模型广场复制的当前可用模型 ID |
 
-### 3\. 启动验证
+### 4\. 启动验证
 
-```
+```bash
 openclaw start
 ```
 
 向 OpenClaw 发送一条消息测试连通性。如果收到正常回复，配置成功。
-
-向导会自动生成 openclaw.json 配置文件。如果你需要更细粒度的控制，请参考下方的完整配置。
 
 ## 完整配置
 
@@ -70,13 +72,13 @@ Provider 定义在 `models.providers` 下，每个 Provider 需要指定 API 协
 {
   "models": {
     "providers": {
-      "haoai-anthropic": {
+      "doudi-anthropic": {
         "baseUrl": "https://doudi.ai/anthropic",
         "apiKey": "${DOUDI_API_KEY}",
         "api": "anthropic-messages",
         "models": []
       },
-      "haoai-openai": {
+      "doudi-openai": {
         "baseUrl": "https://doudi.ai/v1",
         "apiKey": "${DOUDI_API_KEY}",
         "api": "openai-responses",
@@ -87,89 +89,27 @@ Provider 定义在 `models.providers` 下，每个 Provider 需要指定 API 协
 }
 ```
 
-apiKey 支持 `${ENV_VAR}` 语法引用环境变量，避免明文写入配置文件。Claude 使用 haoai-anthropic（anthropic-messages），OpenAI 兼容模型使用 haoai-openai（openai-responses）。
+`apiKey` 支持 `${ENV_VAR}` 语法引用环境变量，避免明文写入配置文件。需要 Anthropic 原生能力时使用 `doudi-anthropic`；需要 Responses 协议时使用 `doudi-openai`。
 
 ### Models 配置
 
-模型定义在对应 Provider 的 `models` 数组中。我们提供三套方案，根据你的需求选择：
-
-### 最强配置
-
-**全 Claude 阵容** — 追求最强能力，适合高要求场景。
+模型定义在对应 Provider 的 `models` 数组中。不要把文档里的占位符直接复制为真实模型；请从 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 复制当前可用 ID，并按模型元数据填写上下文和输出限制。
 
 ```json
 {
   "models": {
     "providers": {
-      "haoai-anthropic": {
-        "baseUrl": "https://doudi.ai/anthropic",
-        "apiKey": "${DOUDI_API_KEY}",
-        "api": "anthropic-messages",
-        "models": [
-          {
-            "id": "anthropic/claude-sonnet-4.6",
-            "name": "Claude Sonnet 4.6",
-            "input": ["text", "image", "file"],
-            "contextWindow": 200000,
-            "maxTokens": 64000
-          },
-          {
-            "id": "anthropic/claude-opus-4.6",
-            "name": "Claude Opus 4.6",
-            "reasoning": true,
-            "input": ["text", "image", "file"],
-            "contextWindow": 200000,
-            "maxTokens": 128000
-          },
-          {
-            "id": "anthropic/claude-haiku-4.5",
-            "name": "Claude Haiku 4.5",
-            "input": ["text", "image", "file"],
-            "contextWindow": 200000,
-            "maxTokens": 64000
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-| 模型 | 角色定位 | 适用场景 |
-| --- | --- | --- |
-| `anthropic/claude-sonnet-4.6` | 主力模型 | 日常对话、任务执行、代码生成 |
-| `anthropic/claude-opus-4.6` | 深度推理 | 复杂分析、长链推理、研究任务 |
-| `anthropic/claude-haiku-4.5` | 快速响应 | 简单查询、快速回复、轻量任务 |
-
-Claude 思考模式需要按模型版本配置。Sonnet 4.5 使用 `enabled + budget_tokens`，Sonnet 4.6 / Opus 4.6 推荐 `adaptive`。完整规则见 [Anthropic Messages API 的 Claude 思考模式](/api/anthropic/messages#claude-%E6%80%9D%E8%80%83%E6%A8%A1%E5%BC%8F)。
-
-### 平衡组合
-
-**OpenAI Codex 组合** — 代码能力突出，通用任务均衡。
-
-```json
-{
-  "models": {
-    "providers": {
-      "haoai-openai": {
+      "doudi-openai": {
         "baseUrl": "https://doudi.ai/v1",
         "apiKey": "${DOUDI_API_KEY}",
         "api": "openai-responses",
         "models": [
           {
-            "id": "openai/gpt-5.3-codex",
-            "name": "GPT 5.3 Codex",
-            "reasoning": true,
-            "input": ["text", "image", "audio", "file"],
-            "contextWindow": 512000,
-            "maxTokens": 128000
-          },
-          {
-            "id": "openai/gpt-5.1-codex-mini",
-            "name": "GPT 5.1 Codex Mini",
-            "input": ["text", "image", "audio", "file"],
-            "contextWindow": 256000,
-            "maxTokens": 65536
+            "id": "<MODEL_ID>",
+            "name": "<DISPLAY_NAME>",
+            "input": ["text"],
+            "contextWindow": 200000,
+            "maxTokens": 8192
           }
         ]
       }
@@ -178,68 +118,32 @@ Claude 思考模式需要按模型版本配置。Sonnet 4.5 使用 `enabled + bu
 }
 ```
 
-| 模型 | 角色定位 | 适用场景 |
-| --- | --- | --- |
-| `openai/gpt-5.3-codex` | 主力 + 推理 | 日常对话、复杂任务、代码重构 |
-| `openai/gpt-5.1-codex-mini` | 快速响应 | 轻量任务、代码补全、快速问答 |
+常用字段：
 
-OpenAI 模型通过 haoai-openai Provider 接入，使用 openai-responses 协议。
-
-### 最具性价比
-
-**国产模型性价比之选** — Token 单价低，适合高频日常使用。
-
-```json
-{
-  "models": {
-    "providers": {
-      "haoai-openai": {
-        "baseUrl": "https://doudi.ai/v1",
-        "apiKey": "${DOUDI_API_KEY}",
-        "api": "openai-responses",
-        "models": [
-          {
-            "id": "bailian/qwen3.5-plus",
-            "name": "Qwen 3.5 Plus",
-            "input": ["text", "image"],
-            "contextWindow": 1000000,
-            "maxTokens": 64000
-          },
-          {
-            "id": "volcengine/doubao-seed-2.0-code",
-            "name": "豆包 Seed 2.0 Code",
-            "input": ["text", "image"],
-            "contextWindow": 256000,
-            "maxTokens": 128000
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-| 模型 | 角色定位 | 适用场景 |
-| --- | --- | --- |
-| `bailian/qwen3.5-plus` | 主力 + 推理 | 日常对话、通用任务、中文优化 |
-| `volcengine/doubao-seed-2.0-code` | 代码 + 快速 | 代码生成、调试、快速回复 |
+| 字段 | 说明 |
+| --- | --- |
+| `id` | DouDi.ai 返回的完整模型 ID |
+| `name` | OpenClaw UI 中显示的名称 |
+| `input` | 模型支持的输入类型，例如 `text`、`image`、`file` |
+| `reasoning` | 模型是否支持推理/思考能力 |
+| `contextWindow` | 上下文窗口大小，参考模型元数据填写 |
+| `maxTokens` | 单次最大输出 token，参考模型元数据填写 |
 
 ### Agents 配置
 
-OpenClaw 通过 `agents.defaults` 设置全局默认，通过 `agents.list` 数组定义不同 Agent，每个 Agent 可覆盖默认配置：
+OpenClaw 通过 `agents.defaults` 设置全局默认，通过 `agents.list` 数组定义不同 Agent。Agent 中引用模型时需要使用 `provider名/model-id` 格式。
 
 ```json
 {
   "agents": {
     "defaults": {
       "model": {
-        "primary": "haoai-anthropic/anthropic/claude-sonnet-4.6",
-        "fallbacks": ["haoai-anthropic/anthropic/claude-haiku-4.5"]
+        "primary": "doudi-openai/<MODEL_ID>",
+        "fallbacks": ["doudi-openai/<FALLBACK_MODEL_ID>"]
       },
       "models": {
-        "haoai-anthropic/anthropic/claude-opus-4.6": { "alias": "opus" },
-        "haoai-anthropic/anthropic/claude-sonnet-4.6": { "alias": "sonnet" },
-        "haoai-anthropic/anthropic/claude-haiku-4.5": { "alias": "haiku" }
+        "doudi-openai/<MODEL_ID>": { "alias": "primary" },
+        "doudi-openai/<FALLBACK_MODEL_ID>": { "alias": "fast" }
       },
       "thinkingDefault": "low",
       "timeoutSeconds": 600,
@@ -253,13 +157,13 @@ OpenClaw 通过 `agents.defaults` 设置全局默认，通过 `agents.list` 数�
       {
         "id": "research",
         "model": {
-          "primary": "haoai-anthropic/anthropic/claude-opus-4.6"
+          "primary": "doudi-openai/<RESEARCH_MODEL_ID>"
         }
       },
       {
         "id": "quick",
         "model": {
-          "primary": "haoai-anthropic/anthropic/claude-haiku-4.5"
+          "primary": "doudi-openai/<FAST_MODEL_ID>"
         }
       }
     ]
@@ -267,48 +171,34 @@ OpenClaw 通过 `agents.defaults` 设置全局默认，通过 `agents.list` 数�
 }
 ```
 
-| Agent | 模型 | 用途 |
-| --- | --- | --- |
-| **main** | `claude-sonnet-4.6`（继承 defaults） | 默认 Agent，日常所有任务 |
-| **research** | `claude-opus-4.6` | 深度研究、复杂推理、长文分析 |
-| **quick** | `claude-haiku-4.5` | 简单问答、快速响应、低成本 |
-
-模型引用格式为 provider名/model-id（如 haoai-anthropic/anthropic/claude-sonnet-4.6）。defaults 中的 models 字段定义模型别名，可在对话中用 /model opus 快速切换。list 中的 Agent 会继承 defaults 的所有配置，只需覆盖需要变更的字段。
+建议按用途建立别名，而不是按具体模型名建立别名。这样模型调整时只需要改配置，不需要改变操作习惯。
 
 ## 完整配置示例
 
-以下是一份完整的 `openclaw.json`，整合了 Provider、Models 和 Agents 配置（最强配置方案）：
+以下示例展示 Provider、Models 和 Agents 的组合方式。请把所有 `<...>` 占位符替换成当前可用模型 ID 和对应参数。
 
 ```json
 {
   "models": {
     "providers": {
-      "haoai-anthropic": {
-        "baseUrl": "https://doudi.ai/anthropic",
+      "doudi-openai": {
+        "baseUrl": "https://doudi.ai/v1",
         "apiKey": "${DOUDI_API_KEY}",
-        "api": "anthropic-messages",
+        "api": "openai-responses",
         "models": [
           {
-            "id": "anthropic/claude-sonnet-4.6",
-            "name": "Claude Sonnet 4.6",
+            "id": "<PRIMARY_MODEL_ID>",
+            "name": "Primary",
             "input": ["text", "image", "file"],
             "contextWindow": 200000,
-            "maxTokens": 64000
+            "maxTokens": 8192
           },
           {
-            "id": "anthropic/claude-opus-4.6",
-            "name": "Claude Opus 4.6",
-            "reasoning": true,
-            "input": ["text", "image", "file"],
-            "contextWindow": 200000,
-            "maxTokens": 128000
-          },
-          {
-            "id": "anthropic/claude-haiku-4.5",
-            "name": "Claude Haiku 4.5",
-            "input": ["text", "image", "file"],
-            "contextWindow": 200000,
-            "maxTokens": 64000
+            "id": "<FAST_MODEL_ID>",
+            "name": "Fast",
+            "input": ["text"],
+            "contextWindow": 128000,
+            "maxTokens": 4096
           }
         ]
       }
@@ -317,34 +207,22 @@ OpenClaw 通过 `agents.defaults` 设置全局默认，通过 `agents.list` 数�
   "agents": {
     "defaults": {
       "model": {
-        "primary": "haoai-anthropic/anthropic/claude-sonnet-4.6",
-        "fallbacks": ["haoai-anthropic/anthropic/claude-haiku-4.5"]
+        "primary": "doudi-openai/<PRIMARY_MODEL_ID>",
+        "fallbacks": ["doudi-openai/<FAST_MODEL_ID>"]
       },
       "models": {
-        "haoai-anthropic/anthropic/claude-opus-4.6": { "alias": "opus" },
-        "haoai-anthropic/anthropic/claude-sonnet-4.6": { "alias": "sonnet" },
-        "haoai-anthropic/anthropic/claude-haiku-4.5": { "alias": "haiku" }
+        "doudi-openai/<PRIMARY_MODEL_ID>": { "alias": "primary" },
+        "doudi-openai/<FAST_MODEL_ID>": { "alias": "fast" }
       },
       "thinkingDefault": "low",
       "timeoutSeconds": 600,
       "maxConcurrent": 3
     },
     "list": [
-      {
-        "id": "main",
-        "default": true
-      },
-      {
-        "id": "research",
-        "model": {
-          "primary": "haoai-anthropic/anthropic/claude-opus-4.6"
-        }
-      },
+      { "id": "main", "default": true },
       {
         "id": "quick",
-        "model": {
-          "primary": "haoai-anthropic/anthropic/claude-haiku-4.5"
-        }
+        "model": { "primary": "doudi-openai/<FAST_MODEL_ID>" }
       }
     ]
   }
@@ -368,20 +246,20 @@ OpenClaw 通过 `agents.defaults` 设置全局默认，通过 `agents.list` 数�
 确认 `baseUrl` 配置正确：
 
 *   Anthropic 协议：`https://doudi.ai/anthropic`
-*   OpenAI-Response 协议：`https://doudi.ai/v1`
+*   OpenAI Responses 协议：`https://doudi.ai/v1`
 
 **模型不存在**
 
-确认模型 ID 格式正确。在 `models.providers` 中定义模型时，`id` 使用 DouDi.ai 返回的完整 ID（如 `anthropic/claude-sonnet-4.6`）。在 `agents` 中引用模型时需要加 Provider 名前缀：`haoai-anthropic/anthropic/claude-sonnet-4.6`。
+确认 `models.providers[].models[].id` 使用 DouDi.ai 返回的完整模型 ID；在 `agents` 中引用模型时，需要加上 OpenClaw Provider 名前缀，例如 `doudi-openai/<MODEL_ID>`。
 
 **Token 消耗过高**
 
 OpenClaw 单次任务消耗较大，建议：
 
-1.  日常任务使用 `claude-haiku-4.5` 或性价比模型
-2.  仅在复杂任务时切换到 `research` Agent（使用 `claude-opus-4.6`）
+1.  在 [模型广场/价格页面](https://doudi.ai/pricing) 选择更适合日常任务的当前可用模型
+2.  只在复杂任务中切换到高能力或高上下文模型
 3.  在 [使用日志页面](https://doudi.ai/usage-logs/common) 查看请求明细，并用 [数据看板页面](https://doudi.ai/dashboard/models) 监控模型维度用量
 
 **如何快速切换模型**
 
-在对话中使用别名切换：`/model opus`、`/model sonnet`、`/model haiku`（需要在 `agents.defaults.models` 中配置别名）。
+在对话中使用别名切换，例如 `/model primary` 或 `/model fast`。别名来自 `agents.defaults.models` 配置。

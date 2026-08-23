@@ -53,13 +53,13 @@ for (const model of data) {
   "object": "list",
   "data": [
     {
-      "id": "anthropic/claude-sonnet-4.6",
+      "id": "provider/model-name",
       "object": "model",
-      "created": 1759104000,
-      "owned_by": "bedrock",
-      "canonical_slug": "claude-sonnet-4-5-20250929",
-      "name": "Claude Sonnet 4.5",
-      "description": "Anthropic's balanced model with state-of-the-art performance...",
+      "created": 0,
+      "owned_by": "provider",
+      "canonical_slug": "provider-model-name",
+      "name": "Provider Model Name",
+      "description": "Model capability description...",
       "context_length": 200000,
       "architecture": {
         "modality": "text+image+file->text",
@@ -102,7 +102,7 @@ for (const model of data) {
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
-| `id` | string | 模型标识符，如 `"anthropic/claude-sonnet-4.6"` |
+| `id` | string | 模型标识符，如 `"provider/model-name"` |
 | `canonical_slug` | string | 永久标识符，不会变更 |
 | `name` | string | 模型显示名称 |
 | `created` | number | 添加时间（Unix 时间戳） |
@@ -154,12 +154,12 @@ GET https://doudi.ai/v1/models/{provider}/{model_id}
 | 参数 | 类型 | 说明 |
 | --- | --- | --- |
 | `provider` | string | 供应商标识，如 `anthropic` |
-| `model_id` | string | 模型名称，如 `claude-sonnet-4.6` |
+| `model_id` | string | 模型名称，如 `model-name` |
 
 ### 请求示例
 
 ```bash
-curl https://doudi.ai/v1/models/anthropic/claude-sonnet-4.6 \
+curl "https://doudi.ai/v1/models/$PROVIDER/$MODEL_ID" \
   -H "Authorization: Bearer $DOUDI_API_KEY"
 ```
 

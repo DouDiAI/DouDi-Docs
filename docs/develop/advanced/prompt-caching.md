@@ -12,16 +12,7 @@ Prompt Caching 允许缓存重复使用的 prompt 前缀，减少 token 消耗�
 
 ## 缓存支持
 
-DouDi.ai 的模型资源分别由 **AWS Bedrock**、**Azure OpenAI**、**Google Cloud**、**阿里云**、**火山云** 等模型官方云厂商提供。云厂商支持 Prompt Caching 的模型，DouDi.ai 同样支持。
-
-| 云厂商 | 代表模型 | 缓存机制 |
-| --- | --- | --- |
-| AWS Bedrock | Claude 系列 | 原生 Prompt Caching |
-| Azure OpenAI | GPT-4o 系列 | 自动缓存 |
-| 阿里云 | Qwen 系列 | 平台侧缓存 |
-| 火山云 | Doubao 系列 | 平台侧缓存 |
-
-具体模型的缓存支持情况以各云厂商官方文档为准。DouDi.ai 会透传缓存相关参数，无需额外配置。
+DouDi.ai 的模型资源来自各官方云厂商。缓存能力取决于当前模型、上游协议和供应商支持情况，请以 [模型广场/价格页面](https://doudi.ai/pricing)、[Models API](/api/openai/models) 和上游官方文档为准。DouDi.ai 会透传缓存相关参数，无需额外配置。
 
 ## 使用方式
 
@@ -42,7 +33,7 @@ SYSTEM_PROMPT = """你是 DouDi.ai 的技术支持助手。
 
 # 第一次请求：缓存 system prompt
 response1 = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": "DouDi.ai 支持哪些模型？"}
@@ -51,7 +42,7 @@ response1 = client.chat.completions.create(
 
 # 第二次请求：命中缓存，更快更便宜
 response2 = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[
         {"role": "system", "content": SYSTEM_PROMPT},  # 缓存命中
         {"role": "user", "content": "如何配置 Claude Code？"}
@@ -72,7 +63,7 @@ client = anthropic.Anthropic(
 )
 
 response = client.messages.create(
-    model="anthropic/claude-sonnet-4.6",
+    model="<ANTHROPIC_MODEL_ID>",
     max_tokens=1024,
     system=[{
         "type": "text",
@@ -91,8 +82,7 @@ print(f"缓存命中 token: {response.usage.cache_read_input_tokens}")
 
 缓存命中后，缓存部分的 token 按更低价格计费，节省比例因模型而异：
 
-*   **Anthropic Claude 系列** — 缓存命中可节省约 **90%** 输入成本
-*   **OpenAI GPT 系列** — 缓存命中可节省约 **50%** 输入成本
+不同上游的缓存计费策略不同，命中后的节省比例也不同。
 
 实际节省比例取决于缓存命中率和各云厂商的计费策略，请参考 [数据看板页面](https://doudi.ai/dashboard/models) 的用量统计查看详情。
 

@@ -45,7 +45,7 @@
 
 ### 第 5 步：浏览可用模型
 
-连接建立后，即可在 Claude Coworks 中查看所有可用模型。前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  浏览完整的支持模型列表及其功能说明。
+连接建立后，即可在 Claude Coworks 中查看当前可用模型。需要核对模型能力、价格和账号权限时，前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)。
 
 ![浏览可用模型](/imported/haoai/integrations-claude-coworks-05.webp)
 
@@ -63,7 +63,7 @@
 
 ## 开始使用
 
-配置生效后，Claude Coworks 的所有推理请求将通过 DouDi.ai Gateway 转发。可前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  查看支持的模型列表。
+配置生效后，Claude Coworks 的所有推理请求将通过 DouDi.ai Gateway 转发。模型可用性以 Claude Coworks 实际拉取结果和 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing) 为准。
 
 ## 常见问题
 

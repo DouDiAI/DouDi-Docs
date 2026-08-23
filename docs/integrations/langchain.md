@@ -25,7 +25,7 @@ pip3 install langchain langchain-openai
 from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(
-    model="openai/gpt-5.4-mini",
+    model="<MODEL_ID>",
     api_key="YOUR_DOUDI_API_KEY",
     base_url="https://doudi.ai/v1",
 )
@@ -46,7 +46,7 @@ python3 -W ignore example.py
 import { ChatOpenAI } from "@langchain/openai";
 
 const llm = new ChatOpenAI({
-  model: "openai/gpt-5.4-mini",
+  model: "<MODEL_ID>",
   apiKey: "YOUR_DOUDI_API_KEY",
   configuration: {
     baseURL: "https://doudi.ai/v1",
@@ -58,10 +58,6 @@ console.log(response.content);
 ```
 
 ![运行效果](/imported/haoai/integrations-langchain-02.webp)
-
-## 可用模型示例
-
-推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

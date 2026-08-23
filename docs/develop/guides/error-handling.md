@@ -112,7 +112,7 @@ def chat_with_retry(max_retries=5, **kwargs):
 
 # 使用
 response = chat_with_retry(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[{"role": "user", "content": "你好"}]
 )
 ```

@@ -35,7 +35,7 @@ curl https://doudi.ai/grok/v1/responses \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "grok/grok-4.5",
+    "model": "<GROK_MODEL_ID>",
     "input": "解释 API 网关如何工作。",
     "instructions": "你是一个有帮助的技术助手。",
     "max_output_tokens": 1024
@@ -53,7 +53,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="grok/grok-4.5",
+    model="<GROK_MODEL_ID>",
     input="解释 API 网关如何工作。",
     instructions="你是一个有帮助的技术助手。",
     max_output_tokens=1024,
@@ -73,7 +73,7 @@ const client = new OpenAI({
 })
 
 const response = await client.responses.create({
-  model: 'grok/grok-4.5',
+  model: '<GROK_MODEL_ID>',
   input: '解释 API 网关如何工作。',
   instructions: '你是一个有帮助的技术助手。',
   max_output_tokens: 1024
@@ -88,7 +88,7 @@ console.log(response.output_text)
 
 ```python
 stream = client.responses.create(
-    model="grok/grok-4.5",
+    model="<GROK_MODEL_ID>",
     input="写一段简短的欢迎语。",
     stream=True,
 )
@@ -110,11 +110,4 @@ GET https://doudi.ai/grok/v1/responses
 
 它是 DouDi.ai 在每个 turn 中桥接到 xAI HTTP/SSE 的入口，**不代表 xAI 提供原生 WebSocket transport**。
 
-## 当前文本模型
-
-| 模型 ID | 说明 |
-| --- | --- |
-| `grok/grok-4.5` | 默认前沿模型，上下文窗口为 500,000 token。 |
-| `grok/grok-composer-2.5-fast` | 纯文本编程模型，上下文窗口为 200,000 token；不支持图像输入。 |
-
-如需使用 Chat Completions 格式，请参考 [Grok Chat Completions](/api/grok/chat-completions)。
+当前可用 Grok 模型以 [Grok Models API](/api/grok/models) 和 [模型广场/价格页面](https://doudi.ai/pricing) 为准。如需使用 Chat Completions 格式，请参考 [Grok Chat Completions](/api/grok/chat-completions)。

@@ -30,21 +30,17 @@
 | **API Provider** | `OpenAI Compatible` |
 | **Base URL** | `https://doudi.ai/v1` |
 | **OpenAI Compatible API Key** | 你的 DouDi.ai API Key |
-| **Model ID** | `openai/gpt-4.1`（或其他模型） |
+| **Model ID** | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID |
 
 ![填写配置信息](/imported/haoai/integrations-cline-03.webp)
 
 Cline 也支持 Anthropic 协议，对应的 Base URL 为 `https://doudi.ai/anthropic`。
 
-## 推荐模型
-
-推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing)  。
-
 ## 常见问题
 
 **Q: 提示模型不支持**
 
-确认 Model ID 格式正确，使用 OpenAI Compatible 时模型名需带 `厂商/` 前缀，如 `openai/gpt-4.1`。
+确认 Model ID 格式正确，使用 OpenAI Compatible 时模型名通常需带 `厂商/` 前缀，并以 [模型广场/价格页面](https://doudi.ai/pricing) 的实时 ID 为准。
 
 **Q: 无法使用 Tool Use 功能**
 

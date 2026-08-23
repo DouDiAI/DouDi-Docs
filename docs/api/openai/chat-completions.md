@@ -14,7 +14,7 @@ POST https://doudi.ai/v1/chat/completions
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| `model` | string | ✅ | 模型标识符，如 `openai/gpt-5.4-mini` |
+| `model` | string | ✅ | 模型标识符，使用 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 返回的当前可用 ID |
 | `messages` | array | ✅ | 消息数组 |
 | `temperature` | number | — | 采样温度 0-2，默认 1 |
 | `max_tokens` | number | — | 最大生成 token 数 |
@@ -53,7 +53,7 @@ curl https://doudi.ai/v1/chat/completions \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "openai/gpt-5.4-mini",
+    "model": "<MODEL_ID>",
     "messages": [
       {"role": "system", "content": "你是一个有帮助的助手。"},
       {"role": "user", "content": "解释什么是 API Gateway"}
@@ -73,7 +73,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="openai/gpt-5.4-mini",
+    model="<MODEL_ID>",
     messages=[
         {"role": "system", "content": "你是一个有帮助的助手。"},
         {"role": "user", "content": "解释什么是 API Gateway"}
@@ -95,7 +95,7 @@ const client = new OpenAI({
 })
 
 const response = await client.chat.completions.create({
-  model: 'openai/gpt-5.4-mini',
+  model: '<MODEL_ID>',
   messages: [
     { role: 'system', content: '你是一个有帮助的助手。' },
     { role: 'user', content: '解释什么是 API Gateway' }
@@ -112,8 +112,8 @@ console.log(response.choices[0].message.content)
 {
   "id": "chatcmpl-abc123",
   "object": "chat.completion",
-  "created": 1703123456,
-  "model": "openai/gpt-5.4-mini",
+  "created": 0,
+  "model": "<MODEL_ID>",
   "choices": [
     {
       "index": 0,
@@ -140,7 +140,7 @@ console.log(response.choices[0].message.content)
 
 ```python
 stream = client.chat.completions.create(
-    model="openai/gpt-5.4-mini",
+    model="<MODEL_ID>",
     messages=[{"role": "user", "content": "讲一个故事"}],
     stream=True
 )
@@ -155,7 +155,7 @@ for chunk in stream:
 
 ```typescript
 const stream = await client.chat.completions.create({
-  model: 'openai/gpt-5.4-mini',
+  model: '<MODEL_ID>',
   messages: [{ role: 'user', content: '讲一个故事' }],
   stream: true
 })
@@ -186,7 +186,7 @@ data: [DONE]
 
 ```
 response = client.chat.completions.create(
-    model="openai/gpt-5.4-mini",
+    model="<VISION_MODEL_ID>",
     messages=[{
         "role": "user",
         "content": [
@@ -197,7 +197,7 @@ response = client.chat.completions.create(
 )
 ```
 
-支持视觉能力的模型包括：openai/gpt-5.4-mini、openai/gpt-4.1、openai/o4-mini 等。 详见 视觉理解指南。
+视觉输入需要选择当前支持图片能力的模型。详见 [视觉理解指南](/develop/guides/vision)。
 
 ## Function Calling
 

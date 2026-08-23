@@ -83,8 +83,17 @@ function normalizeMarkdown(markdown) {
     .trim();
 }
 
+function stripStaticModelSections(markdown) {
+  return markdown
+    .replace(
+      /^##\s+(支持的模型|当前可用模型|当前模型目录|当前文本模型|推荐模型|可用模型示例)\s*\n[\s\S]*?(?=^##\s+|(?![\s\S]))/gm,
+      "",
+    )
+    .replace(/^推荐模型请参考\s+\[[^\]]+\]\([^)]+\)\s*。?\s*$/gm, "");
+}
+
 function adaptMarkdown(markdown) {
-  return normalizeMarkdown(markdown)
+  const adapted = stripStaticModelSections(normalizeMarkdown(markdown))
     .replace(/HaoAI/g, "DouDi.ai")
     .replace(/Hao AI/g, "DouDi.ai")
     .replace(/HAO\.AI/g, "DouDi.ai")
@@ -142,6 +151,7 @@ function adaptMarkdown(markdown) {
       return `](${route}${hash})`;
     })
     .replace(/\]\(\/docs\/zh(#[^)]+)?\)/g, "](/)");
+  return normalizeMarkdown(adapted);
 }
 
 async function fetchText(url) {

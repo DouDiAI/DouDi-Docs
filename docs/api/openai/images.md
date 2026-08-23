@@ -8,7 +8,7 @@
 POST https://doudi.ai/v1/images/generations
 ```
 
-### 用 gpt-image-2
+### 调用示例
 
 ### Python
 
@@ -19,7 +19,7 @@ from openai import OpenAI
 client = OpenAI(api_key="YOUR_DOUDI_API_KEY", base_url="https://doudi.ai/v1")
 
 resp = client.images.generate(
-    model="openai/gpt-image-2",
+    model="<IMAGE_MODEL_ID>",
     prompt="A simple red apple on a white table",
     size="1024x1024",
     quality="low",
@@ -39,7 +39,7 @@ import fs from 'node:fs'
 const client = new OpenAI({ apiKey: 'YOUR_DOUDI_API_KEY', baseURL: 'https://doudi.ai/v1' })
 
 const resp = await client.images.generate({
-  model: 'openai/gpt-image-2',
+  model: '<IMAGE_MODEL_ID>',
   prompt: 'A simple red apple on a white table',
   size: '1024x1024',
   quality: 'low',
@@ -56,7 +56,7 @@ curl -X POST 'https://doudi.ai/v1/images/generations' \
   -H 'Authorization: Bearer YOUR_DOUDI_API_KEY' \
   -H 'Content-Type: application/json' \
   -d '{
-    "model": "openai/gpt-image-2",
+    "model": "<IMAGE_MODEL_ID>",
     "prompt": "A simple red apple on a white table",
     "size": "1024x1024",
     "quality": "low",
@@ -64,26 +64,26 @@ curl -X POST 'https://doudi.ai/v1/images/generations' \
   }'
 ```
 
-实测输出：
+输出示例：
 
-![gpt-image-2 生成的红苹果](/imported/haoai/api-openai-images-01.webp)
+![生成的红苹果](/imported/haoai/api-openai-images-01.webp)
 
 ### 参数
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| `model` | string | ✅ | `openai/gpt-image-2` |
+| `model` | string | ✅ | 图像模型 ID，请从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用值 |
 | `prompt` | string | ✅ | 自然语言描述 |
-| `quality` | string | ✅ | `auto` / `low` / `medium` / `high`。gpt-image 系列质量不影响价格（见下方计费） |
+| `quality` | string | ✅ | `auto` / `low` / `medium` / `high`，以具体模型支持情况为准 |
 | `n` | number | — | 1–10，默认 1 |
 | `size` | string | — | `auto`（默认 1536x1024）或任意 `宽x高`，约束见下方「支持的尺寸」 |
 | `output_format` | string | — | `png` / `jpeg` / `webp` |
-| `background` | string | — | `opaque` / `auto`。gpt-image-2 **不支持** `transparent`，传了会报错 |
+| `background` | string | — | `opaque` / `auto` / `transparent`，以具体模型支持情况为准 |
 | `stream` | boolean | — | 默认 `false` |
 
-### 支持的尺寸（gpt-image-2）
+### 支持的尺寸
 
-尺寸**不是固定档位**，任意同时满足以下约束的 `宽x高` 都可以：
+尺寸不是固定档位，具体约束以当前图像模型和上游返回为准。常见约束包括：
 
 *   宽、高都是 **16 的倍数**；
 *   单边 ≤ **3840**；
@@ -92,13 +92,13 @@ curl -X POST 'https://doudi.ai/v1/images/generations' \
 
 常用尺寸：`1024x1024`、`1536x1024`、`1024x1536`、`2048x2048`、`2560x1440`；4K 档：`3840x2160`、`2160x3840`、`2880x2880`。
 
-`1920x1080` 会被拒（1080 不是 16 的倍数），请改用 `1920x1088`。`256x256`、`512x512` 等旧 DALL·E 尺寸低于像素下限，同样不可用。
+如果尺寸被拒，请根据错误信息调整到模型支持的宽高、像素范围和宽高比。
 
 4K 属实验档：单图可能耗时数分钟（客户端超时建议 ≥600 秒），且上游偶发生成失败——**失败不计费**。
 
 ### 计费（官方 token 口径 × 1.5 折）
 
-与 OpenAI 官方 API **同构计费**：计量单位、token 数量与官方完全一致，单价为官方的 0.15 倍，每一项都可用官方工具复算。
+与上游官方 API 同构计费：计量单位、token 数量和价格倍率以当前通道配置为准。实时价格以 [模型广场/价格页面](https://doudi.ai/pricing) 为准。
 
 | 计费项 | 官方单价 | 本平台 |
 | --- | --- | --- |
@@ -106,7 +106,7 @@ curl -X POST 'https://doudi.ai/v1/images/generations' \
 | 文本输入（提示词） | $5/M tokens | $0.75/M tokens |
 | 参考图输入（编辑场景） | $8/M tokens | $1.20/M tokens（见下） |
 | 缓存输入 | $1.25–$2/M tokens | 本通道无缓存命中，恒为 0 |
-| 文本输出 | —（gpt-image-2 无此项） | — |
+| 文本输出 | 以模型为准 | 以模型为准 |
 
 *   **图片输出 token 数由官方计量公式确定**（输出尺寸 × 质量档，官方文档 Calculating costs 的计算器可逐张复核）。高质档参考值：1024×1024 = 7,024 tokens ≈ $0.0316/张；1536×1024 = 5,488 ≈ $0.0247；3840×2160 = 13,342 ≈ $0.0600；2880×2880 = 23,719 ≈ $0.1067；
 *   **质量统一按高质档计量**（低/中/高同价）：上游对任何质量参数实际均按高细节渲染，按高质计量即按实际交付计费；
@@ -124,7 +124,7 @@ curl -X POST 'https://doudi.ai/v1/images/generations' \
   "data": [
     { "b64_json": "<图片 Base64>", "index": 0 }
   ],
-  "model": "openai/gpt-image-2",
+  "model": "<IMAGE_MODEL_ID>",
   "size": "1024x1024",
   "quality": "low",
   "usage": {
@@ -160,7 +160,7 @@ client = OpenAI(api_key="YOUR_DOUDI_API_KEY", base_url="https://doudi.ai/v1")
 
 with open("apple.png", "rb") as f:
     resp = client.images.edit(
-        model="openai/gpt-image-2",
+        model="<IMAGE_MODEL_ID>",
         image=f,
         prompt="把苹果改成绿色，其他保持不变",
         size="auto",
@@ -180,7 +180,7 @@ import fs from 'node:fs'
 const client = new OpenAI({ apiKey: 'YOUR_DOUDI_API_KEY', baseURL: 'https://doudi.ai/v1' })
 
 const resp = await client.images.edit({
-  model: 'openai/gpt-image-2',
+  model: '<IMAGE_MODEL_ID>',
   image: await toFile(fs.createReadStream('apple.png'), 'apple.png'),
   prompt: '把苹果改成绿色，其他保持不变',
   size: 'auto',
@@ -195,7 +195,7 @@ fs.writeFileSync('apple_edited.png', Buffer.from(resp.data[0].b64_json!, 'base64
 ```bash
 curl -X POST 'https://doudi.ai/v1/images/edits' \
   -H 'Authorization: Bearer YOUR_DOUDI_API_KEY' \
-  -F 'model="openai/gpt-image-2"' \
+  -F 'model="<IMAGE_MODEL_ID>"' \
   -F 'prompt="把苹果改成绿色，其他保持不变"' \
   -F 'image=@/path/to/apple.png' \
   -F 'size="auto"' \
@@ -214,7 +214,7 @@ curl -X POST 'https://doudi.ai/v1/images/edits' \
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| `model` | string | ✅ | 推荐 `openai/gpt-image-2` |
+| `model` | string | ✅ | 图像模型 ID，请从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用值 |
 | `image` | file | ✅ | PNG / JPEG 文件 |
 | `prompt` | string | ✅ | 编辑指令 |
 | `quality` | string | ✅ | `low` / `medium` / `high` |
@@ -229,7 +229,7 @@ curl -X POST 'https://doudi.ai/v1/images/edits' \
   "data": [
     { "b64_json": "<编辑后图片 Base64>", "index": 0 }
   ],
-  "model": "openai/gpt-image-2",
+  "model": "<IMAGE_MODEL_ID>",
   "size": "auto",
   "quality": "low",
   "usage": {
@@ -244,4 +244,4 @@ curl -X POST 'https://doudi.ai/v1/images/edits' \
 
 与生成一致，`usage` 按官方口径返回。`num_input_images` 是输入图片张数。注意：参考图输入的 token 不计入（官方未公开可复算的输入图计数公式，详见上方计费说明），因此 `input_tokens_details` 只含 `text_tokens`。
 
-支持的模型与价格见 [模型广场/价格页面](https://doudi.ai/pricing) 。
+图像模型与价格见 [模型广场/价格页面](https://doudi.ai/pricing) 。

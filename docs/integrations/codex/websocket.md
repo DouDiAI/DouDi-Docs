@@ -8,10 +8,10 @@
 curl -fsSL https://doudi.ai/install/codex.sh | bash
 ```
 
-脚本会备份 `~/.codex/config.toml`，优先找到 CC Switch 已写入的 DouDi.ai 供应商，并在原有供应商配置块里补齐下面两个字段。下面以 `haoai` 供应商名为例；如果你的本地供应商名不同，把 `haoai` 换成实际名称即可：
+脚本会备份 `~/.codex/config.toml`，优先找到 CC Switch 已写入的 DouDi.ai 供应商，并在原有供应商配置块里补齐下面两个字段。下面以 `doudi` 供应商名为例；如果你的本地供应商名不同，把 `doudi` 换成实际名称即可：
 
 ```
-[model_providers.haoai]
+[model_providers.doudi]
 wire_api = "responses"
 supports_websockets = true
 ```

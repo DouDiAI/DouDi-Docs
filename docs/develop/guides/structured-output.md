@@ -17,7 +17,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[
         {"role": "system", "content": "你是一个数据提取助手。请以 JSON 格式返回结果。"},
         {"role": "user", "content": "提取以下文本中的人名、公司和职位：张三是阿里巴巴的高级工程师"}
@@ -35,7 +35,7 @@ print(result)
 
 ```typescript
 const response = await client.chat.completions.create({
-  model: 'openai/gpt-4o',
+  model: '<MODEL_ID>',
   messages: [
     { role: 'system', content: '你是一个数据提取助手。请以 JSON 格式返回结果。' },
     { role: 'user', content: '提取以下文本中的人名、公司和职位：张三是阿里巴巴的高级工程师' }
@@ -54,7 +54,7 @@ const result = JSON.parse(response.choices[0].message.content!)
 
 ```python
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[
         {"role": "user", "content": "分析这段用户评论的情感：这个产品太棒了，非常好用！"}
     ],
@@ -105,7 +105,7 @@ response = client.chat.completions.create(
 ```
 # 从非结构化文本提取结构化数据
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[{
         "role": "user",
         "content": """提取以下订单信息：
@@ -146,7 +146,7 @@ response = client.chat.completions.create(
 ```
 # 多标签分类
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[{
         "role": "user",
         "content": "分类这篇文章的主题：AI 技术在医疗领域的应用越来越广泛..."
@@ -175,12 +175,6 @@ response = client.chat.completions.create(
 )
 ```
 
-## 支持的模型
+## 能力确认
 
-| 模型 | JSON Mode | JSON Schema |
-| --- | --- | --- |
-| `openai/gpt-4o` | ✅ | ✅ |
-| `openai/gpt-4o-mini` | ✅ | ✅ |
-| `anthropic/claude-sonnet-4.6` | ✅ | — |
-
-不支持 JSON Schema 的模型可以通过在 system prompt 中详细描述期望的 JSON 格式来实现类似效果。
+JSON Mode 与 JSON Schema 支持情况以当前模型元数据和上游协议为准。接入前请在 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 查看 `supported_parameters` 是否包含 `response_format`。不支持 JSON Schema 的模型可以通过在 system prompt 中详细描述期望的 JSON 格式来实现类似效果。

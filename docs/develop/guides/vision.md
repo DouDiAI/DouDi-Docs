@@ -1,14 +1,6 @@
 # 视觉理解
 
-DouDi.ai 支持多模态模型的视觉输入，可以分析图像、截图、文档和视频内容。
-
-## 支持的模型
-
-| 模型 | 图像 | 视频 | 说明 |
-| --- | --- | --- | --- |
-| `openai/gpt-4o` | ✅ | — | 高质量图像分析 |
-| `openai/gpt-4o-mini` | ✅ | — | 快速图像分析 |
-| `anthropic/claude-sonnet-4.6` | ✅ | — | 强大的文档和代码理解 |
+DouDi.ai 支持多模态模型的视觉输入，可以分析图像、截图、文档和视频内容。请在 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 选择当前标记为支持图像输入的模型。
 
 ## 图像分析
 
@@ -21,7 +13,7 @@ curl https://doudi.ai/v1/chat/completions \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "openai/gpt-4o",
+    "model": "<VISION_MODEL_ID>",
     "messages": [{
       "role": "user",
       "content": [
@@ -43,7 +35,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<VISION_MODEL_ID>",
     messages=[{
         "role": "user",
         "content": [
@@ -63,7 +55,7 @@ print(response.choices[0].message.content)
 
 ```typescript
 const response = await client.chat.completions.create({
-  model: 'openai/gpt-4o',
+  model: '<VISION_MODEL_ID>',
   messages: [{
     role: 'user',
     content: [
@@ -89,7 +81,7 @@ with open("screenshot.png", "rb") as f:
     image_data = base64.standard_b64encode(f.read()).decode("utf-8")
 
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<VISION_MODEL_ID>",
     messages=[{
         "role": "user",
         "content": [
@@ -131,7 +123,7 @@ response = client.chat.completions.create(
 
 ```
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<VISION_MODEL_ID>",
     messages=[{
         "role": "user",
         "content": [
@@ -154,7 +146,7 @@ client = anthropic.Anthropic(
 )
 
 message = client.messages.create(
-    model="anthropic/claude-sonnet-4.6",
+    model="<ANTHROPIC_VISION_MODEL_ID>",
     max_tokens=1024,
     messages=[{
         "role": "user",

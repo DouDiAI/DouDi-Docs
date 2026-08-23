@@ -4,12 +4,11 @@ DouDi.ai 提供主流大模型的统一访问。你可以在 [DouDi.ai 模型广
 
 ## 模型命名规范
 
-所有模型遵循 `provider/model-name` 格式：
+所有模型遵循 `provider/model-name` 格式。下面只展示格式，不代表当前可用模型：
 
 ```
-anthropic/claude-sonnet-4.6
-grok/grok-4.5
-moonshotai/kimi-k2.5
+provider/model-name
+provider/another-model
 ```
 
 ## Models API 标准
@@ -35,7 +34,7 @@ DouDi.ai 的 [Models API](/api/openai/models) 遵循 OpenRouter 标准，以 JSO
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
-| `id` | string | API 请求中使用的模型标识符，如 `"anthropic/claude-sonnet-4.6"` |
+| `id` | string | API 请求中使用的模型标识符，如 `"provider/model-name"` |
 | `canonical_slug` | string | 模型的永久标识符，不会变更 |
 | `name` | string | 模型的显示名称 |
 | `created` | number | 模型添加时间（Unix 时间戳） |

@@ -27,7 +27,7 @@ anthropic-version: 2023-06-01
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| `model` | string | ✅ | 模型标识，如 `anthropic/claude-sonnet-4.6` |
+| `model` | string | ✅ | 模型标识，使用 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Anthropic Models API](/api/anthropic/models) 返回的当前可用 ID |
 | `max_tokens` | number | ✅ | 最大生成 token 数 |
 | `messages` | array | ✅ | 消息数组 |
 | `system` | string | — | 系统提示词 |
@@ -57,23 +57,17 @@ type ContentBlock =
 
 ## Claude 思考模式
 
-Claude 不同版本的思考模式参数不同。请按具体模型版本配置，不要把 `adaptive` 和 `budget_tokens` 混用到不支持的模型上。
-
-| 模型 | 推荐配置 | 说明 |
-| --- | --- | --- |
-| `anthropic/claude-sonnet-4.5`、`anthropic/claude-haiku-4.5` | 手动思考 | 使用 `enabled + budget_tokens`，不支持 `adaptive` |
-| `anthropic/claude-sonnet-4.6`、`anthropic/claude-opus-4.6` | 自适应思考 | 使用 `adaptive`；手动 `budget_tokens` 仍可用，但已不推荐 |
-| `anthropic/claude-opus-4.7+` | 自适应思考 | 只使用 `adaptive`，不支持手动 `budget_tokens` |
+Claude-family 模型的思考参数会随上游版本变化。请先在 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Anthropic Models API](/api/anthropic/models) 确认当前模型能力，再选择 `enabled + budget_tokens` 或 `adaptive`。不要把两类参数混用到同一个请求里。
 
 `budget_tokens` 必须小于 `max_tokens`。思考过程会消耗并计入输出 token；如果只需要最终答案，可按上游支持情况使用 `display: "omitted"` 减少思考内容返回。
 
-### 手动思考：Sonnet 4.5 / Haiku 4.5
+### 手动思考
 
-`claude-sonnet-4.5` 和 `claude-haiku-4.5` 使用手动思考模式，需要显式设置 `budget_tokens`。
+适用于支持显式 `budget_tokens` 的模型：
 
 ```
 {
-  "model": "anthropic/claude-sonnet-4.5",
+  "model": "<ANTHROPIC_MODEL_ID>",
   "max_tokens": 16000,
   "thinking": {
     "type": "enabled",
@@ -88,13 +82,13 @@ Claude 不同版本的思考模式参数不同。请按具体模型版本配置�
 }
 ```
 
-### 自适应思考：Sonnet 4.6 / Opus 4.6
+### 自适应思考
 
-`claude-sonnet-4.6` 和 `claude-opus-4.6` 推荐使用自适应思考模式。`output_config.effort` 可按任务复杂度设置为 `low`、`medium` 或 `high`。
+适用于支持 `adaptive` 的模型。`output_config.effort` 可按任务复杂度设置为 `low`、`medium` 或 `high`。
 
 ```
 {
-  "model": "anthropic/claude-sonnet-4.6",
+  "model": "<ANTHROPIC_MODEL_ID>",
   "max_tokens": 16000,
   "thinking": {
     "type": "adaptive"
@@ -111,9 +105,7 @@ Claude 不同版本的思考模式参数不同。请按具体模型版本配置�
 }
 ```
 
-### Opus 4.7+：不要使用 budget\_tokens
-
-`claude-opus-4.7+` 继续使用 `thinking: {"type":"adaptive"}`。不要在这些模型上发送手动 `budget_tokens`，否则上游可能返回参数错误。
+如果模型只支持 `adaptive`，不要发送手动 `budget_tokens`，否则上游可能返回参数错误。
 
 ## 请求示例
 
@@ -125,7 +117,7 @@ curl https://doudi.ai/anthropic/v1/messages \
   -H "anthropic-version: 2023-06-01" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "anthropic/claude-sonnet-4.6",
+    "model": "<ANTHROPIC_MODEL_ID>",
     "max_tokens": 1024,
     "system": "你是一个专业的编程助手。",
     "messages": [
@@ -145,7 +137,7 @@ client = anthropic.Anthropic(
 )
 
 message = client.messages.create(
-    model="anthropic/claude-sonnet-4.6",
+    model="<ANTHROPIC_MODEL_ID>",
     max_tokens=1024,
     system="你是一个专业的编程助手。",
     messages=[
@@ -167,7 +159,7 @@ const client = new Anthropic({
 })
 
 const message = await client.messages.create({
-  model: 'anthropic/claude-sonnet-4.6',
+  model: '<ANTHROPIC_MODEL_ID>',
   max_tokens: 1024,
   system: '你是一个专业的编程助手。',
   messages: [
@@ -191,7 +183,7 @@ console.log(message.content[0].text)
       "text": "以下是 Python 快速排序的实现..."
     }
   ],
-  "model": "anthropic/claude-sonnet-4.6",
+  "model": "<ANTHROPIC_MODEL_ID>",
   "stop_reason": "end_turn",
   "usage": {
     "input_tokens": 25,
@@ -206,7 +198,7 @@ console.log(message.content[0].text)
 
 ```python
 with client.messages.stream(
-    model="anthropic/claude-sonnet-4.6",
+    model="<ANTHROPIC_MODEL_ID>",
     max_tokens=1024,
     messages=[{"role": "user", "content": "讲一个故事"}]
 ) as stream:
@@ -218,7 +210,7 @@ with client.messages.stream(
 
 ```typescript
 const stream = client.messages.stream({
-  model: 'anthropic/claude-sonnet-4.6',
+  model: '<ANTHROPIC_MODEL_ID>',
   max_tokens: 1024,
   messages: [{ role: 'user', content: '讲一个故事' }]
 })
@@ -230,13 +222,4 @@ for await (const event of stream) {
 }
 ```
 
-## 支持的模型
-
-| 模型 | 说明 |
-| --- | --- |
-| `anthropic/claude-opus-4.6` | Claude Opus 4 — 最强能力 |
-| `anthropic/claude-sonnet-4.6` | Claude Sonnet 4 — 均衡性能 |
-| `anthropic/claude-sonnet-4.5` | Claude Sonnet 4.5 — 支持手动思考模式 |
-| `anthropic/claude-haiku-4.5` | Claude Haiku 4.5 — 快速响应 |
-
-DouDi.ai 的 Anthropic 协议支持全部原生功能，包括 Vision、Tool Use、Prompt Caching、Extended Thinking 等。完整可用模型以 Models API 和 [模型广场/价格页面](https://doudi.ai/pricing) 为准。
+DouDi.ai 的 Anthropic 协议支持 Vision、Tool Use、Prompt Caching、Extended Thinking 等原生能力；具体能力以当前模型元数据、上游支持和账号权限为准。

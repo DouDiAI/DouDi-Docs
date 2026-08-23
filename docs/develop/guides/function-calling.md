@@ -53,7 +53,7 @@ tools = [{
 messages = [{"role": "user", "content": "北京今天天气怎么样？"}]
 
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=messages,
     tools=tools,
     tool_choice="auto"
@@ -79,7 +79,7 @@ if message.tool_calls:
 
     # 获取最终回复
     final = client.chat.completions.create(
-        model="openai/gpt-4o",
+        model="<MODEL_ID>",
         messages=messages,
         tools=tools
     )
@@ -119,7 +119,7 @@ const messages: OpenAI.ChatCompletionMessageParam[] = [
 ]
 
 const response = await client.chat.completions.create({
-  model: 'openai/gpt-4o',
+  model: '<MODEL_ID>',
   messages,
   tools,
   tool_choice: 'auto'
@@ -143,7 +143,7 @@ if (message.tool_calls) {
   }
 
   const final = await client.chat.completions.create({
-    model: 'openai/gpt-4o',
+    model: '<MODEL_ID>',
     messages,
     tools
   })
@@ -165,7 +165,7 @@ client = anthropic.Anthropic(
 )
 
 response = client.messages.create(
-    model="anthropic/claude-sonnet-4.6",
+    model="<ANTHROPIC_MODEL_ID>",
     max_tokens=1024,
     tools=[{
         "name": "get_weather",
@@ -214,10 +214,6 @@ if message.tool_calls:
 | `"required"` | 强制调用工具 |
 | `{"type": "function", "function": {"name": "xxx"}}` | 强制调用指定工具 |
 
-## 支持的模型
+## 能力确认
 
-以下模型支持 Function Calling：
-
-*   OpenAI: gpt-4o、gpt-4o-mini、o1、o3-mini
-*   Anthropic: claude-opus-4、claude-sonnet-4、claude-3-5-haiku
-*   国产: deepseek-chat、qwen-max、glm-4
+Function Calling / Tool Use 支持情况会随模型和上游协议变化。接入前请在 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 查看模型的 `supported_parameters`，确认包含 `tools` / `tool_choice` 后再启用。

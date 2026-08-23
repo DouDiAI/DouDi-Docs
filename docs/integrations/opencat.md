@@ -2,7 +2,7 @@
 
 [OpenCat](https://opencat.app)  是一款界面简洁、体验流畅的 AI 客户端（支持 macOS、iOS），专为日常 AI 对话场景设计，支持自定义 API 服务商、多模型切换和对话历史管理。
 
-通过配置 DouDi.ai 作为服务商，你可以在 OpenCat 中使用 GPT、Claude、Grok、DeepSeek 等当前可用模型，只需一个 API Key。
+通过配置 DouDi.ai 作为服务商，你可以在 OpenCat 中使用当前账号可用模型，只需一个 API Key。
 
 ## 前提条件
 
@@ -33,7 +33,7 @@
 | --- | --- |
 | **基础 URL** | `https://doudi.ai/v1` |
 | **密钥** | 你的 DouDi.ai API Key |
-| **自定义模型** | 手动输入模型名，例如 `openai/gpt-4.1` |
+| **自定义模型** | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID |
 
 ![填写配置信息](/imported/haoai/integrations-opencat-03.webp)
 
@@ -50,10 +50,6 @@
 配置完成后，回到主界面即可开始对话，顶部会显示当前使用的模型名称。
 
 ![开始对话](/imported/haoai/integrations-opencat-05.webp)
-
-## 可用模型示例
-
-推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

@@ -24,12 +24,12 @@ curl https://doudi.ai/anthropic/v1/models \
   "data": [
     {
       "type": "model",
-      "id": "anthropic/claude-haiku-4.5",
-      "display_name": "Anthropic: Claude Haiku 4.5",
+      "id": "provider/model-name",
+      "display_name": "Provider Model Name",
       "created_at": "2026-01-21T16:09:13Z",
-      "owned_by": "bedrock",
-      "canonical_slug": "claude-haiku-4-5-20251001",
-      "description": "Anthropic's fastest and most cost-effective model...",
+      "owned_by": "provider",
+      "canonical_slug": "provider-model-name",
+      "description": "Model capability description...",
       "context_length": 200000,
       "architecture": {
         "modality": "text+image+file->text",
@@ -88,7 +88,7 @@ GET https://doudi.ai/anthropic/v1/models/{provider}
 ### 请求示例
 
 ```bash
-# 仅列出 Claude 系列模型
+# 按供应商过滤模型
 curl https://doudi.ai/anthropic/v1/models/anthropic \
   -H "x-api-key: $DOUDI_API_KEY"
 ```
@@ -108,12 +108,12 @@ GET https://doudi.ai/anthropic/v1/models/{provider}/{model_id}
 | 参数 | 类型 | 说明 |
 | --- | --- | --- |
 | `provider` | string | 供应商标识，如 `anthropic` |
-| `model_id` | string | 模型名称，如 `claude-sonnet-4.6` |
+| `model_id` | string | 模型名称，如 `model-name` |
 
 ### 请求示例
 
 ```bash
-curl https://doudi.ai/anthropic/v1/models/anthropic/claude-sonnet-4.6 \
+curl "https://doudi.ai/anthropic/v1/models/$PROVIDER/$MODEL_ID" \
   -H "x-api-key: $DOUDI_API_KEY"
 ```
 

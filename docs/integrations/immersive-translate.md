@@ -2,7 +2,7 @@
 
 [沉浸式翻译](https://immersivetranslate.com)  是一款广受欢迎的浏览器翻译插件，支持双语对照显示，可翻译网页、PDF、字幕、输入框等内容，支持 Chrome、Firefox、Safari 等主流浏览器。
 
-通过配置 DouDi.ai 作为翻译服务，你可以使用 GPT、Claude、DeepSeek 等当前可用模型进行翻译，只需一个 API Key。
+通过配置 DouDi.ai 作为翻译服务，你可以使用当前账号可用模型进行翻译，只需一个 API Key。
 
 ## 前提条件
 
@@ -45,19 +45,19 @@
 
 | 配置项 | 值 |
 | --- | --- |
-| **自定义翻译服务名称** | `haoai`（或任意名称） |
+| **自定义翻译服务名称** | `doudi`（或任意名称） |
 | **自定义 API 接口地址** | `https://doudi.ai/v1/chat/completions` |
 | **APIKEY** | 你的 DouDi.ai API Key |
-| **模型** | 勾选「输入自定义模型名称」，填写模型名，例如 `openai/gpt-4.1` |
+| **模型** | 勾选「输入自定义模型名称」，填写当前可用模型 ID |
 
 **OpenAI Response**
 
 | 配置项 | 值 |
 | --- | --- |
-| **自定义翻译服务名称** | `haoai-response`（或任意名称） |
+| **自定义翻译服务名称** | `doudi-response`（或任意名称） |
 | **自定义 API 接口地址** | `https://doudi.ai/v1/responses` |
 | **APIKEY** | 你的 DouDi.ai API Key |
-| **模型** | 勾选「输入自定义模型名称」，填写模型名，例如 `openai/gpt-4.1` |
+| **模型** | 勾选「输入自定义模型名称」，填写当前可用模型 ID |
 
 **Claude（Anthropic 原生协议）**
 
@@ -67,7 +67,7 @@
 | --- | --- |
 | **APIKEY** | 你的 DouDi.ai API Key |
 | **自定义 API 接口地址** | `https://doudi.ai/anthropic` |
-| **模型** | 勾选「输入自定义模型名称」，填写 `claude-sonnet-4.6` |
+| **模型** | 勾选「输入自定义模型名称」，填写 Anthropic 协议可用模型名 |
 
 填写完成后点击**点此测试服务**，通过后点击**保存**。
 
@@ -82,10 +82,6 @@
 配置完成后，网页会显示原文与译文双语对照。
 
 ![翻译效果](/imported/haoai/integrations-immersive-translate-05.webp)
-
-## 可用模型示例
-
-推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 

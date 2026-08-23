@@ -51,7 +51,7 @@ chmod +x CC-Switch-*.AppImage && ./CC-Switch-*.AppImage
 
 | 配置项 | 值 | 说明 |
 | --- | --- | --- |
-| ❶ 供应商名称 | `haoai` | 推荐使用，后续 WebSocket 配置更容易对应 |
+| ❶ 供应商名称 | `doudi` | 推荐使用，后续 WebSocket 配置更容易对应 |
 | ❷ 官网链接 | `https://doudi.ai` | 供应商官网 |
 | ❸ API Key | 你的 DouDi.ai API Key | 在 [doudi.ai/keys](https://doudi.ai/keys)  获取 |
 | ❹ 请求地址 | `https://doudi.ai/v1` | 末尾不要加斜杠 |
@@ -62,7 +62,7 @@ CC Switch 自动写入配置文件，无需手动编辑任何文件。
 
 ### 步骤三：启用供应商
 
-添加完成后回到列表，选中 `haoai`，点击**使用**按钮，看到「切换成功」提示即完成。确认 **写入通用配置** 已勾选，配置会自动写入 `config.toml`。
+添加完成后回到列表，选中 `doudi`，点击**使用**按钮，看到「切换成功」提示即完成。确认 **写入通用配置** 已勾选，配置会自动写入 `config.toml`。
 
 ![CC Switch 写入通用配置](/imported/haoai/integrations-codex-model-provider-03.webp)
 
@@ -87,8 +87,6 @@ codex --model <model-id> "重构这个函数"
 ```
 
 Codex CLI 需要使用 **Responses 协议格式**（`wire_api = "responses"`）来接收编码任务中的流式响应和工具调用，并非所有模型都支持此格式。选择模型时，请在 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  确认该模型支持 **Responses** 协议，否则会报错。
-
-推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 故障排除
 

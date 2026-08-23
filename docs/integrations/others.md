@@ -21,16 +21,16 @@ DouDi.ai 兼容 OpenAI / Anthropic 协议，并提供 Grok / xAI 协议入口。
 {
   "models": [
     {
-      "title": "DouDi.ai GPT-4o",
+      "title": "DouDi.ai Primary",
       "provider": "openai",
-      "model": "openai/gpt-4o",
+      "model": "<MODEL_ID>",
       "apiBase": "https://doudi.ai/v1",
       "apiKey": "<你的 DOUDI_API_KEY>"
     },
     {
-      "title": "DouDi.ai Claude Sonnet",
+      "title": "DouDi.ai Fallback",
       "provider": "openai",
-      "model": "anthropic/claude-sonnet-4.6",
+      "model": "<FALLBACK_MODEL_ID>",
       "apiBase": "https://doudi.ai/v1",
       "apiKey": "<你的 DOUDI_API_KEY>"
     }
@@ -49,8 +49,9 @@ export OPENAI_API_KEY=<你的 DOUDI_API_KEY>
 export OPENAI_API_BASE=https://doudi.ai/v1
 ```
 
-```
-aider --model openai/gpt-4o
+```bash
+DOUDI_MODEL_ID="provider/model-name"
+aider --model "$DOUDI_MODEL_ID"
 ```
 
 ## BoltAI (macOS)

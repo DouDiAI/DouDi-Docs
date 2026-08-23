@@ -47,7 +47,7 @@ chmod +x CC-Switch-*.AppImage && ./CC-Switch-*.AppImage
 
 | 配置项 | 值 | 说明 |
 | --- | --- | --- |
-| ❶ 供应商名称 | `haoai-claude` | 自定义，方便识别 |
+| ❶ 供应商名称 | `doudi-claude` | 自定义，方便识别 |
 | ❷ 官网链接 | `https://doudi.ai` | 供应商官网 |
 | ❸ API Key | 你的 DouDi.ai API Key | 在 [doudi.ai/keys](https://doudi.ai/keys)  获取 |
 | ❹ 请求地址 | `https://doudi.ai/anthropic` | 末尾不要加斜杠 |
@@ -60,7 +60,7 @@ CC Switch 自动写入 `~/.claude/settings.json`，无需手动编辑任何文�
 
 ### 步骤三：启用供应商
 
-添加完成后回到列表，选中 `haoai-claude`，点击**使用**按钮，看到「切换成功」提示即完成。
+添加完成后回到列表，选中 `doudi-claude`，点击**使用**按钮，看到「切换成功」提示即完成。
 
 ![CC Switch 启用供应商](/imported/haoai/integrations-claude-code-model-provider-03.webp)
 
@@ -81,7 +81,7 @@ claude
 
 ## 4\. 使用其他模型
 
-通过 DouDi.ai，你可以在 Claude Code 中使用非 Claude 模型（如 Qwen、GLM、DeepSeek 等）。只需在 [模型广场/价格页面](https://doudi.ai/pricing) 筛选兼容模型，然后配置模型映射即可。
+通过 DouDi.ai，你可以在 Claude Code 中使用当前支持 Anthropic 协议的兼容模型。只需在 [模型广场/价格页面](https://doudi.ai/pricing) 筛选兼容模型，然后配置模型映射即可。
 
 ### 步骤一：筛选兼容模型
 
@@ -91,7 +91,7 @@ claude
 
 ### 步骤二：复制模型名称
 
-点击目标模型卡片，模型名称旁有 **复制按钮**，一键复制模型 ID（如 `bailian/qwen3.6-plus`）。
+点击目标模型卡片，模型名称旁有 **复制按钮**，一键复制模型 ID。
 
 ![一键复制模型名称](/imported/haoai/integrations-claude-code-model-provider-06.webp)
 
@@ -107,7 +107,7 @@ claude
 | **Sonnet 默认模型** | 中等复杂度任务模型 |
 | **Opus 默认模型** | 高复杂度任务模型 |
 
-Claude 思考模式的 API 参数取决于模型版本：Sonnet 4.5 使用 `enabled + budget_tokens`，Sonnet 4.6 / Opus 4.6 推荐 `adaptive`。完整规则见 [Anthropic Messages API 的 Claude 思考模式](/api/anthropic/messages#claude-%E6%80%9D%E8%80%83%E6%A8%A1%E5%BC%8F)。
+Claude 思考模式的 API 参数取决于当前模型版本和上游支持。完整规则见 [Anthropic Messages API 的 Claude 思考模式](/api/anthropic/messages#claude-%E6%80%9D%E8%80%83%E6%A8%A1%E5%BC%8F)。
 
 如果供应商原生提供 Claude 系列模型，通常无需配置模型映射。仅在需要将请求映射到不同模型名称时填写。
 

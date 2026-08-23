@@ -31,13 +31,7 @@ curl https://doudi.ai/grok/v1/models \
   "object": "list",
   "data": [
     {
-      "id": "grok/grok-4.5",
-      "object": "model",
-      "created": 0,
-      "owned_by": "grok"
-    },
-    {
-      "id": "grok/grok-composer-2.5-fast",
+      "id": "grok/<MODEL_ID>",
       "object": "model",
       "created": 0,
       "owned_by": "grok"
@@ -51,15 +45,8 @@ curl https://doudi.ai/grok/v1/models \
 详情路径支持 canonical ID 或裸 Grok 模型名称。例如：
 
 ```bash
-curl https://doudi.ai/grok/v1/models/grok-4.5 \
+curl "https://doudi.ai/grok/v1/models/$MODEL_ID" \
   -H "Authorization: Bearer $DOUDI_API_KEY"
 ```
 
-## 当前模型目录
-
-| 模型 ID | 上下文窗口 | 输入 |
-| --- | --- | --- |
-| `grok/grok-4.5` | 500,000 token | 文本与图像 |
-| `grok/grok-composer-2.5-fast` | 200,000 token | 仅文本 |
-
-在 [Grok Chat Completions](/api/grok/chat-completions) 或 [Grok Responses](/api/grok/responses) 请求中使用这些 canonical model ID。
+在 [Grok Chat Completions](/api/grok/chat-completions) 或 [Grok Responses](/api/grok/responses) 请求中使用接口返回的 canonical model ID。模型上下文、输入模态和可用状态会变化，不在文档中维护静态目录。

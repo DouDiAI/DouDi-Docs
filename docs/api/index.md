@@ -141,13 +141,13 @@ DouDi.ai 在标准协议基础上提供扩展参数，用于高级路由和回�
 
 ```
 {
-  "model": "openai/gpt-4o",
+  "model": "<MODEL_ID>",
   "messages": [{ "role": "user", "content": "Hello" }],
   "provider": {
     "routing": "latency",
     "fallback": [
-      "anthropic/claude-sonnet-4.6",
-      "grok/grok-4.5"
+      "<FALLBACK_MODEL_ID_1>",
+      "<FALLBACK_MODEL_ID_2>"
     ]
   }
 }

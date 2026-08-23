@@ -18,7 +18,7 @@ POST https://doudi.ai/v1/responses
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| `model` | string | ✅ | 模型标识符，如 `openai/gpt-5.4-mini` |
+| `model` | string | ✅ | 模型标识符，使用 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 返回的当前可用 ID |
 | `input` | string | array | ✅ | 输入内容，可以是纯文本字符串或结构化消息数组 |
 | `instructions` | string | — | 系统指令（独立于 input，自动享受 Prompt Caching） |
 | `stream` | boolean | — | 是否启用 SSE 流式响应，默认 `false` |
@@ -73,7 +73,7 @@ curl https://doudi.ai/v1/responses \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "openai/gpt-5.4-mini",
+    "model": "<MODEL_ID>",
     "input": "解释什么是 API Gateway",
     "instructions": "你是一个有帮助的技术助手，用中文回答。",
     "max_output_tokens": 1024
@@ -91,7 +91,7 @@ client = OpenAI(
 )
 
 response = client.responses.create(
-    model="openai/gpt-5.4-mini",
+    model="<MODEL_ID>",
     input="解释什么是 API Gateway",
     instructions="你是一个有帮助的技术助手，用中文回答。",
     max_output_tokens=1024
@@ -111,7 +111,7 @@ const client = new OpenAI({
 })
 
 const response = await client.responses.create({
-  model: 'openai/gpt-5.4-mini',
+  model: '<MODEL_ID>',
   input: '解释什么是 API Gateway',
   instructions: '你是一个有帮助的技术助手，用中文回答。',
   max_output_tokens: 1024
@@ -126,8 +126,8 @@ console.log(response.output_text)
 {
   "id": "resp_abc123",
   "object": "response",
-  "created_at": 1703123456,
-  "model": "openai/gpt-5.4-mini",
+  "created_at": 0,
+  "model": "<MODEL_ID>",
   "status": "completed",
   "output": [
     {
@@ -172,7 +172,7 @@ console.log(response.output_text)
 
 ```python
 response = client.responses.create(
-    model="openai/gpt-5.4-mini",
+    model="<MODEL_ID>",
     input=[
         {
             "type": "message",
@@ -207,7 +207,7 @@ print(response.output_text)
 
 ```typescript
 const response = await client.responses.create({
-  model: 'openai/gpt-5.4-mini',
+  model: '<MODEL_ID>',
   input: [
     {
       type: 'message',
@@ -246,7 +246,7 @@ console.log(response.output_text)
 
 ```python
 stream = client.responses.create(
-    model="openai/gpt-5.4-mini",
+    model="<MODEL_ID>",
     input="讲一个关于编程的笑话",
     stream=True
 )
@@ -260,7 +260,7 @@ for event in stream:
 
 ```typescript
 const stream = await client.responses.create({
-  model: 'openai/gpt-5.4-mini',
+  model: '<MODEL_ID>',
   input: '讲一个关于编程的笑话',
   stream: true
 })
@@ -313,7 +313,7 @@ Responses API 原生支持工具调用：
 
 ```python
 response = client.responses.create(
-    model="openai/gpt-5.4-mini",
+    model="<TOOL_CAPABLE_MODEL_ID>",
     input="北京今天天气怎么样？",
     tools=[
         {
@@ -350,7 +350,7 @@ for item in response.output:
 
 ```typescript
 const response = await client.responses.create({
-  model: 'openai/gpt-5.4-mini',
+  model: '<TOOL_CAPABLE_MODEL_ID>',
   input: '北京今天天气怎么样？',
   tools: [
     {
@@ -418,7 +418,7 @@ for (const item of response.output) {
 ```
 # 第二次请求：提交工具结果
 response = client.responses.create(
-    model="openai/gpt-5.4-mini",
+    model="<TOOL_CAPABLE_MODEL_ID>",
     input=[
         {
             "type": "message",

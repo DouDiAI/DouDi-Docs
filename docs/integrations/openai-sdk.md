@@ -22,7 +22,7 @@ client = OpenAI(
 
 # 其他代码完全不变！
 response = client.chat.completions.create(
-    model="openai/gpt-4o",  # 添加 provider 前缀
+    model="<MODEL_ID>",  # 使用 DouDi.ai 模型 ID
     messages=[{"role": "user", "content": "Hello!"}]
 )
 ```
@@ -46,15 +46,7 @@ const client = new OpenAI({
 
 ## 模型命名
 
-DouDi.ai 使用 `provider/model-name` 格式标识模型：
-
-| OpenAI 原始名称 | DouDi.ai 模型 ID |
-| --- | --- |
-| `gpt-4o` | `openai/gpt-4o` |
-| `gpt-4o-mini` | `openai/gpt-4o-mini` |
-| `gpt-5.2` | `openai/gpt-5.4-mini` |
-
-通过 DouDi.ai，你还可以使用其他厂商的模型，推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing) 。
+DouDi.ai 使用 `provider/model-name` 格式标识模型。请从 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 复制当前可用 ID，不要直接沿用旧教程里的模型名。
 
 ## 兼容性
 
@@ -80,7 +72,7 @@ from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(
     base_url="https://doudi.ai/v1",
     api_key="<你的 DOUDI_API_KEY>",
-    model="openai/gpt-4o"
+    model="<MODEL_ID>"
 )
 ```
 
@@ -92,7 +84,7 @@ from llama_index.llms.openai import OpenAI
 llm = OpenAI(
     api_base="https://doudi.ai/v1",
     api_key="<你的 DOUDI_API_KEY>",
-    model="openai/gpt-4o"
+    model="<MODEL_ID>"
 )
 ```
 
@@ -101,12 +93,12 @@ llm = OpenAI(
 ```
 import { createOpenAI } from '@ai-sdk/openai'
 
-const haoai = createOpenAI({
+const doudi = createOpenAI({
   baseURL: 'https://doudi.ai/v1',
   apiKey: '<你的 DOUDI_API_KEY>'
 })
 
-const model = haoai('openai/gpt-4o')
+const model = doudi('<MODEL_ID>')
 ```
 
 任何支持 OpenAI SDK 的框架和工具，都可以通过修改 base\_url 接入 DouDi.ai。

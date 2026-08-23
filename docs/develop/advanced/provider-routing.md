@@ -24,7 +24,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[{"role": "user", "content": "你好"}],
     extra_body={
         "provider": {
@@ -36,7 +36,7 @@ response = client.chat.completions.create(
 
 ```typescript
 const response = await client.chat.completions.create({
-  model: 'openai/gpt-4o',
+  model: '<MODEL_ID>',
   messages: [{ role: 'user', content: '你好' }],
   // @ts-ignore DouDi.ai 扩展参数
   provider: {

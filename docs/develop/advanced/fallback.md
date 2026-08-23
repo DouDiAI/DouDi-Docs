@@ -22,13 +22,13 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="openai/gpt-4o",  # 主模型
+    model="<PRIMARY_MODEL_ID>",  # 主模型
     messages=[{"role": "user", "content": "你好"}],
     extra_body={
         "provider": {
             "fallback": [
-                "anthropic/claude-sonnet-4.6",  # 第一备选
-                "grok/grok-4.5"              # 第二备选
+                "<FALLBACK_MODEL_ID_1>",  # 第一备选
+                "<FALLBACK_MODEL_ID_2>"   # 第二备选
             ]
         }
     }
@@ -40,13 +40,13 @@ print(response.model)
 
 ```typescript
 const response = await client.chat.completions.create({
-  model: 'openai/gpt-4o',
+  model: '<PRIMARY_MODEL_ID>',
   messages: [{ role: 'user', content: '你好' }],
   // @ts-ignore DouDi.ai 扩展参数
   provider: {
     fallback: [
-      'anthropic/claude-sonnet-4.6',
-      'grok/grok-4.5'
+      '<FALLBACK_MODEL_ID_1>',
+      '<FALLBACK_MODEL_ID_2>'
     ]
   }
 })
@@ -76,23 +76,23 @@ const response = await client.chat.completions.create({
 
 ```
 response = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<PRIMARY_MODEL_ID>",
     messages=[{"role": "user", "content": "你好"}],
     extra_body={
         "provider": {
             "routing": "latency",    # 延迟优先路由
             "fallback": [             # 回退列表
-                "anthropic/claude-sonnet-4.6",
-                "grok/grok-4.5"
+                "<FALLBACK_MODEL_ID_1>",
+                "<FALLBACK_MODEL_ID_2>"
             ]
         }
     }
 )
 ```
 
-## 推荐回退方案
+## 回退模型选择
 
-推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing) 。
+回退列表请从 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 选择当前可用、能力相近且最好跨供应商的模型，不在文档中维护固定组合。
 
 ## 最佳实践
 

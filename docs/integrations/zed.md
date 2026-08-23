@@ -35,7 +35,7 @@
 | ① | Provider Name | `DouDi.ai` |
 | ② | API URL | `https://doudi.ai/v1` |
 | ③ | API Key | 你的 DouDi.ai API Key |
-| ④ | Model Name | `openai/gpt-5.4-mini` |
+| ④ | Model Name | 从 [模型广场/价格页面](https://doudi.ai/pricing) 复制当前可用模型 ID |
 | ⑤ | Max Completion Tokens | `512000` |
 | ⑥ | Capabilities | 勾选模型支持的能力 |
 
@@ -43,7 +43,7 @@
 
 ### settings.json 配置
 
-通过 `settings.json` 批量配置所有模型。
+通过 `settings.json` 批量配置模型。
 
 1.  按 `⌘ + ,` 打开设置，点击右上角 **Edit in settings.json**
 2.  在 `~/.config/zed/settings.json` 中添加以下配置：
@@ -56,40 +56,10 @@
         "api_url": "https://doudi.ai/v1",
         "available_models": [
           {
-            "name": "openai/gpt-5.3-codex",
-            "display_name": "GPT-5.3 Codex",
-            "max_tokens": 512000,
-            "max_output_tokens": 65536,
-            "capabilities": {
-              "tools": true,
-              "images": true
-            }
-          },
-          {
-            "name": "openai/gpt-5-mini",
-            "display_name": "GPT-5 Mini",
-            "max_tokens": 256000,
-            "max_output_tokens": 32768,
-            "capabilities": {
-              "tools": true,
-              "images": true
-            }
-          },
-          {
-            "name": "moonshotai/kimi-k2.5",
-            "display_name": "Kimi K2.5",
-            "max_tokens": 262144,
-            "max_output_tokens": 262144,
-            "capabilities": {
-              "tools": true,
-              "images": true
-            }
-          },
-          {
-            "name": "bailian/qwen3-max",
-            "display_name": "Qwen3 Max",
-            "max_tokens": 256000,
-            "max_output_tokens": 64000,
+            "name": "<MODEL_ID>",
+            "display_name": "<DISPLAY_NAME>",
+            "max_tokens": 200000,
+            "max_output_tokens": 8192,
             "capabilities": {
               "tools": true,
               "images": false
@@ -104,7 +74,7 @@
 
 1.  保存后，Zed 会弹出输入框要求输入 API Key
 
-settings.json 适合批量添加模型，后续增删直接编辑 available\_models 数组即可。
+settings.json 适合批量添加模型。后续增删请以 [模型广场/价格页面](https://doudi.ai/pricing) 或 [Models API](/api/openai/models) 的实时数据为准，手动更新 `available_models` 数组。
 
 API Key 安全存储在系统钥匙串（macOS Keychain / Linux Secret Service）中，不会明文写入配置文件。
 
@@ -129,17 +99,13 @@ Zed Agent Panel 有两种模式：
 
 ![Zed Agent 对话演示](/imported/haoai/integrations-zed-04.webp)
 
-## 推荐模型
-
-推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing) 。
-
 ## 添加更多模型
 
 每个模型需要以下参数：
 
 | 字段 | 必填 | 说明 |
 | --- | --- | --- |
-| `name` | 是 | 模型 ID，如 `openai/gpt-5.4-mini` |
+| `name` | 是 | 当前可用模型 ID |
 | `display_name` | 否 | UI 显示名称 |
 | `max_tokens` | 是 | 上下文窗口大小 |
 | `max_output_tokens` | 否 | 最大输出 token 数 |

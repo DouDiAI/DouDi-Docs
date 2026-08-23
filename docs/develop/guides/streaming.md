@@ -21,7 +21,7 @@ curl https://doudi.ai/v1/chat/completions \
   -H "Content-Type: application/json" \
   -N \
   -d '{
-    "model": "openai/gpt-4o",
+    "model": "<MODEL_ID>",
     "messages": [{"role": "user", "content": "写一首关于编程的诗"}],
     "stream": true
   }'
@@ -38,7 +38,7 @@ client = OpenAI(
 )
 
 stream = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[{"role": "user", "content": "写一首关于编程的诗"}],
     stream=True
 )
@@ -60,7 +60,7 @@ const client = new OpenAI({
 })
 
 const stream = await client.chat.completions.create({
-  model: 'openai/gpt-4o',
+  model: '<MODEL_ID>',
   messages: [{ role: 'user', content: '写一首关于编程的诗' }],
   stream: true
 })
@@ -84,7 +84,7 @@ client = anthropic.Anthropic(
 )
 
 with client.messages.stream(
-    model="anthropic/claude-sonnet-4.6",
+    model="<ANTHROPIC_MODEL_ID>",
     max_tokens=1024,
     messages=[{"role": "user", "content": "写一首关于编程的诗"}]
 ) as stream:
@@ -103,7 +103,7 @@ const client = new Anthropic({
 })
 
 const stream = client.messages.stream({
-  model: 'anthropic/claude-sonnet-4.6',
+  model: '<ANTHROPIC_MODEL_ID>',
   max_tokens: 1024,
   messages: [{ role: 'user', content: '写一首关于编程的诗' }]
 })
@@ -121,7 +121,7 @@ for await (const event of stream) {
 
 ```
 stream = client.chat.completions.create(
-    model="openai/gpt-4o",
+    model="<MODEL_ID>",
     messages=[{"role": "user", "content": "今天北京天气怎么样？"}],
     tools=[{
         "type": "function",

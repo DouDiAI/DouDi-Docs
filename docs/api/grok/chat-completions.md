@@ -32,14 +32,9 @@ POST https://doudi.ai/grok/v1/chat/completions
 Authorization: Bearer <你的 DOUDI_API_KEY>
 ```
 
-## 当前可用模型
+## 模型选择
 
-请使用带 `grok/` 前缀的 canonical model ID。
-
-| 模型 ID | 当前用途 |
-| --- | --- |
-| `grok/grok-4.5` | 默认前沿通用模型，适合通用任务、编程和 Agent 工作流；上下文窗口为 500,000 token。 |
-| `grok/grok-composer-2.5-fast` | 面向 Grok Build 工作流的纯文本编程模型；上下文窗口为 200,000 token，不接受图像输入。 |
+请使用带 `grok/` 前缀的 canonical model ID。当前可用模型以 [Grok Models API](/api/grok/models) 和 [模型广场/价格页面](https://doudi.ai/pricing) 为准。
 
 ## 请求示例
 
@@ -50,7 +45,7 @@ curl https://doudi.ai/grok/v1/chat/completions \
   -H "Authorization: Bearer $DOUDI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "grok/grok-4.5",
+    "model": "<GROK_MODEL_ID>",
     "messages": [
       {"role": "system", "content": "你是一个有帮助的助手。"},
       {"role": "user", "content": "解释 API 网关如何工作。"}
@@ -69,7 +64,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="grok/grok-4.5",
+    model="<GROK_MODEL_ID>",
     messages=[
         {"role": "system", "content": "你是一个有帮助的助手。"},
         {"role": "user", "content": "解释 API 网关如何工作。"},
@@ -90,7 +85,7 @@ const client = new OpenAI({
 })
 
 const response = await client.chat.completions.create({
-  model: 'grok/grok-4.5',
+  model: '<GROK_MODEL_ID>',
   messages: [
     { role: 'system', content: '你是一个有帮助的助手。' },
     { role: 'user', content: '解释 API 网关如何工作。' }
@@ -106,7 +101,7 @@ console.log(response.choices[0].message.content)
 
 ```python
 stream = client.chat.completions.create(
-    model="grok/grok-4.5",
+    model="<GROK_MODEL_ID>",
     messages=[{"role": "user", "content": "写一段简短的欢迎语。"}],
     stream=True,
 )

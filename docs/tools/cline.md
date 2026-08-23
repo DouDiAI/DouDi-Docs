@@ -72,7 +72,7 @@ Cline 是安装在 VS Code 里的 AI 编程助手。配置好 DouDi 后，它可
   <div class="ml-field-row">
     <div>Model ID</div>
     <div>填写完整模型 ID</div>
-    <div>例如截图里的 <code>gpt-5.5</code> 只是示例，以你控制台可用模型为准。</div>
+    <div>以你控制台可用模型为准，不要照抄截图或旧教程里的模型名。</div>
   </div>
 </div>
 

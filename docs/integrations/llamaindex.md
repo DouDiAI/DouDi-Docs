@@ -25,7 +25,7 @@ pip3 install llama-index llama-index-llms-openai-like
 from llama_index.llms.openai_like import OpenAILike
 
 llm = OpenAILike(
-    model="openai/gpt-4.1",
+    model="<MODEL_ID>",
     api_base="https://doudi.ai/v1",
     api_key="<你的 DOUDI_API_KEY>",
     is_chat_model=True
@@ -42,10 +42,6 @@ python3 -W ignore test_llamaindex.py
 ```
 
 ![运行效果](/imported/haoai/integrations-llamaindex-02.webp)
-
-## 可用模型示例
-
-推荐模型请参考 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 LlamaIndex 的具体 API 可能随版本更新变化，请参考 [LlamaIndex 官方文档](https://docs.llamaindex.ai)  。
 

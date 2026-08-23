@@ -107,7 +107,7 @@ for (const model of body.data.models) {
     "updated_at": "2026-06-07T12:00:00Z",
     "models": [
       {
-        "model_name": "openai/gpt-4o",
+        "model_name": "provider/model-name",
         "group_name": "channel-1",
         "input_price": 18.75,
         "output_price": 75,
@@ -146,7 +146,7 @@ for (const model of body.data.models) {
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
-| `model_name` | string | 模型 ID（请求侧名称），如 `openai/gpt-4o` |
+| `model_name` | string | 模型 ID（请求侧名称），如 `provider/model-name` |
 | `group_name` | string | 渠道分组名，按渠道稳定，如 `channel-1` |
 | `input_price` | number | 输入 token 价格 |
 | `output_price` | number | null | 输出 token 价格，该模型无此定价时为 `null` |

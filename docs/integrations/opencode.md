@@ -38,13 +38,13 @@ export ANTHROPIC_BASE_URL=https://doudi.ai/anthropic
 也可以通过 `~/.config/opencode/config.toml` 设置：
 
 ```toml
-[providers.haoai]
+[providers.doudi]
 api_key = "<你的 DOUDI_API_KEY>"
 base_url = "https://doudi.ai/v1"
 
 [models.default]
-provider = "haoai"
-model = "anthropic/claude-sonnet-4.6"
+provider = "doudi"
+model = "<MODEL_ID>"
 ```
 
 ### 4\. 验证
@@ -54,9 +54,5 @@ opencode "Hello, 你好吗？"
 ```
 
 ![运行效果](/imported/haoai/integrations-opencode-02.webp)
-
-## 推荐模型
-
-推荐模型请参考 [模型广场/价格页面](https://doudi.ai/pricing)  。
 
 OpenCode 的具体配置方式可能随版本更新变化，请参考 [OpenCode 官方文档](https://github.com/opencode-ai/opencode)  。

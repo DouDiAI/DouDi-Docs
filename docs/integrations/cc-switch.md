@@ -15,7 +15,7 @@ CC-Switch 是一个功能强大的多模型管理工具，支持在单一界面�
 
 | 配置项 | 值 |
 | --- | --- |
-| **提供商名称** | `haoai-claude`（或自定义名称） |
+| **提供商名称** | `doudi-claude`（或自定义名称） |
 | **API Base URL** | `https://doudi.ai/v1` |
 | **API Key** | 你的 DouDi.ai API Key |
 
@@ -43,10 +43,6 @@ CC-Switch 是一个功能强大的多模型管理工具，支持在单一界面�
 用量查询功能通过定期调用 DouDi.ai API 获取账户统计信息，请确保 API Key 具有足够权限。
 
 请勿在公开的代码仓库中提交 API Key。建议使用环境变量或密钥管理系统安全存储 API Key。
-
-## 支持的模型
-
-CC-Switch 通过 DouDi.ai 可以访问全球顶级模型。详见 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  。
 
 ## 常见问题
 
