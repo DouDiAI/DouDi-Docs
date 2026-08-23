@@ -37,13 +37,13 @@ chmod +x CC-Switch-*.AppImage && ./CC-Switch-*.AppImage
 
 打开 CC Switch，进入供应商管理页，点击右上角 **+** 按钮。
 
-![CC Switch 添加供应商](/imported/haoai/integrations-claude-code-model-provider-01.webp)
+![CC Switch 添加供应商](/assets/images/integrations-claude-code-model-provider-01.webp)
 
 ### 步骤二：填写配置
 
 按下图标注填写，点击 **\+ 添加** 完成。
 
-![CC Switch 供应商配置](/imported/haoai/integrations-claude-code-model-provider-02.webp)
+![CC Switch 供应商配置](/assets/images/integrations-claude-code-model-provider-02.webp)
 
 | 配置项 | 值 | 说明 |
 | --- | --- | --- |
@@ -62,7 +62,7 @@ CC Switch 自动写入 `~/.claude/settings.json`，无需手动编辑任何文�
 
 添加完成后回到列表，选中 `doudi-claude`，点击**使用**按钮，看到「切换成功」提示即完成。
 
-![CC Switch 启用供应商](/imported/haoai/integrations-claude-code-model-provider-03.webp)
+![CC Switch 启用供应商](/assets/images/integrations-claude-code-model-provider-03.webp)
 
 ## 3\. 验证配置
 
@@ -75,41 +75,9 @@ claude
 
 首次启动按 `Esc` 跳过登录。启动后注意顶部信息栏，确认显示 **API Usage Billing**（❶）表示已通过 DouDi.ai 计费：
 
-![Claude Code 启动界面](/imported/haoai/integrations-claude-code-model-provider-04.webp)
+![Claude Code 启动界面](/assets/images/integrations-claude-code-model-provider-04.webp)
 
 以上信息确认无误，即配置成功。
-
-## 4\. 使用其他模型
-
-通过 DouDi.ai，你可以在 Claude Code 中使用当前支持 Anthropic 协议的兼容模型。只需在 [模型广场/价格页面](https://doudi.ai/pricing) 筛选兼容模型，然后配置模型映射即可。
-
-### 步骤一：筛选兼容模型
-
-前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  ，在左侧 **API 协议** 中选择 **Anthropic**，筛选出支持 Anthropic 协议的模型。
-
-![模型广场筛选 Anthropic 协议](/imported/haoai/integrations-claude-code-model-provider-05.webp)
-
-### 步骤二：复制模型名称
-
-点击目标模型卡片，模型名称旁有 **复制按钮**，一键复制模型 ID。
-
-![一键复制模型名称](/imported/haoai/integrations-claude-code-model-provider-06.webp)
-
-### 步骤三：配置模型映射
-
-回到 CC Switch，在供应商配置中找到 **模型映射** 部分。将复制的模型名称填入对应的模型槽位，可前往 [DouDi.ai 模型广场/价格页面](https://doudi.ai/pricing)  浏览可用模型：
-
-| 映射槽位 | 说明 |
-| --- | --- |
-| **主模型** | Claude Code 默认使用的模型 |
-| **推理模型 (Thinking)** | 用于深度推理的模型 |
-| **Haiku 默认模型** | 轻量级任务模型 |
-| **Sonnet 默认模型** | 中等复杂度任务模型 |
-| **Opus 默认模型** | 高复杂度任务模型 |
-
-Claude 思考模式的 API 参数取决于当前模型版本和上游支持。完整规则见 [Anthropic Messages API 的 Claude 思考模式](/api/anthropic/messages#claude-%E6%80%9D%E8%80%83%E6%A8%A1%E5%BC%8F)。
-
-如果供应商原生提供 Claude 系列模型，通常无需配置模型映射。仅在需要将请求映射到不同模型名称时填写。
 
 ## 故障排除
 
@@ -124,7 +92,7 @@ Claude 思考模式的 API 参数取决于当前模型版本和上游支持。�
 *   **❶ Anthropic base URL** 为 `https://doudi.ai/anthropic`
 *   **❷ Model** 显示当前使用的模型
 
-![Claude Code /status 输出](/imported/haoai/integrations-claude-code-model-provider-07.webp)
+![Claude Code /status 输出](/assets/images/integrations-claude-code-model-provider-07.webp)
 
 **Q: 提示 “Authentication error”**
 

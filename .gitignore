@@ -6,3 +6,5 @@ docs/.vitepress/dist/
 *.local
 .qa/
 .impeccable/
+TEMP-IMG/
+docs/TEMP-IMG/
