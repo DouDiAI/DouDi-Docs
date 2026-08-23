@@ -15,7 +15,8 @@ Cursor 近期版本对自定义 API 提供商做出了严格限制，导致通�
 
 以下工具对 DouDi.ai 有完整支持，功能无限制：
 
-[Claude Code + CC Switch](/integrations/claude-code)[Codex CLI + CC Switch](/integrations/codex)
+- [Claude Code + CC Switch](/integrations/claude-code)
+- [Codex CLI + CC Switch](/integrations/codex)
 
 ## 继续使用 Cursor 编辑器
 

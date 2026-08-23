@@ -12,4 +12,6 @@
 
 ## 快速开始
 
-[1\. 安装 Codex CLI](/integrations/codex/installation)[2\. 配置模型供应商](/integrations/codex/model-provider)[3\. 开启 WebSocket（推荐）](/integrations/codex/websocket)
+1. [安装 Codex CLI](/integrations/codex/installation)
+2. [配置模型供应商](/integrations/codex/model-provider)
+3. [开启 WebSocket（推荐）](/integrations/codex/websocket)
