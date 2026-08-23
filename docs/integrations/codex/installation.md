@@ -15,7 +15,7 @@ Codex CLI 是 OpenAI 推出的 AI 编码命令行工具，可在终端中直接�
 npm install -g @openai/codex
 ```
 
-![安装 Codex CLI](/imported/haoai/integrations-codex-installation-01.webp)
+![安装 Codex CLI](/assets/images/integrations-codex-installation-01.webp)
 
 ## 验证安装
 
@@ -24,7 +24,7 @@ codex --version
 # 正常输出版本号即表示安装成功
 ```
 
-![验证安装](/imported/haoai/integrations-codex-installation-02.webp)
+![验证安装](/assets/images/integrations-codex-installation-02.webp)
 
 如提示 `command not found`，请确认 Node.js 已正确安装（`node --version`），然后重新运行安装命令。
 

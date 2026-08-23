@@ -41,13 +41,13 @@ chmod +x CC-Switch-*.AppImage && ./CC-Switch-*.AppImage
 
 切换到顶部 **Codex** 标签页，点击右上角 **+** 按钮。
 
-![CC Switch Codex 标签页](/imported/haoai/integrations-codex-model-provider-01.webp)
+![CC Switch Codex 标签页](/assets/images/integrations-codex-model-provider-01.webp)
 
 ### 步骤二：填写配置
 
 按下表填写，点击 **\+ 添加** 完成。
 
-![CC Switch Codex 供应商配置](/imported/haoai/integrations-codex-model-provider-02.webp)
+![CC Switch Codex 供应商配置](/assets/images/integrations-codex-model-provider-02.webp)
 
 | 配置项 | 值 | 说明 |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ CC Switch 自动写入配置文件，无需手动编辑任何文件。
 
 添加完成后回到列表，选中 `doudi`，点击**使用**按钮，看到「切换成功」提示即完成。确认 **写入通用配置** 已勾选，配置会自动写入 `config.toml`。
 
-![CC Switch 写入通用配置](/imported/haoai/integrations-codex-model-provider-03.webp)
+![CC Switch 写入通用配置](/assets/images/integrations-codex-model-provider-03.webp)
 
 ## 验证配置
 
@@ -72,7 +72,7 @@ CC Switch 自动写入配置文件，无需手动编辑任何文件。
 codex "hello"
 ```
 
-![Codex CLI 运行效果](/imported/haoai/integrations-codex-model-provider-04.webp)
+![Codex CLI 运行效果](/assets/images/integrations-codex-model-provider-04.webp)
 
 正常返回 AI 响应即表示配置成功。
 
