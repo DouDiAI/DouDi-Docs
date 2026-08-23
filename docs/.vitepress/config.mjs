@@ -254,7 +254,7 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   head: [
-    ["meta", { name: "theme-color", content: "#f7f6f3" }],
+    ["meta", { name: "theme-color", content: "#ffffff" }],
     ["link", { rel: "icon", type: "image/png", href: asset("logo.png") }],
   ],
   themeConfig: {

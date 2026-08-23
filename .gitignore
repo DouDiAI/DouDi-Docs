@@ -5,3 +5,4 @@ docs/.vitepress/dist/
 *.log
 *.local
 .qa/
+.impeccable/
