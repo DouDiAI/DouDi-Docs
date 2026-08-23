@@ -13,13 +13,13 @@
 
 启动 WorkBuddy，点击左下角头像，在弹出菜单中点击 **设置**。
 
-![打开 WorkBuddy 设置](/imported/haoai/integrations-workbuddy-01.webp)
+![打开 WorkBuddy 设置](/assets/images/integrations-workbuddy-01.webp)
 
 ### 第 2 步：进入模型配置
 
 在设置页左侧导航中点击 **模型**，然后点击右侧的 **\+ 添加模型**。
 
-![进入模型配置](/imported/haoai/integrations-workbuddy-02.webp)
+![进入模型配置](/assets/images/integrations-workbuddy-02.webp)
 
 ### 第 3 步：填写配置信息
 
@@ -44,19 +44,19 @@ WorkBuddy 仅支持 OpenAI 兼容协议。通过 DouDi.ai 的 `/v1/chat/completi
 
 填写完成后点击 **保存**。
 
-![填写配置信息](/imported/haoai/integrations-workbuddy-03.webp)
+![填写配置信息](/assets/images/integrations-workbuddy-03.webp)
 
 ### 第 4 步：确认模型已保存
 
 保存后模型出现在「已保存模型」列表中，配置完成。
 
-![已保存模型列表](/imported/haoai/integrations-workbuddy-04.webp)
+![已保存模型列表](/assets/images/integrations-workbuddy-04.webp)
 
 ### 第 5 步：开始对话
 
 回到主界面，点击底部模型选择器，在「自定义模型」分组下选择刚配置的模型，即可开始对话。
 
-![开始对话](/imported/haoai/integrations-workbuddy-05.webp)
+![开始对话](/assets/images/integrations-workbuddy-05.webp)
 
 ## 常见问题
 
