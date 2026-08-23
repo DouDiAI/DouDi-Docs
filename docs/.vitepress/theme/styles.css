@@ -331,6 +331,8 @@ summary:focus-visible {
 }
 
 .VPDoc div[class*="language-"] {
+  --dd-code-accent: rgba(255, 255, 255, 0.62);
+  --dd-code-gutter: rgba(255, 255, 255, 0.34);
   position: relative;
   overflow: hidden;
   margin: 20px 0 24px;
@@ -381,6 +383,10 @@ summary:focus-visible {
   white-space: pre;
 }
 
+.VPDoc div[class*="language-"] .line {
+  min-height: 1.58em;
+}
+
 .VPDoc div[class*="language-"] code span {
   color: var(--shiki-dark, var(--dd-code-text)) !important;
 }
@@ -398,14 +404,25 @@ summary:focus-visible {
 }
 
 .VPDoc div[class*="language-"] .lang {
-  top: 11px;
-  right: 60px;
+  top: 9px;
+  right: 56px;
   z-index: 2;
-  color: var(--dd-code-muted);
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  max-width: calc(100% - 122px);
+  padding: 0 8px;
+  border: 1px solid var(--dd-code-line);
+  border-radius: var(--dd-radius-pill);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--dd-code-accent);
   font-family: var(--vp-font-family-mono);
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 1;
 }
 
 .VPDoc div[class*="language-"] > button.copy,
@@ -420,6 +437,10 @@ summary:focus-visible {
   background-color: rgba(255, 255, 255, 0.06);
   background-size: 15px;
   opacity: 1 !important;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .VPDoc div[class*="language-"] > button.copy:hover,
@@ -432,18 +453,193 @@ summary:focus-visible {
 
 .VPDoc div[class*="language-"] > button.copy.copied,
 .vp-doc div[class*="language-"] > button.copy.copied {
-  border-radius: 0 var(--dd-radius-pill) var(--dd-radius-pill) 0;
-  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: var(--dd-radius-pill);
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .VPDoc div[class*="language-"] > button.copy.copied::before,
-.vp-doc div[class*="language-"] > button.copy.copied::before {
-  top: -1px;
-  height: 26px;
-  border-color: var(--dd-code-line);
-  border-radius: var(--dd-radius-pill) 0 0 var(--dd-radius-pill);
-  background-color: var(--dd-code-bg-soft);
-  color: var(--dd-code-text);
+.VPDoc div[class*="language-"] > button.copy:hover.copied::before,
+.vp-doc div[class*="language-"] > button.copy.copied::before,
+.vp-doc div[class*="language-"] > button.copy:hover.copied::before,
+.VPDoc div[class*="language-"] > button.copy.copied::after,
+.VPDoc div[class*="language-"] > button.copy:hover.copied::after,
+.vp-doc div[class*="language-"] > button.copy.copied::after,
+.vp-doc div[class*="language-"] > button.copy:hover.copied::after {
+  content: none !important;
+  display: none !important;
+}
+
+.VPDoc div[class*="language-"]:hover > button.copy + span.lang,
+.VPDoc div[class*="language-"] > button.copy:focus + span.lang,
+.vp-doc div[class*="language-"]:hover > button.copy + span.lang,
+.vp-doc div[class*="language-"] > button.copy:focus + span.lang {
+  opacity: 1;
+}
+
+.VPDoc div:is(
+    [class~="language-bash"],
+    [class~="language-sh"],
+    [class~="language-shell"],
+    [class~="language-zsh"],
+    [class~="language-curl"],
+    [class~="language-powershell"],
+    [class~="language-ps1"],
+    [class~="language-cmd"],
+    [class~="language-bat"]
+  ) {
+  --dd-code-accent: var(--dd-terminal-green);
+  --dd-code-gutter: rgba(39, 201, 63, 0.68);
+  --dd-code-prompt: "$";
+}
+
+.VPDoc div:is(
+    [class~="language-powershell"],
+    [class~="language-ps1"]
+  ) {
+  --dd-code-prompt: "PS";
+}
+
+.VPDoc div:is(
+    [class~="language-cmd"],
+    [class~="language-bat"]
+  ) {
+  --dd-code-prompt: ">";
+}
+
+.VPDoc div:is(
+    [class~="language-bash"],
+    [class~="language-sh"],
+    [class~="language-shell"],
+    [class~="language-zsh"],
+    [class~="language-curl"],
+    [class~="language-powershell"],
+    [class~="language-ps1"],
+    [class~="language-cmd"],
+    [class~="language-bat"]
+  ) .line {
+  position: relative;
+  display: inline-block;
+  min-width: 100%;
+  padding-left: 2.6ch;
+}
+
+.VPDoc div:is(
+    [class~="language-bash"],
+    [class~="language-sh"],
+    [class~="language-shell"],
+    [class~="language-zsh"],
+    [class~="language-curl"],
+    [class~="language-powershell"],
+    [class~="language-ps1"],
+    [class~="language-cmd"],
+    [class~="language-bat"]
+  ) .line::before {
+  content: var(--dd-code-prompt);
+  position: absolute;
+  left: 0;
+  color: var(--dd-code-gutter);
+}
+
+.VPDoc div:is(
+    [class~="language-json"],
+    [class~="language-toml"],
+    [class~="language-yaml"],
+    [class~="language-yml"],
+    [class~="language-ini"],
+    [class~="language-http"]
+  ) {
+  --dd-code-accent: var(--dd-terminal-yellow);
+  --dd-code-gutter: rgba(255, 189, 46, 0.62);
+}
+
+.VPDoc div:is(
+    [class~="language-javascript"],
+    [class~="language-js"],
+    [class~="language-typescript"],
+    [class~="language-ts"]
+  ) {
+  --dd-code-accent: var(--dd-terminal-yellow);
+  --dd-code-gutter: rgba(255, 189, 46, 0.58);
+}
+
+.VPDoc div[class~="language-python"] {
+  --dd-code-accent: var(--dd-terminal-green);
+  --dd-code-gutter: rgba(39, 201, 63, 0.56);
+}
+
+.VPDoc div:is(
+    [class~="language-javascript"],
+    [class~="language-js"],
+    [class~="language-typescript"],
+    [class~="language-ts"],
+    [class~="language-python"],
+    [class~="language-json"],
+    [class~="language-toml"],
+    [class~="language-yaml"],
+    [class~="language-yml"],
+    [class~="language-ini"],
+    [class~="language-http"]
+  ) {
+  --dd-editor-gutter-width: 4.5ch;
+}
+
+.VPDoc div:is(
+    [class~="language-javascript"],
+    [class~="language-js"],
+    [class~="language-typescript"],
+    [class~="language-ts"],
+    [class~="language-python"],
+    [class~="language-json"],
+    [class~="language-toml"],
+    [class~="language-yaml"],
+    [class~="language-yml"],
+    [class~="language-ini"],
+    [class~="language-http"]
+  ) pre code {
+  counter-reset: dd-code-line;
+}
+
+.VPDoc div:is(
+    [class~="language-javascript"],
+    [class~="language-js"],
+    [class~="language-typescript"],
+    [class~="language-ts"],
+    [class~="language-python"],
+    [class~="language-json"],
+    [class~="language-toml"],
+    [class~="language-yaml"],
+    [class~="language-yml"],
+    [class~="language-ini"],
+    [class~="language-http"]
+  ) .line {
+  position: relative;
+  display: inline-block;
+  min-width: 100%;
+  padding-left: var(--dd-editor-gutter-width);
+  counter-increment: dd-code-line;
+}
+
+.VPDoc div:is(
+    [class~="language-javascript"],
+    [class~="language-js"],
+    [class~="language-typescript"],
+    [class~="language-ts"],
+    [class~="language-python"],
+    [class~="language-json"],
+    [class~="language-toml"],
+    [class~="language-yaml"],
+    [class~="language-yml"],
+    [class~="language-ini"],
+    [class~="language-http"]
+  ) .line::before {
+  content: counter(dd-code-line);
+  position: absolute;
+  left: 0;
+  width: 2.8ch;
+  color: var(--dd-code-gutter);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
 }
 
 .VPDoc table {

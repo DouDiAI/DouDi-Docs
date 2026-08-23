@@ -3,6 +3,78 @@ import { defineConfig } from "vitepress";
 const base = process.env.VITEPRESS_BASE || "/";
 const asset = (fileName) => `${base}${fileName}`.replace(/\/{2,}/g, "/");
 
+const hintLanguageMap = [
+  [/^(curl|terminal|shell|bash|sh|zsh)$/i, "bash"],
+  [/^(powershell|ps1)$/i, "powershell"],
+  [/^(cmd|bat)$/i, "bat"],
+  [/^(python|py|.+\.py)$/i, "python"],
+  [/^(typescript|ts|.+\.ts)$/i, "typescript"],
+  [/^(javascript|js|.+\.js|.+\.mjs|.+\.cjs)$/i, "javascript"],
+  [/^(json|.+\.json)$/i, "json"],
+  [/^(toml|.+\.toml)$/i, "toml"],
+  [/^(yaml|yml|.+\.ya?ml)$/i, "yaml"],
+  [/^(ini|env|.+\.ini|.+\.env)$/i, "ini"],
+  [/^(http|request|endpoint|端点)$/i, "http"],
+];
+
+const normalizedHint = (value) =>
+  value
+    .trim()
+    .replace(/^#+\s*/g, "")
+    .replace(/[:：]$/g, "")
+    .trim();
+
+const languageFromHint = (hint) => {
+  const value = normalizedHint(hint);
+  for (const [pattern, language] of hintLanguageMap) {
+    if (pattern.test(value)) return language;
+  }
+  return "";
+};
+
+const nearbyInlineText = (tokens, index) => {
+  for (let cursor = index - 1; cursor >= 0 && cursor >= index - 10; cursor -= 1) {
+    const token = tokens[cursor];
+    if (token?.type === "inline" && token.content.trim()) {
+      return token.content.trim();
+    }
+  }
+  return "";
+};
+
+const isJsonLike = (code) => {
+  if (!/^[\s[{]/.test(code)) return false;
+  try {
+    JSON.parse(code);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+const inferFenceLanguage = (code, hint) => {
+  const hinted = languageFromHint(hint);
+  const text = code.trim();
+  if (!text) return "text";
+
+  if (hinted === "bash" && /^\s*(GET|POST|PUT|PATCH|DELETE)\s+https?:\/\//m.test(text)) {
+    return "http";
+  }
+  if (hinted) return hinted;
+
+  if (isJsonLike(text)) return "json";
+  if (/^\s*(GET|POST|PUT|PATCH|DELETE)\s+https?:\/\//m.test(text)) return "http";
+  if (/^\s*curl\s+|\\\n\s+-[A-Za-z]/m.test(text)) return "bash";
+  if (/^\s*(\$env:|\[Environment\]::|if\s*\(\$env:|notepad\s+\$HOME)/m.test(text)) return "powershell";
+  if (/^\s*(npm|pnpm|yarn|node|npx|git|docker|codex|claude)\s+/m.test(text)) return "bash";
+  if (/^\s*from\s+\w+\s+import\s+|print\(|client\s*=\s*OpenAI\(/m.test(text)) return "python";
+  if (/^\s*import\s+.+\s+from\s+['"]|^\s*const\s+\w+\s*=|await\s+|baseURL\s*:/m.test(text)) return "typescript";
+  if (/^\s*model_provider\s*=|\[model_providers\./m.test(text)) return "toml";
+  if (/^\s*[A-Z0-9_]+\s*=/m.test(text)) return "bash";
+  if (/^\s*interface\s+\w+|^\s*type\s+\w+\s*=/m.test(text)) return "typescript";
+  return "text";
+};
+
 const gettingStartedSidebar = {
   text: "入门",
   link: "/",
@@ -257,6 +329,16 @@ export default defineConfig({
     ["meta", { name: "theme-color", content: "#ffffff" }],
     ["link", { rel: "icon", type: "image/png", href: asset("logo.png") }],
   ],
+  markdown: {
+    config(md) {
+      md.core.ruler.after("inline", "doudi-infer-code-languages", (state) => {
+        state.tokens.forEach((token, index) => {
+          if (token.type !== "fence" || token.info.trim()) return;
+          token.info = inferFenceLanguage(token.content, nearbyInlineText(state.tokens, index));
+        });
+      });
+    },
+  },
   themeConfig: {
     logo: "/logo.png",
     siteTitle: "DouDi 文档",
