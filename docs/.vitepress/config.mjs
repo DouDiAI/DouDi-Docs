@@ -145,6 +145,7 @@ const apiSidebar = {
       items: [
         { text: "Chat Completions", link: "/api/openai/chat-completions" },
         { text: "Responses", link: "/api/openai/responses" },
+        { text: "Web Search", link: "/api/openai/web-search" },
         { text: "Models", link: "/api/openai/models" },
         { text: "Images", link: "/api/openai/images" },
       ],

@@ -9,7 +9,7 @@ DouDi.ai 提供三种协议的 API 接入方式，覆盖 OpenAI 兼容、Anthrop
 <div class="ml-route-grid">
   <a class="ml-route-card" href="/api/openai/responses">
     <span>OpenAI 兼容协议</span>
-    <p>适合 OpenAI SDK、Responses API、Chat Completions、模型列表和图像生成。</p>
+    <p>适合 OpenAI SDK、Responses API、Chat Completions、Codex Web Search、模型列表和图像生成。</p>
   </a>
   <a class="ml-route-card" href="/api/anthropic/messages">
     <span>Anthropic 原生协议</span>
@@ -53,6 +53,7 @@ DouDi.ai 提供三种协议的 API 接入方式，覆盖 OpenAI 兼容、Anthrop
 | --- | --- | --- |
 | `/v1/chat/completions` | POST | 创建对话补全 |
 | `/v1/responses` | POST | 创建模型响应（Responses API，推荐） |
+| `/v1/alpha/search` | POST | Codex standalone web search，详见 [Web Search](/api/openai/web-search) |
 | `/v1/images/generations` | POST | 图像生成 |
 | `/v1/models` | GET | 列出所有可用模型 |
 | `/v1/models/{provider}` | GET | 按供应商过滤模型 |
